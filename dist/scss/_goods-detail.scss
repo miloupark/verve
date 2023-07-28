@@ -250,23 +250,44 @@
   height: 70px;
   border: 1px solid #cfcfcf;
 }
-.bh-box-link-tit {
-  display: inline-flex;
-  flex-direction: column;
-}
-.bh-box-link-tit__brand {
-  display: block;
-  width: 195px;
-  font-size: 14px;
-  font-weight: 700;
-}
-.brandhomeimg {
+.bh-box-link__atd {
+  display: flex;
   position: relative;
-  display: block;
+  padding-right: 70px;
+  .brandhomeimg {
+    width: 68px;
+    height: 68px;
+  }
+  &::before {
+    position: absolute;
+    content: "\f004";
+    top: 0;
+    right: 0;
+    transform: translate(50%, 50%);
+    font-size: 20px;
+    font-family: "Font Awesome 6 Free";
+  }
+}
+.bh-box-link-tit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 195px;
+  padding-left: 16px;
+  .bh-box-link-tit__brand {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .bh-box-link-tit__txt {
+    font-size: 13px;
+    font-weight: 400;
+  }
+}
+.bh-box-link-icon {
   width: 68px;
   height: 68px;
-  object-fit: cover;
 }
+
 
 // tab
 .dp-tab {
@@ -277,7 +298,7 @@
     width: 100%;
     height: 40px;
     color: #cfcfcf;
-    font-family: sans-serif;
+    font-family: 'Noto Serif KR', serif;;
     font-weight: 700;
     font-size: 14px;
     border-bottom: 1px solid #cfcfcf;
