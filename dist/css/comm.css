@@ -330,12 +330,8 @@ legend {
   content: "";
 }
 
-body {
-  background: url(../../images/상품리스트-WOMEN.png) 0 0 no-repeat;
-}
-
 .container {
-  margin: 0 20px;
+  padding: 0 20px;
 }
 
 #header .inner {
@@ -492,10 +488,6 @@ body {
 }
 .main {
   height: 100px;
-}
-
-.container {
-  margin: 0 20px;
 }
 
 #header .inner {
@@ -891,8 +883,24 @@ body {
   color: #000000;
 }
 
-.sale-section1:nth-child(2) {
-  margin-top: 20px;
+.sec-bnr {
+  margin-top: 44px;
+}
+
+.sec-ranking {
+  margin-top: 36px;
+}
+.sec-ranking ul {
+  position: relative;
+}
+.sec-ranking ul li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: #000;
 }
 
 @font-face {
@@ -1226,20 +1234,12 @@ legend {
   content: "";
 }
 
-body {
-  background: url(../../images/상품리스트-WOMEN.png) 0 0 no-repeat;
-}
-
 .main {
   height: 100px;
 }
 
 .wrap {
   position: relative;
-}
-
-.container {
-  padding: 0 20px;
 }
 
 .wrap-header {
