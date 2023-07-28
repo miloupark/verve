@@ -330,6 +330,10 @@ legend {
   content: "";
 }
 
+body {
+  background: url(../../images/상품리스트-WOMEN.png) 0 0 no-repeat;
+}
+
 .container {
   margin: 0 20px;
 }
@@ -486,28 +490,10 @@ legend {
     left: 2000px;
   }
 }
-.ocean {
-  overflow: hidden;
-}
-.ocean .wave {
-  background: url(../../images/main/main1.jpg) repeat-x;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 6400px;
-  height: 198px;
-  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-  transform: translate3d(0, 0, 0);
+.main {
+  height: 100px;
 }
 
-@keyframes wave {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: -1600px;
-  }
-}
 .container {
   margin: 0 20px;
 }
@@ -852,39 +838,41 @@ legend {
   font-size: 20px;
 }
 
-.sale-section1 {
-  display: flex;
-  flex-direction: column;
-  margin-top: 11px;
-  border-top: 1px solid #cfcfcf;
+.sec-sale-g {
+  margin-top: 8px;
 }
-.sale-section1 li {
-  margin-top: -5px;
-}
-.sale-section1 li:nth-child(3) {
+.sec-sale-g li {
   margin-top: -5px;
   border-bottom: 1px solid #cfcfcf;
 }
-.sale-section1 li a {
+.sec-sale-g li:nth-child(1) {
+  border-top: 1px solid #cfcfcf;
+}
+.sec-sale-g li a {
   display: flex;
 }
-.sale-section1 li a .sale-txt {
+.sec-sale-g li a .sale-txt {
   padding-left: 15px;
-  padding-top: 20px;
+  padding-top: 23px;
   font-family: "Gothic A1", sans-serif;
 }
-.sale-section1 li a .sale-txt p {
+.sec-sale-g li a .sale-txt p {
   font-size: 12px;
-  font-weight: bold;
+  font-weight: 700;
 }
-.sale-section1 li a .sale-txt .sale-p2 {
+.sec-sale-g li a .sale-txt .sale-p2 {
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.4px;
 }
 
+.sale-img {
+  display: flex;
+  margin-top: 5px;
+}
+
 .sale-txt-p {
-  padding-top: 6px;
+  padding-top: 5px;
 }
 .sale-txt-p strong {
   font-size: 14px;
@@ -1238,28 +1226,14 @@ legend {
   content: "";
 }
 
-.ocean {
-  overflow: hidden;
-}
-.ocean .wave {
-  background: url(../../images/main/main1.jpg) repeat-x;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 6400px;
-  height: 198px;
-  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-  transform: translate3d(0, 0, 0);
+body {
+  background: url(../../images/상품리스트-WOMEN.png) 0 0 no-repeat;
 }
 
-@keyframes wave {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: -1600px;
-  }
+.main {
+  height: 100px;
 }
+
 .wrap {
   position: relative;
 }
