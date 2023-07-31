@@ -88,10 +88,11 @@
 
       <main>
         <!-- swiper slide images -->
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="./images/dp-slide1.jpg" alt="slide-img1" />
+        <section class="swiper-slide-images">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./images/dp-slide1.jpg" alt="slide-img1" />
             </div>
             <div class="swiper-slide">
               <img src="./images/dp-slide2.jpg" alt="slide-img2" />
@@ -103,8 +104,11 @@
               <img src="./images/dp-slide4.jpg" alt="slide-img4" />
             </div>
           </div>
+          <!-- swiper scrollbar -->
           <div class="swiper-scrollbar"></div>
         </div>
+      </section>
+
         <!-- swiper script -->
         <script>
           var swiper = new Swiper(".mySwiper", {
@@ -115,287 +119,249 @@
           });
         </script>
 
-        <div class="prd-info container">
-          <!-- product front info -->
-          <div class="prd-info-front">
-            <span class="prd-info-front__brand">A;td 
-              <span class="blind">브랜드이름 A;td 아티드</span> 
+    
+      <section class="prd-info container">
+        <!-- product front info -->
+        <div class="prd-info-front">
+          <span class="prd-info-front__brand">A;td 
+          <span class="blind">브랜드이름 A;td 아티드</span> 
+        </span>
+        <br />
+        <span class="prd-info-front__likeicon">
+          <span class="blind">좋아요 아이콘</span>
+          <a href="#"><i class="fa-regular fa-heart"></i></a>
+        </span>
+        </div>
+        <div class="prd-info-tit">
+          <span class="prd-info-tit__product">
+            [23SUMMER]|[08/08 예약배송] <br />
+            23HS_크로쉐 니트 가디건_WHITE
+          </span>
+        </div>
+
+
+        <!-- product rating / see more review / coupon  -->
+        <div class="prd-rating">
+          <div class="prd-rating-star">
+            <i class="las la-star"></i><i class="las la-star"></i
+            ><i class="las la-star"></i><i class="las la-star"></i
+            ><i class="las la-star-half"></i>
+          </div>
+          <button class="prd-rating-link">
+            <span class="blind">77개 리뷰 더보기</span>
+            77
+          </button>
+          <div class="prd-coupon">
+            <button type="button" class="prd-coupon">쿠폰받기</button>
+          </div>
+        </div>
+
+        <!-- product price info -->
+        <div class="prd-price-info">
+          <div class="prd-price-del">
+            <del class="prd-price-del__beforeprice">
+              <span class="blind">할인 전 가격 129,000원</span>
+              129,000원
+            </del>
+          </div>
+          <div class="prd-price-discount">
+            <span class="prd-price-discount__percent">
+              <span class="blind">할인율 19%</span>
+              19%
             </span>
-            <br />
-            <span class="prd-info-front__likeicon">
-              <span class="blind">좋아요 아이콘</span>
-              <a href="#"><i class="fa-regular fa-heart"></i></a>
+            <span class="prd-price-discount__price">
+              <span class="blind">할인율 19% 적용시 104,490원</span>
+              104,490원
             </span>
           </div>
-          <div class="prd-info-tit">
-            <span class="prd-info-tit__product">
-              [23SUMMER]|[08/08 예약배송] <br />
-              23HS_크로쉐 니트 가디건_WHITE
+          <div class="prd-price-point">
+            <span class="prd-price-point__savingpoint">
+              <span class="blind">적립률 1% 적용시 1290포인트 적립</span>
+              1290p(1%) 적립
             </span>
           </div>
+        </div>
+      </section>
+
+      <!-- accordion-1 -->
+      <section class="accordion-1 container">
+        <!-- accordion 1 최대혜택가 -->
+        <div class="acc-1">
+          <div class="acc-1-benefitprice">
+            <span class="acc-1-benefitprice__txt">최대혜택가</span>
+          </div>
+          <div class="acc-1-discount">
+            <span class="acc-1-discount__percent">
+              <span class="blind">할인율 19%</span>
+              19%
+            </span>
+            <span class="acc-1-discount__price">
+              <span class="blind">할인율 19% 적용시 104,490원</span>
+              104,490원
+            </span>
+          </div>
+        </div>
+        <!-- accordion 2 배송정보 -->
+        <div class="acc-2">
+          <div class="acc-2-shipinfo">
+            <span class="acc-2-shipinfo__txt">배송정보</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- accordion script -->
+      <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+          });
+        }
+      </script>
+
       <!-- brandhome togo -->
-      <div class="brandhome container">
+      <section class="brandhome container">
         <div class="bh-box">
           <div class="bh-box-link">
             <a class="bh-box-link__atd" href="https://shop.29cm.co.kr/brand/16478">
-              <img src="./images/a;td brandhome.png" alt="브랜드 홈페이지 바로가기" class="brandhomeimg"/>
-                <div class="bh-box-link-tit">
-                  <span class="bh-box-link-tit__brand">A;td</span>
-                  <span class="bh-box-link-tit__txt">Beloved Attitude</span>
-                </div>
-              </a>
-            </div>
-            <div class="bh-box-link-icon">
-              <span class="bind">브랜드 아티드 좋아요</span>
-            </div>
+              <img
+                src="/images/a;td brandhome.png"
+                alt="브랜드 홈페이지 바로가기"
+                class="brandhomeimg"
+              />
+              <div class="bh-box-link-tit">
+                <span class="bh-box-link-tit__brand">A;td</span>
+                <span class="bh-box-link-tit__slogan">Beloved Attitude</span>
+              </div>
+            </a>
+          </div>
+          <button class="bh-box-icon">
+            <span class="bh-box-icon-click">234</span>
+          </button>
         </div>
-      </div>
-    
-    <!-- detailpage tab -->
-    <div class="dp-tab container">
-      <ul class="dp-tab__menu">
-        <li class="dp-tab__menu-1">
-          <a href="javascript:void(0)" class="dp-tab__detail">
-            Detail
-          </a>
-        </li>
-        <li class="dp-tab__menu-2">
-          <a href="javascript:void(0)" class="dp-tab__review">
-            Review
-          </a>
-        </li>
-        <li class="dp-tab__menu-3">
-          <a href="javascript:void(0)" class="dp-tab__q&a">
-            Q&A
-          </a>
-        </li>
-      </ul>
-    </div>
-    
-    <!-- detail tab active fullpage -->
-    <div class="dp-tab__menu1-active">
+      </section>
 
-          <!-- product rating / see more review / coupon  -->
-          <div class="prd-rating">
-            <div class="prd-rating-star">
-              <i class="las la-star"></i><i class="las la-star"></i
-              ><i class="las la-star"></i><i class="las la-star"></i
-              ><i class="las la-star-half"></i>
-            </div>
-            <button class="prd-rating-link">
-              <span class="blind">77개 리뷰 더보기</span>
-              77
-            </button>
-            <div class="prd-coupon">
-              <button type="button" class="prd-coupon">쿠폰받기</button>
-            </div>
-          </div>
 
-          <!-- product price info -->
-          <div class="prd-price-info">
-            <div class="prd-price-del">
-              <del class="prd-price-del__beforeprice">
-                <span class="blind">할인 전 가격 129,000원</span>
-                129,000원
-              </del>
-            </div>
-            <div class="prd-price-discount">
-              <span class="prd-price-discount__percent">
-                <span class="blind">할인율 19%</span>
-                19%
-              </span>
-              <span class="prd-price-discount__price">
-                <span class="blind">할인율 19% 적용시 104,490원</span>
-                104,490원
-              </span>
-            </div>
-            <div class="prd-price-point">
-              <span class="prd-price-point__savingpoint">
-                <span class="blind">적립률 1% 적용시 1290포인트 적립</span>
-                1290p(1%) 적립
-              </span>
-            </div>
-          </div>
-        </div>
+      <!-- detailpage tab -->
+      <section class="dp-tab container">
+        <ul class="dp-tab__menu">
+          <li class="dp-tab__detail">
+            <a href="javascript:void(0)"> Detail </a>
+          </li>
+          <li class="dp-tab__review">
+            <a href="javascript:void(0)"> Review </a>
+          </li>
+          <li class="dp-tab__q&a">
+            <a href="javascript:void(0)"> Q&A </a>
+          </li>
+        </ul>
+      </section>
 
-        <!-- accordion-1 -->
-        <div class="accordion-1 container">
-          <!-- accordion 1 최대혜택가 -->
-          <div class="acc-1">
-            <div class="acc-1-benefitprice">
-              <div class="acc-1-benefitprice__txt">최대혜택가</div>
-            </div>
-            <div class="acc-1-discount">
-              <span class="acc-1-discount__percent">
-                <span class="blind">할인율 19%</span>
-                19%
-              </span>
-              <span class="acc-1-discount__price">
-                <span class="blind">할인율 19% 적용시 104,490원</span>
-                104,490원
-              </span>
-            </div>
-          </div>
-          <!-- accordion 2 배송정보 -->
-          <div class="acc-2">
-            <div class="acc-2-shipinfo">
-              <div class="acc-2-shipinfo__txt">배송정보</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- accordion script -->
-        <script>
-          var acc = document.getElementsByClassName("accordion");
-          var i;
-
-          for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function () {
-              this.classList.toggle("active");
-              var panel = this.nextElementSibling;
-              if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
-              } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-              }
-            });
-          }
-        </script>
-
-        <!-- brandhome togo -->
-        <div class="brandhome container">
-          <div class="bh-box">
-            <div class="bh-box-link">
-              <a href="https://shop.29cm.co.kr/brand/16478">
-                <img
-                  src="./images/a;td brandhome.png"
-                  alt="브랜드 홈페이지 바로가기"
-                  class="brandhomeimg"
-                />
-                <div class="bh-box-link-tit">
-                  <span class="bh-box-link-tit__brand">A;td</span>
-                  <span>Beloved Attitude</span>
-                </div>
-              </a>
-            </div>
-            <div class="brandhome-box-link__icon">
-              <img src="#" alt="" />
-            </div>
-          </div>
-        </div>
-
-        <!-- detailpage tab -->
-        <div class="dp-tab container">
-          <ul class="dp-tab__menu">
-            <li class="dp-tab__menu-1">
-              <a href="javascript:void(0)" class="dp-tab__detail"> Detail </a>
+      <!-- detail tab active fullpage -->
+      <div class="dp-tab__menu1-active">
+        <!-- detailpage product detail info -->
+        <div class="dp-pd-info">
+          <ul class="dp-pd-info__list">
+            <li class="dp-pd-info__list-1">
+              <strong>Product Code</strong>
+              <p>302764156</p>
             </li>
-            <li class="dp-tab__menu-2">
-              <a href="javascript:void(0)" class="dp-tab__review"> Review </a>
+            <li class="dp-pd-info__list-2">
+              <strong>Material</strong>
+              <p>ACRYL 100%</p>
             </li>
-            <li class="dp-tab__menu-3">
-              <a href="javascript:void(0)" class="dp-tab__q&a"> Q&A </a>
+            <li class="dp-pd-info__list-3">
+              <strong>Country of origin</strong>
+              <p>EASTEND / KOREA</p>
             </li>
           </ul>
         </div>
 
-        <!-- detail tab active fullpage -->
-        <div class="dp-tab__menu1-active">
-          <!-- detailpage product detail info -->
-          <div class="dp-pd-info">
-            <ul class="dp-pd-info__list">
-              <li class="dp-pd-info__list-1">
-                <strong>Product Code</strong>
-                <p>302764156</p>
-              </li>
-              <li class="dp-pd-info__list-2">
-                <strong>Material</strong>
-                <p>ACRYL 100%</p>
-              </li>
-              <li class="dp-pd-info__list-3">
-                <strong>Country of origin</strong>
-                <p>EASTEND / KOREA</p>
-              </li>
-            </ul>
-          </div>
+        <!-- detailpage product detail image -->
+        <div class="dp-pd-images">
+          <img
+            class="dp-pd-image"
+            src="./images/dp-detail1.jpg"
+            alt="1번 이미지 아티드 크로쉐 니트 가디건 화이트 모델 전신이미지 정면"
+          />
+          <img
+            class="dp-pd-image"
+            src="./images/dp-detail2.jpg"
+            alt="2번 이미지 아티드 크로쉐 니트 가디건 화이트 모델 전신이미지 정면"
+          />
+          <img
+            class="dp-pd-image"
+            src="./images/dp-detail3.jpg"
+            alt="3번 이미지 아티드 크로쉐 니트 가디건 화이트 모델 전신이미지 정면 확대"
+          />
+          <img
+            class="dp-pd-image"
+            src="./images/dp-detail4.png"
+            alt="4번 이미지 아티드 크로쉐 니트 가디건 화이트 모델 전신이미지 측면"
+          />
+          <img
+            class="dp-pd-image"
+            src="./images/dp-detail5.jpg"
+            alt="5번 아티드 크로쉐 니트 가디건 화이트 모델 전신이미지 후면 확대"
+          />
+          <img
+            class="dp-pd-image"
+            src="./images/dp-detail6.jpg"
+            alt="6번 아티드 크로쉐 니트 가디건 화이트 모델 전신이미지 정면"
+          />
+          <img
+            class="dp-pd-image"
+            src="./images/dp-detail7.jpg"
+            alt="7번 아티드 크로쉐 니트 가디건 화이트 제품 이미지 정면"
+          />
+          <img
+            class="dp-pd-image"
+            src="./images/dp-detail8.jpg"
+            alt="8번 아티드 크로쉐 니트 가디건 화이트 제품 이미지 후면"
+          />
+          <img
+            class="dp-pd-image"
+            src="./images/dp-detail9.png"
+            alt="9번 아티드 크로쉐 니트 가디건 화이트 제품 이미지 정면 상단 확대"
+          />
+          <img
+            class="dp-pd-image"
+            src="./images/dp-detail10.jpg"
+            alt="10번 아티드 크로쉐 니트 가디건 화이트 제품 이미지 후면 상단 확대"
+          />
+          <img
+            class="dp-pd-image"
+            src="./images/dp-detail11.jpg"
+            alt="11번 아티드 크로쉐 니트 가디건 화이트 제품 이미지 좌측 상단 확대"
+          />
+          <img
+            class="dp-pd-image"
+            src="./images/dp-detail12.jpg"
+            alt="12번 아티드 크로쉐 니트 가디건 화이트 제품 이미지 정면 하단 확대"
+          />
+        </div>
 
-          <!-- detailpage product detail image -->
-          <div class="dp-pd-images">
-            <img
-              class="dp-pd-image"
-              src="./images/dp-detail1.jpg"
-              alt="1번 이미지 아티드 크로쉐 니트 가디건 화이트 모델 전신이미지 정면"
-            />
-            <img
-              class="dp-pd-image"
-              src="./images/dp-detail2.jpg"
-              alt="2번 이미지 아티드 크로쉐 니트 가디건 화이트 모델 전신이미지 정면"
-            />
-            <img
-              class="dp-pd-image"
-              src="./images/dp-detail3.jpg"
-              alt="3번 이미지 아티드 크로쉐 니트 가디건 화이트 모델 전신이미지 정면 확대"
-            />
-            <img
-              class="dp-pd-image"
-              src="./images/dp-detail4.png"
-              alt="4번 이미지 아티드 크로쉐 니트 가디건 화이트 모델 전신이미지 측면"
-            />
-            <img
-              class="dp-pd-image"
-              src="./images/dp-detail5.jpg"
-              alt="5번 아티드 크로쉐 니트 가디건 화이트 모델 전신이미지 후면 확대"
-            />
-            <img
-              class="dp-pd-image"
-              src="./images/dp-detail6.jpg"
-              alt="6번 아티드 크로쉐 니트 가디건 화이트 모델 전신이미지 정면"
-            />
-            <img
-              class="dp-pd-image"
-              src="./images/dp-detail7.jpg"
-              alt="7번 아티드 크로쉐 니트 가디건 화이트 제품 이미지 정면"
-            />
-            <img
-              class="dp-pd-image"
-              src="./images/dp-detail8.jpg"
-              alt="8번 아티드 크로쉐 니트 가디건 화이트 제품 이미지 후면"
-            />
-            <img
-              class="dp-pd-image"
-              src="./images/dp-detail9.png"
-              alt="9번 아티드 크로쉐 니트 가디건 화이트 제품 이미지 정면 상단 확대"
-            />
-            <img
-              class="dp-pd-image"
-              src="./images/dp-detail10.jpg"
-              alt="10번 아티드 크로쉐 니트 가디건 화이트 제품 이미지 후면 상단 확대"
-            />
-            <img
-              class="dp-pd-image"
-              src="./images/dp-detail11.jpg"
-              alt="11번 아티드 크로쉐 니트 가디건 화이트 제품 이미지 좌측 상단 확대"
-            />
-            <img
-              class="dp-pd-image"
-              src="./images/dp-detail12.jpg"
-              alt="12번 아티드 크로쉐 니트 가디건 화이트 제품 이미지 정면 하단 확대"
-            />
-          </div>
-
-          <!-- detailpage product image seemore btn -->
-          <div class="dp-img-seemore-wrap">
-            <div class="dp-img-seemore-full">
-              <button
-                type="button"
-                onclick="show-prd-img(this)"
-                class="dp-img-seemore__btn"
-              >
-                상품설명 닫기
-              </button>
-            </div>
+        <!-- detailpage product image seemore btn -->
+        <div class="dp-img-seemore-wrap">
+          <div class="dp-img-seemore-full">
+            <button
+              type="button"
+              onclick="show-prd-img(this)"
+              class="dp-img-seemore__btn"
+            >
+              상품설명 닫기
+            </button>
           </div>
         </div>
+      </div>
 
         <!-- accordion-2  -->
         <div class="accordion-2 container">
@@ -419,7 +385,7 @@
           </div>
         </div>
 
-        <!-- More by BRAND list : Recommend Product list-->
+        <!-- More by BRAND list : Recommend Product list -->
         <div class="recommend_prd_lst-1">
           <div class="rpl-tit">
             More by BRAND
@@ -521,7 +487,148 @@
             </ul>
           </div>
         </div>
+   
+
+     <!-- swiper slide images -->
+     <section class="recommend_prd_lst-2 container">
+      <div class="rpl-tit">
+        You may also like
+        <span class="blind">연관 상품 추천 리스트</span>
       </div>
+      <div class="rpl-tit-swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="rpl-slide">
+            <img src="./images/youmayalsolike1.jpg" alt="youmayalsolike-img1" />
+          </div>
+          <div class="rpl-slide-info">
+            <span>Sincethen</span>
+            <span>Black Daisy Long Onepiece</span>
+            <span>119,000원</span>
+          </div>
+          <div class="rpl-slide">
+            <img src="./images/youmayalsolike2.jpg" alt="youmayalsolike-img2" />
+          </div>
+          <div class="rpl-slide">
+            <img src="./images/youmayalsolike3.jpg" alt="youmayalsolike-img3" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- swiper script -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+      });
+    </script>
+
+
+    <!-- review -->
+    <section class="review container">
+      <div class="review">
+        <span class="review_tit">Review (77)</span>
+      </div>
+      <div class="buyers-rate">
+        <span>구매자 평점</span>
+      </div>
+      <div class="buyers-rate-star">
+        <i class="las la-star"></i><i class="las la-star"></i
+        ><i class="las la-star"></i><i class="las la-star"></i
+        ><i class="las la-star-half"></i>
+        <span>4.5</span>
+      </div>
+      <div class="review-img">
+        <img src="./images/review1.jpg" alt="리뷰 이미지 1">
+        <img src="./images/review2.jpg" alt="리뷰 이미지 2">
+        <img src="./images/review3.jpg" alt="리뷰 이미지 3">
+        <img src="./images/review4.jpg" alt="리뷰 이미지 4">
+      </div>
+      <div class="buyer-rate-percent">
+        <div class="review-percent">
+          <span class="">정사이즈에요</span>
+          <div class="review-percent-bar"></div>
+          <span>100%</span>
+        </div>
+        <div class="review-percent">
+          <span class="">편해요</span>
+          <div class="review-percent-bar"></div>
+          <span>90%</span>
+        </div>
+        <div class="review-percent">
+          <span class="">마음에들어요</span>
+          <div class="review-percent-bar"></div>
+          <span>80%</span>
+        </div>
+      </div>
+      
+      <div class="review-tabs">
+        <span>최신순</span>  
+        <span>평점 높은순</span>  
+        <span>평점 낮은순</span>  
+        <span>추천순</span>  
+      </div>
+      
+      <div class="personal-review-lst">
+        <div>
+          <div class="">
+            <i class="las la-star"></i><i class="las la-star"></i
+            ><i class="las la-star"></i><i class="las la-star"></i
+            ><i class="las la-star-half"></i>
+            <span>2023.06.13</span>
+          </div>
+
+          <div>
+            <span>옵션 : 색상 사이즈</span>
+            <span>체형 : 160cm / 48kg</span>
+            <span>사이즈 : 잘 맞아요</span>
+            <div>
+              <img src="./images/review1.jpg" alt="">
+            </div>
+          </div>
+          <div>
+            <span>신고</span>
+            <span>숨김</span>
+            <span>추천</span>
+          </div>
+
+        </div>
+      </div>
+
+        <!-- detailpage product image seemore btn -->
+        <div class="dp-img-seemore-wrap">
+          <div class="dp-img-seemore-full">
+            <button
+              type="button"
+              onclick="show-prd-img(this)"
+              class="dp-img-seemore__btn"
+            >
+              상품 리뷰 전체보기 (77)
+            </button>
+          </div>
+        </div>
+      </section>
+
+
+        <section class="q&a container"> 
+          <div class="q&a-personal-review">
+            <div>
+              <span>접수완료 | hele*******</span>
+              <span>2023.07.10</span>
+            </div>
+          </div>
+          <!-- detailpage product image seemore btn -->
+          <div class="dp-img-seemore-wrap">
+            <div class="dp-img-seemore-full">
+              <button
+              type="button"
+              onclick="show-prd-img(this)"
+              class="dp-img-seemore__btn"
+              >
+              상품 Q&A 전체보기 (77)
+            </button>
+          </div>
+        </div>
+      </section>
+      
     </main>
     </div>
   </body>

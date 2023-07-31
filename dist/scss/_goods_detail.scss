@@ -7,7 +7,9 @@
 // 공통
 .wrap {
   position: relative;
+  background: url(/images/dp.jpg);
 }
+
 // header
 .wrap-header {
   position: fixed;
@@ -75,25 +77,25 @@
 .prd-info {
   padding-top: 20px;
   padding-bottom: 24px;
-  .prd-info-front {
-    position: relative;
-    .prd-info-front__brand {
-      font-size: 20px;
-      font-weight: 700;
-    }
-    .prd-info-front__likeicon {
-      position: absolute;
-      top: -4px;
-      right: 0;
-      font-size: 24px;
-    }
+}
+.prd-info-front {
+  position: relative;
+  .prd-info-front__brand {
+    font-size: 20px;
+    font-weight: 700;
   }
-  .prd-info-tit__product {
-    display: block;
-    margin-top: 4px;
-    font-size: 15px;
-    font-weight: 500;
+  .prd-info-front__likeicon {
+    position: absolute;
+    top: -4px;
+    right: 0;
+    font-size: 24px;
   }
+}
+.prd-info-tit__product {
+  display: block;
+  margin-top: 4px;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 // product rating / see more review / coupon
@@ -191,7 +193,6 @@
     font-weight: bold;
   }
 }
-
 .active,
 .accordion-1-benefitprice:hover {
   background-color: #ffffff;
@@ -237,29 +238,23 @@
 
 // brand home
 .brandhome {
+  position: relative;
   margin: 16px 0 24px 0;
 }
 .bh-box {
+  display: flex;
   width: 335px;
   height: 70px;
   border: 1px solid #cfcfcf;
 }
+.bh-box-link {
+  position: relative;
+}
 .bh-box-link__atd {
   display: flex;
-  position: relative;
-  padding-right: 70px;
   .brandhomeimg {
     width: 68px;
-    height: 68px;
-  }
-  &::before {
-    position: absolute;
-    content: "\f004";
-    top: 0;
-    right: 0;
-    transform: translate(50%, 50%);
-    font-size: 20px;
-    font-family: "Font Awesome 6 Free";
+    object-fit: cover;
   }
 }
 .bh-box-link-tit {
@@ -272,23 +267,44 @@
     font-size: 14px;
     font-weight: 700;
   }
-  .bh-box-link-tit__txt {
+  .bh-box-link-tit__slogan {
+    padding-top: 4px;
     font-size: 13px;
     font-weight: 400;
   }
 }
-.bh-box-link-icon {
+.bh-box-icon {
+  display: block;
+  padding: 0 22px;
   width: 68px;
   height: 68px;
+  &::before {
+    position: absolute;
+    content: "\f004";
+    top: 0px;
+    right: 0;
+    transform: translate(-200%, 80%);
+    font-size: 22px;
+    font-family: "Font Awesome 6 Free";
+  }
+  .bh-box-icon-click {
+    display: block;
+    padding-top: 22px;
+    font-size: 10px;
+    font-weight: 500;
+    color: #555;
+  }
 }
 
 
 // tab
 .dp-tab {
   background: #fff;
-  ul {
+  .dp-tab__menu {
     display: flex;
-    position: relative;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
     width: 100%;
     height: 40px;
     color: #cfcfcf;
@@ -296,24 +312,19 @@
     font-weight: 700;
     font-size: 14px;
     border-bottom: 1px solid #cfcfcf;
-    li:nth-child(1) {
-      text-align: center;
-      vertical-align: middle;
-      &:active {
-        color: #000;
-        border-bottom: 1px solid #000;
-      }
-    }
-    li:nth-child(2) {
-      text-align: center;
-      vertical-align: middle;
-    }
-    li:nth-child(3) {
-      text-align: center;
-      vertical-align: middle;
-    }
+  }
+  .dp-tab__menu > li {
+    width: 30%;
   }
 }
+  li:nth-child(1) {
+    &:active {
+      color: #000;
+      border-bottom: 1px solid #000;
+      padding-bottom: 10px;
+    }
+  }
+
 
 // detailpage product detail information
 .dp-pd-info {
@@ -503,3 +514,19 @@
     }
   }
 }
+
+
+
+// swiper slide
+.rpl-tit {
+  font-family: "Noto Serif KR", serif;
+  font-size: 15px;
+  font-weight: 700;
+  padding-bottom: 8px;
+}
+.rpl-slide {
+  width: 136px;
+  height: 136px;
+  // margin-top: -44px;
+  display: flex;
+  }
