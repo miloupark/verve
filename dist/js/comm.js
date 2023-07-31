@@ -8,3 +8,20 @@ var swiper = new Swiper(".slide-g", {
 });
 
 var swiper = new Swiper(".sale-slide", {});
+
+
+// var splide = new Splide( '.splide', {
+//   type   : 'loop',
+//   drag   : 'free',
+//   perPage: 3,
+// } );
+
+// splide.mount();
+
+var splide = new Splide( '.splide', {
+  perPage: 3,
+  focus  : 0,
+  omitEnd: true,
+} );
+
+splide.mount();

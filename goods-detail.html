@@ -44,6 +44,11 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" 
+    rel="stylesheet">
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
@@ -385,6 +390,24 @@
           </div>
         </div>
 
+       <!-- splide  -->
+       <!-- More by BRAND list : Recommend Product list -->
+      <section class="splide container" aria-label="Splide Basic HTML Example">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide"><img src="./images/morebybrand1.jpg" alt="Slide 01"></li>
+            <li class="splide__slide"><img src="./images/morebybrand2.jpg" alt="Slide 02"></li>
+            <li class="splide__slide"><img src="./images/morebybrand3.jpg" alt="Slide 03"></li>
+          </ul>
+        </div>
+      </section>
+      <!-- splide script -->
+      <script>
+        new Splide( '.splide' ).mount();
+      </script>
+
+
+
         <!-- More by BRAND list : Recommend Product list -->
         <div class="recommend_prd_lst-1">
           <div class="rpl-tit">
@@ -487,113 +510,104 @@
             </ul>
           </div>
         </div>
-   
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
 
-     <!-- swiper slide images -->
-     <section class="recommend_prd_lst-2 container">
-      <div class="rpl-tit">
-        You may also like
-        <span class="blind">연관 상품 추천 리스트</span>
-      </div>
-      <div class="rpl-tit-swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="rpl-slide">
-            <img src="./images/youmayalsolike1.jpg" alt="youmayalsolike-img1" />
-          </div>
-          <div class="rpl-slide-info">
-            <span>Sincethen</span>
-            <span>Black Daisy Long Onepiece</span>
-            <span>119,000원</span>
-          </div>
-          <div class="rpl-slide">
-            <img src="./images/youmayalsolike2.jpg" alt="youmayalsolike-img2" />
-          </div>
-          <div class="rpl-slide">
-            <img src="./images/youmayalsolike3.jpg" alt="youmayalsolike-img3" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- swiper script -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-      });
-    </script>
 
 
     <!-- review -->
-    <section class="review container">
-      <div class="review">
-        <span class="review_tit">Review (77)</span>
+    <section class="sec-review container">
+      <!-- review tit -->
+      <div class="review-tit">
+        <span class="review-tit__txt">REVIEW (77)</span>
       </div>
-      <div class="buyers-rate">
-        <span>구매자 평점</span>
-      </div>
-      <div class="buyers-rate-star">
-        <i class="las la-star"></i><i class="las la-star"></i
-        ><i class="las la-star"></i><i class="las la-star"></i
-        ><i class="las la-star-half"></i>
-        <span>4.5</span>
-      </div>
-      <div class="review-img">
+      <!-- review icons -->
+      <div class="customer-rates">
+        <div class="customer-rates-tit">
+          <span>구매자 평점</span>
+        </div>
+        <div class="customer-rates-icons">
+          <i class="las la-star"></i><i class="las la-star"></i
+            ><i class="las la-star"></i><i class="las la-star"></i
+              ><i class="las la-star-half"></i>
+              <span>4.5</span>
+            </div>
+          </div>
+      <!-- review customer images-->
+      <div class="customer-review-image">
         <img src="./images/review1.jpg" alt="리뷰 이미지 1">
         <img src="./images/review2.jpg" alt="리뷰 이미지 2">
         <img src="./images/review3.jpg" alt="리뷰 이미지 3">
         <img src="./images/review4.jpg" alt="리뷰 이미지 4">
       </div>
-      <div class="buyer-rate-percent">
-        <div class="review-percent">
-          <span class="">정사이즈에요</span>
-          <div class="review-percent-bar"></div>
-          <span>100%</span>
-        </div>
-        <div class="review-percent">
-          <span class="">편해요</span>
-          <div class="review-percent-bar"></div>
-          <span>90%</span>
-        </div>
-        <div class="review-percent">
-          <span class="">마음에들어요</span>
-          <div class="review-percent-bar"></div>
-          <span>80%</span>
-        </div>
-      </div>
-      
-      <div class="review-tabs">
-        <span>최신순</span>  
-        <span>평점 높은순</span>  
-        <span>평점 낮은순</span>  
-        <span>추천순</span>  
-      </div>
-      
-      <div class="personal-review-lst">
-        <div>
-          <div class="">
-            <i class="las la-star"></i><i class="las la-star"></i
-            ><i class="las la-star"></i><i class="las la-star"></i
-            ><i class="las la-star-half"></i>
-            <span>2023.06.13</span>
+      <!-- review average customer satisfaction -->
+      <div class="customer-rates-average">
+        <div class="rev-g review-average-1">
+          <span class="review-average__1">사이즈</span>
+          <span class="review-average__2">정사이즈에요</span>
+          <div class="review-average-bar__3">
+            <span class="blind">구매자들의 상품 사이즈 평점 100%</span>
           </div>
+          <span class="review-average__4">100%</span>
+        </div>
+        <div class="rev-g review-average-2">
+          <span class="review-average__1">착용감</span>
+          <span class="review-average__2">잘맞고편해요</span>
+          <div class="review-average-bar__3">
+            <span class="blind">구매자들의 상품 사이즈 평점 100%</span>
+          </div>
+          <span class="review-average__4">90%</span>
+        </div>
+        <div class="rev-g review-average-3">
+          <span class="review-average__1">스타일</span>
+          <span class="review-average__2">마음에들어요</span>
+          <div class="review-average-bar__3">
+            <span class="blind">구매자들의 상품 사이즈 평점 100%</span>
+          </div>
+          <span class="review-average__4">80%</span>
+        </div>
+      </div>
+      <!-- review tabs -->
+      <div class="review-tabs">
+        <button type="button" class="review-tabs__btn1">최신순</button>  
+        <button type="button" class="review-tabs__btn2">평점 높은순</button>  
+        <button type="button" class="review-tabs__btn3">평점 낮은순</button>  
+        <button type="button" class="review-tabs__btn4">추천순</button>  
+      </div>
+      <!-- customer review list -->
+      <div class="customer-review-lst">
 
-          <div>
-            <span>옵션 : 색상 사이즈</span>
-            <span>체형 : 160cm / 48kg</span>
-            <span>사이즈 : 잘 맞아요</span>
-            <div>
-              <img src="./images/review1.jpg" alt="">
+        <div class="crl-g customer-review-lst-1">
+          <div class="customer-review-top">
+            <div class="customer-review-icons">
+              <i class="las la-star"></i><i class="las la-star"></i
+                ><i class="las la-star"></i><i class="las la-star"></i
+                  ><i class="las la-star-half"></i>
+            </div>
+            <div class="customer-review-date">
+              <span>2023.06.13</span>
             </div>
           </div>
-          <div>
-            <span>신고</span>
-            <span>숨김</span>
-            <span>추천</span>
+              
+              <div>
+                <span>옵션 : 색상 사이즈</span>
+                <span>체형 : 160cm / 48kg</span>
+                <span>사이즈 : 잘 맞아요</span>
+                <div>
+                  <img src="./images/review1.jpg" alt="">
+                </div>
+              </div>
+              <div>
+                <span>신고</span>
+                <span>숨김</span>
+                <span>추천</span>
+              </div>
+              
+            </div>
           </div>
 
-        </div>
-      </div>
-
-        <!-- detailpage product image seemore btn -->
+        <!-- detailpage product image seemore btn
         <div class="dp-img-seemore-wrap">
           <div class="dp-img-seemore-full">
             <button
@@ -604,7 +618,7 @@
               상품 리뷰 전체보기 (77)
             </button>
           </div>
-        </div>
+        </div> -->
       </section>
 
 
@@ -616,7 +630,7 @@
             </div>
           </div>
           <!-- detailpage product image seemore btn -->
-          <div class="dp-img-seemore-wrap">
+          <!-- <div class="dp-img-seemore-wrap">
             <div class="dp-img-seemore-full">
               <button
               type="button"
@@ -626,9 +640,11 @@
               상품 Q&A 전체보기 (77)
             </button>
           </div>
-        </div>
+        </div> -->
       </section>
       
+
+
     </main>
     </div>
   </body>

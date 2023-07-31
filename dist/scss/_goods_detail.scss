@@ -475,6 +475,7 @@
   }
 }
 
+
 // More by BRAND list : Recommend Product list
 // 정리필요
 .recommend_prd_lst-1 {
@@ -515,18 +516,132 @@
   }
 }
 
-
-
-// swiper slide
-.rpl-tit {
-  font-family: "Noto Serif KR", serif;
-  font-size: 15px;
-  font-weight: 700;
-  padding-bottom: 8px;
-}
-.rpl-slide {
-  width: 136px;
-  height: 136px;
-  // margin-top: -44px;
-  display: flex;
+// review 
+.sec-review {
+  padding-top: 20px;
+  .review-tit__txt {
+    font-size: 15px;
+    font-weight: 700;
+    font-family: "Noto Serif KR", serif;
   }
+}
+.customer-rates {
+  .customer-rates-tit {
+    font-size: 10px;
+    font-weight: 700;
+    color: #555;
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .customer-rates-icons {
+    margin-top: -6px;
+    text-align: center;
+    font-size: 18px;
+  }
+}
+.customer-review-image {
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  img {
+    width: 76px;
+    height: 76px;
+  }
+}
+// review average customer satisfaction
+.customer-rates-percent {
+  padding-top: 20px;
+}
+.customer-rates-average {
+  padding-top: 12px;
+  padding-bottom: 20px;
+}
+// review average customer satisfaction 공통 클래스
+.rev-g {
+  display: flex;
+  padding-top: 8px;
+  .review-average__1 {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: #555;
+  }
+  .review-average__2 {
+    font-size: 11px;
+    font-weight: 500;
+    color: #000;
+    padding-left: 16px;
+  }
+  .review-average-bar__3 {
+    width: 132px;
+    height: 4px;
+    background: #555;
+    margin: 6px 0 0 40px;
+    border-radius: 5px;
+  }
+  .review-average__4 {
+    font-size: 11px;
+    font-weight: 500;
+    color: #000;
+    padding-left: 26px;
+  }
+}
+// review tabs
+.review-tabs {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 49px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #555;
+  button {
+    background: none;
+    padding: 0 8px;
+  }
+  .review-tabs__btn1 {
+    position: relative;
+    &::before {
+      content: "";
+      top: 2px;
+      left: 46px;
+      width: 1px;
+      height: 10px;
+      position: absolute;
+      background-color: #555;
+    }
+  }
+  .review-tabs__btn2 {
+    position: relative;
+    &::before {
+      content: "";
+      top: 2px;
+      right: 0px;
+      width: 1px;
+      height: 10px;
+      position: absolute;
+      background-color: #555;
+    }
+  }
+  .review-tabs__btn3 {
+    position: relative;
+    &::before {
+      content: "";
+      top: 2px;
+      right: 0px;
+      width: 1px;
+      height: 10px;
+      position: absolute;
+      background-color: #555;
+    }
+  }
+}
+
+.crl-g {
+  padding-top: 16px;
+}
+.customer-review-top {
+  display: flex;
+  justify-content: space-between;
+}
