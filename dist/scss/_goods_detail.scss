@@ -7,7 +7,7 @@
 // 공통
 .wrap {
   position: relative;
-  background: url(/images/dp.jpg);
+  // background: url(/images/dp.jpg);
 }
 
 // header
@@ -19,7 +19,7 @@
   top: 0;
   left: 0;
   z-index: 100;
-  // width: 100%;
+  margin: 0 -16px;
   .util-g {
     display: flex;
     height: 44px;
@@ -282,7 +282,7 @@
     position: absolute;
     content: "\f004";
     top: 0px;
-    right: 0;
+    right: 2px;
     transform: translate(-200%, 80%);
     font-size: 22px;
     font-family: "Font Awesome 6 Free";
@@ -295,7 +295,6 @@
     color: #555;
   }
 }
-
 
 // tab
 .dp-tab {
@@ -325,7 +324,6 @@
     }
   }
 
-
 // detailpage product detail information
 .dp-pd-info {
   padding: 38px 70px;
@@ -345,7 +343,17 @@
   padding-bottom: 8px;
 }
 
-// <!-- detailpage product image seemore btn -->
+.dp-pd-images {
+  overflow: hidden;
+  max-height: 1000px;
+  transition: all 0.3s;
+  &.active {
+    max-height: 10000px;
+  }
+}
+
+
+// detailpage product image seemore btn
 .dp-img-seemore-wrap {
   width: 375px;
   height: 132px;
@@ -475,8 +483,15 @@
   }
 }
 
+// splide 
+.splide {
+  .splide__track {
+    width: 100%;
+    height: 136px;
+  }
+}
+
 // More by BRAND list : Recommend Product list
-// 정리필요
 .recommend_prd_lst-1 {
   display: block;
   padding-left: 20px;
@@ -562,25 +577,25 @@
   padding-top: 8px;
   .review-average__1 {
     display: block;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     color: #555;
   }
   .review-average__2 {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 500;
     color: #000;
     padding-left: 16px;
   }
   .review-average-bar__3 {
-    width: 132px;
+    width: 121px;
     height: 4px;
     background: #555;
     margin: 6px 0 0 40px;
     border-radius: 5px;
   }
   .review-average__4 {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 500;
     color: #000;
     padding-left: 26px;
@@ -594,7 +609,9 @@
   height: 49px;
   font-size: 12px;
   font-weight: 500;
-  color: #555;
+  color: #cfcfcf;
+  border-top: 1px solid #cfcfcf;
+  border-bottom: 1px solid #cfcfcf;
   button {
     background: none;
     padding: 0 8px;
@@ -603,48 +620,140 @@
     position: relative;
     &::before {
       content: "";
-      top: 2px;
-      left: 46px;
+      top: 3px;
+      left: 52px;
       width: 1px;
       height: 10px;
       position: absolute;
-      background-color: #555;
+      background-color: #cfcfcf;
     }
   }
   .review-tabs__btn2 {
     position: relative;
+    color: #cfcfcf;
     &::before {
       content: "";
-      top: 2px;
+      top: 3px;
       right: 0px;
       width: 1px;
       height: 10px;
       position: absolute;
-      background-color: #555;
+      background-color: #cfcfcf;
     }
   }
   .review-tabs__btn3 {
     position: relative;
+    color: #cfcfcf;
     &::before {
       content: "";
-      top: 2px;
+      top: 3px;
       right: 0px;
       width: 1px;
       height: 10px;
       position: absolute;
-      background-color: #555;
+      background-color: #cfcfcf;
     }
+  }
+  .review-tabs__btn4 {
+    color: #cfcfcf;
   }
 }
 
+// customer review list
 .crl-g {
   padding-top: 16px;
-}
-.customer-review-top {
-  display: flex;
-  font-size: 11px;
-  justify-content: space-between;
+  border-bottom: 1px solid #cfcfcf;
+  .customer-review-top {
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+  }
+  .customer-review-id {
+    margin-left: -154px;
+  }
   .customer-review-date {
     color: #555;
   }
 }
+
+.customer-review-option {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8px;
+  .crd__txt {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: #555;
+  .customer-review-detail-image {
+   img {
+     width: 50px;
+     height: 50px;
+     }
+   }
+ }
+}
+.customer-review-purchase {
+  width: 268px;
+  padding-top: 4px;
+  .crp__txt {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    color: #000;
+  }
+}
+.customer-review-buttons {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 700;
+  color: #cfcfcf;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  .crb-left-1 {
+    position: relative;
+    padding-right: 16px;
+    &::before {
+      content: "";
+      top: 3px;
+      left: 30px;
+      width: 1px;
+      height: 10px;
+      position: absolute;
+      background-color: #cfcfcf;
+    }
+  }
+}
+
+
+// customer review list seemore btn
+.customer-review-list-btn {
+  width: 375px;
+  height: 132px;
+  position: relative;
+ 
+}
+  .crl-seemore__btn {
+    width: 100%;
+    display: block;
+    height: 56px;
+    border: 1px solid #000;
+    background-color: #fff;
+    padding: 12px 0;
+    font-size: 15px;
+    font-weight: 700;
+    &::after {
+      content: "\f078";
+      display: inline-block;
+      margin-left: 4px;
+      width: 20px;
+      height: 20px;
+      font-weight: 900;
+      font-family: "Font Awesome 6 Free";
+   }
+  }  
+
+// <i class="fa-solid fa-chevron-up"></i> = "\f077"
+// <i class="fa-solid fa-chevron-down"></i> = "\f078"

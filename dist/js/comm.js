@@ -19,9 +19,9 @@ var swiper = new Swiper(".sale-slide", {});
 // splide.mount();
 
 var splide = new Splide( '.splide', {
+  type   : 'loop',
+  drag   : 'free',
   perPage: 3,
-  focus  : 0,
-  omitEnd: true,
 } );
 
 splide.mount();

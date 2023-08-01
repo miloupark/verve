@@ -40,10 +40,10 @@
       rel="stylesheet"
       href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
     />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+ <link
+  href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round"
+  rel="stylesheet"
+/>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" 
@@ -81,7 +81,7 @@
               </li>
               <li>
                 <button class="btn-g btn-shoppingbag">
-                  <span class="material-icons-outlined">
+                  <span class="material-icons-outlined">shopping_cart
                     <span class="blind">장바구니</span>
                   </span>
                 </button>
@@ -256,19 +256,19 @@
 
 
       <!-- detailpage tab -->
-      <section class="dp-tab container">
+      <div class="dp-tab container">
         <ul class="dp-tab__menu">
           <li class="dp-tab__detail">
             <a href="javascript:void(0)"> Detail </a>
           </li>
           <li class="dp-tab__review">
-            <a href="javascript:void(0)"> Review </a>
+            <a href="#tab-review"> Review </a>
           </li>
           <li class="dp-tab__q&a">
             <a href="javascript:void(0)"> Q&A </a>
           </li>
         </ul>
-      </section>
+      </div>
 
       <!-- detail tab active fullpage -->
       <div class="dp-tab__menu1-active">
@@ -291,7 +291,7 @@
         </div>
 
         <!-- detailpage product detail image -->
-        <div class="dp-pd-images">
+        <div class="dp-pd-images active">
           <img
             class="dp-pd-image"
             src="./images/dp-detail1.jpg"
@@ -354,6 +354,7 @@
           />
         </div>
 
+        <!-- 버튼 div 안으로 ! -->
         <!-- detailpage product image seemore btn -->
         <div class="dp-img-seemore-wrap">
           <div class="dp-img-seemore-full">
@@ -405,6 +406,7 @@
       <script>
         new Splide( '.splide' ).mount();
       </script>
+ 
 
 
 
@@ -518,10 +520,14 @@
 
     <!-- review -->
     <section class="sec-review container">
+      
       <!-- review tit -->
       <div class="review-tit">
-        <span class="review-tit__txt">REVIEW (77)</span>
+        <a name="tab-review"></a>
+        <span class="review-tit__txt">REVIEW (77)
+          </span>
       </div>
+
       <!-- review icons -->
       <div class="customer-rates">
         <div class="customer-rates-tit">
@@ -534,6 +540,7 @@
               <span>4.5</span>
             </div>
           </div>
+
       <!-- review customer images-->
       <div class="customer-review-image">
         <img src="./images/review1.jpg" alt="리뷰 이미지 1">
@@ -541,6 +548,7 @@
         <img src="./images/review3.jpg" alt="리뷰 이미지 3">
         <img src="./images/review4.jpg" alt="리뷰 이미지 4">
       </div>
+
       <!-- review average customer satisfaction -->
       <div class="customer-rates-average">
         <div class="rev-g review-average-1">
@@ -568,6 +576,7 @@
           <span class="review-average__4">80%</span>
         </div>
       </div>
+
       <!-- review tabs -->
       <div class="review-tabs">
         <button type="button" class="review-tabs__btn1">최신순</button>  
@@ -575,9 +584,10 @@
         <button type="button" class="review-tabs__btn3">평점 낮은순</button>  
         <button type="button" class="review-tabs__btn4">추천순</button>  
       </div>
+
       <!-- customer review list -->
       <div class="customer-review-lst">
-
+        <!-- customer review list 1 -->
         <div class="crl-g customer-review-lst-1">
           <div class="customer-review-top">
             <div class="customer-review-icons">
@@ -585,43 +595,126 @@
                 ><i class="las la-star"></i><i class="las la-star"></i
                   ><i class="las la-star-half"></i>
             </div>
+            <div class="customer-review-id">
+              <span>hele******</span>
+            </div>
             <div class="customer-review-date">
               <span>2023.06.13</span>
             </div>
           </div>
-              
-          <div class="customer-review-detail">
-            <span>옵션 : 색상 사이즈</span>
-            <span>체형 : 160cm / 48kg</span>
-            <span>사이즈 : 잘 맞아요</span>
-            <div>
-              <img src="./images/review1.jpg" alt="">
+          <div class="customer-review-option">
+            <div class="customer-review-option-txt">
+              <span class="crd__txt">옵션 : 색상 사이즈</span>
+              <span class="crd__txt">체형 : 160cm / 48kg</span>
+              <span class="crd__txt">사이즈 : 잘 맞아요</span>
+            </div>
+            <div class="customer-review-detail-image">
+              <img src="./images/review1.jpg" alt="고객 구매 리뷰 이미지">
             </div>
           </div>
-          <div>
-            <span>신고</span>
-            <span>숨김</span>
-            <span>추천</span>
+          <div class="customer-review-purchase">
+            <span class="crp__txt">소재가 탄탄해서 늘어짐도 없을 것 같고 착용감도 좋아요
+              색상도 단독으로 입기 예쁘고 핏도 날씬해 보여서 스커트나 팬츠 어디에 받쳐 입어도 예뻐서 잘 구매한 것 같아요</span>
           </div>
-          
+          <div class="customer-review-buttons">
+            <div class="customer-review-buttons-left">
+              <button type="button" class="crb-left-1">신고</button>
+              <button type="button" class="crb-left-2">숨김</button>
+            </div>
+            <div class="customer-review-buttons-right">
+              <button type="button" class="crb-right-1">추천</button>
+            </div>
+          </div>
         </div>
-      </div>
-
-        <!-- detailpage product image seemore btn
-        <div class="dp-img-seemore-wrap">
-          <div class="dp-img-seemore-full">
-            <button
-              type="button"
-              onclick="show-prd-img(this)"
-              class="dp-img-seemore__btn"
-            >
-              상품 리뷰 전체보기 (77)
-            </button>
+        <!-- customer review list 2 -->
+        <div class="crl-g customer-review-lst-2">
+        <div class="customer-review-top">
+          <div class="customer-review-icons">
+            <i class="las la-star"></i><i class="las la-star"></i
+              ><i class="las la-star"></i><i class="las la-star"></i
+                ><i class="las la-star-half"></i>
           </div>
-        </div> -->
+          <div class="customer-review-id">
+            <span>hoon******</span>
+          </div>
+          <div class="customer-review-date">
+            <span>2023.06.13</span>
+          </div>
+        </div>
+        <div class="customer-review-option">
+          <div class="customer-review-option-txt">
+            <span class="crd__txt">옵션 : 색상 사이즈</span>
+            <span class="crd__txt">체형 : 164cm / 54kg</span>
+            <span class="crd__txt">사이즈 : 잘 맞아요</span>
+          </div>
+          <div class="customer-review-detail-image">
+            <img src="./images/review2.jpg" alt="고객 구매 리뷰 이미지">
+          </div>
+        </div>
+        <div class="customer-review-purchase">
+          <span class="crp__txt">우선 핏이 넘 무난하고 이쁘네요ㅎㅎ
+            여름에 입기도 좋고 재질도 너무 좋아요 </span>
+        </div>
+        <div class="customer-review-buttons">
+          <div class="customer-review-buttons-left">
+            <button type="button" class="crb-left-1">신고</button>
+            <button type="button" class="crb-left-2">숨김</button>
+          </div>
+          <div class="customer-review-buttons-right">
+            <button type="button" class="crb-right-1">추천</button>
+          </div>
+          </div>
+        </div>
+        <!-- customer review list 3 -->
+        <div class="crl-g customer-review-lst-3">
+          <div class="customer-review-top">
+            <div class="customer-review-icons">
+              <i class="las la-star"></i><i class="las la-star"></i
+                ><i class="las la-star"></i><i class="las la-star"></i
+                  ><i class="las la-star-half"></i>
+            </div>
+            <div class="customer-review-id">
+              <span>biny******</span>
+            </div>
+            <div class="customer-review-date">
+              <span>2023.06.13</span>
+            </div>
+          </div>
+          <div class="customer-review-option">
+            <div class="customer-review-option-txt">
+              <span class="crd__txt">옵션 : 색상 사이즈</span>
+              <span class="crd__txt">체형 : 164cm / 54kg</span>
+              <span class="crd__txt">사이즈 : 잘 맞아요</span>
+            </div>
+            <div class="customer-review-detail-image">
+              <img src="./images/review2.jpg" alt="고객 구매 리뷰 이미지">
+            </div>
+          </div>
+          <div class="customer-review-purchase">
+            <span class="crp__txt">비 오는 날 입어봤는데 너무 좋아요~! 포인트 주기 딱인 것 같아요 여러모로 좋네용ㅎㅎ </span>
+          </div>
+          <div class="customer-review-buttons">
+            <div class="customer-review-buttons-left">
+              <button type="button" class="crb-left-1">신고</button>
+              <button type="button" class="crb-left-2">숨김</button>
+            </div>
+            <div class="customer-review-buttons-right">
+              <button type="button" class="crb-right-1">추천</button>
+            </div>
+            </div>
+          </div>
+      </div> 
+      
+      <!-- customer review list seemore btn -->
+      <div class="customer-review-list-btn">
+        <button type="button" onclick="show-prd-img(this)" class="crl-seemore__btn">
+          상품 리뷰 전체보기
+        </button>
+      </div>
+      
       </section>
-
-
+      
+      
         <section class="q&a container"> 
           <div class="q&a-personal-review">
             <div>
@@ -629,23 +722,9 @@
               <span>2023.07.10</span>
             </div>
           </div>
-          <!-- detailpage product image seemore btn -->
-          <!-- <div class="dp-img-seemore-wrap">
-            <div class="dp-img-seemore-full">
-              <button
-              type="button"
-              onclick="show-prd-img(this)"
-              class="dp-img-seemore__btn"
-              >
-              상품 Q&A 전체보기 (77)
-            </button>
-          </div>
-        </div> -->
-      </section>
-      
-
-
-    </main>
+        </section>
+    
+      </main>
     </div>
   </body>
 </html>
