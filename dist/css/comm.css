@@ -1852,5 +1852,9 @@ li:nth-child(1):active {
 
 .customer-review-top {
   display: flex;
+  font-size: 11px;
   justify-content: space-between;
+}
+.customer-review-top .customer-review-date {
+  color: #555;
 }/*# sourceMappingURL=comm.css.map */

@@ -475,7 +475,6 @@
   }
 }
 
-
 // More by BRAND list : Recommend Product list
 // 정리필요
 .recommend_prd_lst-1 {
@@ -643,5 +642,9 @@
 }
 .customer-review-top {
   display: flex;
+  font-size: 11px;
   justify-content: space-between;
+  .customer-review-date {
+    color: #555;
+  }
 }
