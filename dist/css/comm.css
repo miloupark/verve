@@ -1338,14 +1338,27 @@ legend {
   padding-top: 4px;
   padding-bottom: 8px;
 }
-.prd-rating .prd-rating-star {
-  font-size: 16px;
-  margin-right: 8px;
+
+.prd-rating-star {
+  background: url(https://aldo814.github.io/jobcloud/html/images/user/star_bg02.png) no-repeat;
+  background-size: 90px;
+  width: 92px;
+  height: 20px;
+  position: relative;
 }
-.prd-rating .prd-rating-link {
+
+.prd-rating-star__icons {
+  position: absolute;
+  background: url(https://aldo814.github.io/jobcloud/html/images/user/star02.png) no-repeat;
+  background-size: 90px;
+  height: 20px;
+}
+
+.prd-rating-link {
   font-size: 12px;
-  height: 14px;
+  height: 15px;
   border-bottom: 1px solid #000;
+  margin-left: 8px;
 }
 
 .prd-coupon {
@@ -1380,7 +1393,8 @@ legend {
   font-weight: bold;
 }
 
-.prd-price-point {
+.prd-price-point__savingpoint {
+  display: block;
   font-size: 12px;
   font-weight: bold;
   color: #333;
@@ -1755,27 +1769,46 @@ li:nth-child(1):active {
   text-align: center;
   padding-top: 20px;
 }
-.customer-rates .customer-rates-icons {
-  margin-top: -6px;
-  text-align: center;
-  font-size: 18px;
+.customer-rates .customer-rates-average {
+  display: flex;
+  justify-content: center;
+  padding-top: 4px;
 }
 
-.customer-review-image {
+.customer-rates-icons {
+  position: relative;
+  width: 98px;
+  height: 20px;
+  background: url(https://aldo814.github.io/jobcloud/html/images/user/star_bg02.png) no-repeat;
+  background-size: 96px;
+  margin-top: 5px;
+}
+.customer-rates-icons .customer-rates-icons__stars {
+  position: absolute;
+  height: 20px;
+  background: url(https://aldo814.github.io/jobcloud/html/images/user/star02.png) no-repeat;
+  background-size: 96px;
+}
+
+.customer-rates-point {
+  font-size: 17px;
+  font-weight: 500;
+  padding-left: 8px;
+}
+
+.customer-review-image-wrap {
   padding-top: 16px;
+}
+.customer-review-image-wrap .customer-review-image {
   display: flex;
   justify-content: space-between;
 }
-.customer-review-image img {
+.customer-review-image-wrap .customer-review-image img {
   width: 76px;
   height: 76px;
 }
 
-.customer-rates-percent {
-  padding-top: 20px;
-}
-
-.customer-rates-average {
+.customer-rates-average-lst {
   padding-top: 12px;
   padding-bottom: 20px;
 }
@@ -1784,30 +1817,42 @@ li:nth-child(1):active {
   display: flex;
   padding-top: 8px;
 }
-.rev-g .review-average__1 {
+.rev-g .review-average-lst__1-title {
   display: block;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 400;
   color: #555;
 }
-.rev-g .review-average__2 {
+.rev-g .review-average-lst__1-size {
   font-size: 12px;
   font-weight: 500;
   color: #000;
   padding-left: 16px;
 }
-.rev-g .review-average-bar__3 {
-  width: 121px;
-  height: 4px;
-  background: #555;
-  margin: 6px 0 0 40px;
-  border-radius: 5px;
+.rev-g .review-average-lst__1-percent-bar {
+  position: relative;
+  display: flex;
+  margin-left: auto;
 }
-.rev-g .review-average__4 {
+.rev-g .review-average-lst__1-percent-bar .percent-bg {
+  display: block;
+  background: #cfcfcf;
+  border-radius: 5px;
+  width: 132px;
+  height: 4px;
+  margin-top: 7;
+}
+.rev-g .review-average-lst__1-percent-bar .percent {
+  display: block;
+  background: #555;
+  border-radius: 5px;
+  height: 4px;
+}
+.rev-g .review-average-lst__1-percent-txt {
   font-size: 12px;
   font-weight: 500;
   color: #000;
-  padding-left: 26px;
+  padding-left: 16px;
 }
 
 .review-tabs {
@@ -1876,6 +1921,20 @@ li:nth-child(1):active {
   font-size: 12px;
   justify-content: space-between;
 }
+.crl-g .customer-review-top .customer-review-icons {
+  position: relative;
+  width: 98px;
+  height: 20px;
+  background: url(https://aldo814.github.io/jobcloud/html/images/user/star_bg02.png) no-repeat;
+  background-size: 64px;
+  margin-top: 3px;
+}
+.crl-g .customer-review-top .customer-review-icons .customer-review-icons__stars {
+  position: absolute;
+  height: 20px;
+  background: url(https://aldo814.github.io/jobcloud/html/images/user/star02.png) no-repeat;
+  background-size: 64px;
+}
 .crl-g .customer-review-id {
   margin-left: -154px;
 }
@@ -1934,13 +1993,14 @@ li:nth-child(1):active {
   background-color: #cfcfcf;
 }
 
-.customer-review-list-btn {
+.customer-review-list-seemore {
+  display: block;
   width: 375px;
   height: 132px;
   position: relative;
 }
 
-.crl-seemore__btn {
+.customer-review-list-seemore__btn {
   width: 100%;
   display: block;
   height: 56px;
@@ -1950,7 +2010,7 @@ li:nth-child(1):active {
   font-size: 15px;
   font-weight: 700;
 }
-.crl-seemore__btn::after {
+.customer-review-list-seemore__btn::after {
   content: "\f078";
   display: inline-block;
   margin-left: 4px;

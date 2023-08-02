@@ -98,6 +98,7 @@
   font-weight: 500;
 }
 
+
 // product rating / see more review / coupon
 .prd-rating {
   display: flex;
@@ -105,16 +106,27 @@
   align-items: center;
   padding-top: 4px;
   padding-bottom: 8px;
+}
+  // star icons
   .prd-rating-star {
-    font-size: 16px;
-    margin-right: 8px;
+    background: url(https://aldo814.github.io/jobcloud/html/images/user/star_bg02.png) no-repeat;
+    background-size: 90px;
+    width: 92px;
+    height: 20px;
+    position: relative;
+  }
+  .prd-rating-star__icons {
+    position: absolute;
+    background: url(https://aldo814.github.io/jobcloud/html/images/user/star02.png) no-repeat;
+    background-size: 90px;
+    height: 20px;
   }
   .prd-rating-link {
     font-size: 12px;
-    height: 14px;
+    height: 15px;
     border-bottom: 1px solid #000;
+    margin-left: 8px;
   }
-}
 .prd-coupon {
   position: absolute;
   top: 2px;
@@ -145,7 +157,8 @@
     font-weight: bold;
   }
 }
-.prd-price-point {
+.prd-price-point__savingpoint {
+  display: block;
   font-size: 12px;
   font-weight: bold;
   color: #333;
@@ -548,60 +561,94 @@
     text-align: center;
     padding-top: 20px;
   }
-  .customer-rates-icons {
-    margin-top: -6px;
-    text-align: center;
-    font-size: 18px;
-  }
-}
-.customer-review-image {
-  padding-top: 16px;
-  display: flex;
-  justify-content: space-between;
-  img {
-    width: 76px;
-    height: 76px;
-  }
-}
-// review average customer satisfaction
-.customer-rates-percent {
-  padding-top: 20px;
-}
 .customer-rates-average {
+  display: flex;
+  justify-content: center;
+  padding-top: 4px;
+}
+}
+.customer-rates-icons {
+  position: relative;
+  width: 98px;
+  height: 20px;
+  background: url(https://aldo814.github.io/jobcloud/html/images/user/star_bg02.png) no-repeat;
+  background-size: 96px;
+  margin-top: 5px;
+  .customer-rates-icons__stars {
+    position: absolute;
+    height: 20px;
+    background: url(https://aldo814.github.io/jobcloud/html/images/user/star02.png) no-repeat;
+    background-size: 96px;
+}
+}
+.customer-rates-point {
+  font-size: 17px;
+  font-weight: 500;
+  padding-left: 8px;
+}
+
+// review - top customer images
+.customer-review-image-wrap {
+  padding-top: 16px;
+  .customer-review-image {
+    display: flex;
+    justify-content: space-between;
+    img {
+      width: 76px;
+      height: 76px;
+    }
+  }
+}
+// review bar graph - average of customer satisfaction
+.customer-rates-average-lst {
   padding-top: 12px;
   padding-bottom: 20px;
 }
-// review average customer satisfaction 공통 클래스
+//  review bar graph - average of customer satisfaction 공통 클래스
 .rev-g {
   display: flex;
   padding-top: 8px;
-  .review-average__1 {
+  .review-average-lst__1-title {
     display: block;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 400;
     color: #555;
   }
-  .review-average__2 {
+  .review-average-lst__1-size {
     font-size: 12px;
     font-weight: 500;
     color: #000;
     padding-left: 16px;
   }
-  .review-average-bar__3 {
-    width: 121px;
-    height: 4px;
-    background: #555;
-    margin: 6px 0 0 40px;
-    border-radius: 5px;
+  .review-average-lst__1-percent-bar {
+    position: relative;
+    display: flex;
+    margin-left: auto;
+    .percent-bg {
+      display: block;
+      background: #cfcfcf;
+      // margin: 6px 0 0 23px;
+      border-radius: 5px;
+      width: 132px;
+      height: 4px;
+      margin-top: 7;
+    }
+    .percent {
+      display: block;    
+      background: #555;
+      border-radius: 5px;
+      height: 4px;
+    }
   }
-  .review-average__4 {
+  .review-average-lst__1-percent-txt {
     font-size: 12px;
     font-weight: 500;
     color: #000;
-    padding-left: 26px;
+    padding-left: 16px;
   }
 }
-// review tabs
+
+// review tabs - btn
 .review-tabs {
   display: flex;
   justify-content: flex-end;
@@ -667,6 +714,20 @@
     display: flex;
     font-size: 12px;
     justify-content: space-between;
+    .customer-review-icons {
+      position: relative;
+      width: 98px;
+      height: 20px;
+      background: url(https://aldo814.github.io/jobcloud/html/images/user/star_bg02.png) no-repeat;
+      background-size: 64px;
+      margin-top: 3px;
+      .customer-review-icons__stars {
+        position: absolute;
+        height: 20px;
+        background: url(https://aldo814.github.io/jobcloud/html/images/user/star02.png) no-repeat;
+        background-size: 64px;
+      }
+    }
   }
   .customer-review-id {
     margin-left: -154px;
@@ -726,16 +787,14 @@
     }
   }
 }
-
-
-// customer review list seemore btn
-.customer-review-list-btn {
+// detailpage product image seemore btn
+.customer-review-list-seemore {
+  display: block;
   width: 375px;
   height: 132px;
   position: relative;
- 
 }
-  .crl-seemore__btn {
+  .customer-review-list-seemore__btn {
     width: 100%;
     display: block;
     height: 56px;
@@ -752,8 +811,34 @@
       height: 20px;
       font-weight: 900;
       font-family: "Font Awesome 6 Free";
-   }
-  }  
+    }
+  }
+
+// // customer review list seemore btn
+// .customer-review-list-btn {
+//   width: 355px;
+//   height: 132px;
+//   position: relative;
+// }
+//   .crl-seemore__btn {
+//     width: 100%;
+//     display: block;
+//     height: 56px;
+//     border: 1px solid #000;
+//     background-color: #fff;
+//     padding: 12px 0;
+//     font-size: 15px;
+//     font-weight: 700;
+//     &::after {
+//       content: "\f078";
+//       display: inline-block;
+//       margin-left: 4px;
+//       width: 20px;
+//       height: 20px;
+//       font-weight: 900;
+//       font-family: "Font Awesome 6 Free";
+//    }
+//   }  
 
 // <i class="fa-solid fa-chevron-up"></i> = "\f077"
 // <i class="fa-solid fa-chevron-down"></i> = "\f078"

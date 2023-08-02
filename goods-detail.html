@@ -93,26 +93,26 @@
 
       <main>
         <!-- swiper slide images -->
-        <section class="swiper-slide-images">
+        <div class="swiper-slide-images">
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <img src="./images/dp-slide1.jpg" alt="slide-img1" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/dp-slide2.jpg" alt="slide-img2" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/dp-slide3.jpg" alt="slide-img3" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/dp-slide4.jpg" alt="slide-img4" />
+              </div>
             </div>
-            <div class="swiper-slide">
-              <img src="./images/dp-slide2.jpg" alt="slide-img2" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./images/dp-slide3.jpg" alt="slide-img3" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./images/dp-slide4.jpg" alt="slide-img4" />
-            </div>
-          </div>
           <!-- swiper scrollbar -->
           <div class="swiper-scrollbar"></div>
-        </div>
-      </section>
+         </div>
+       </div>
 
         <!-- swiper script -->
         <script>
@@ -125,7 +125,7 @@
         </script>
 
     
-      <section class="prd-info container">
+      <div class="prd-info container">
         <!-- product front info -->
         <div class="prd-info-front">
           <span class="prd-info-front__brand">A;td 
@@ -144,13 +144,10 @@
           </span>
         </div>
 
-
         <!-- product rating / see more review / coupon  -->
         <div class="prd-rating">
           <div class="prd-rating-star">
-            <i class="las la-star"></i><i class="las la-star"></i
-            ><i class="las la-star"></i><i class="las la-star"></i
-            ><i class="las la-star-half"></i>
+            <span class="prd-rating-star__icons" style="width: 90%"></span>
           </div>
           <button class="prd-rating-link">
             <span class="blind">77개 리뷰 더보기</span>
@@ -178,18 +175,16 @@
               <span class="blind">할인율 19% 적용시 104,490원</span>
               104,490원
             </span>
-          </div>
-          <div class="prd-price-point">
             <span class="prd-price-point__savingpoint">
               <span class="blind">적립률 1% 적용시 1290포인트 적립</span>
               1290p(1%) 적립
             </span>
           </div>
         </div>
-      </section>
+      </div>
 
       <!-- accordion-1 -->
-      <section class="accordion-1 container">
+      <div class="accordion-1 container">
         <!-- accordion 1 최대혜택가 -->
         <div class="acc-1">
           <div class="acc-1-benefitprice">
@@ -212,7 +207,7 @@
             <span class="acc-2-shipinfo__txt">배송정보</span>
           </div>
         </div>
-      </section>
+      </div>
 
       <!-- accordion script -->
       <script>
@@ -233,7 +228,7 @@
       </script>
 
       <!-- brandhome togo -->
-      <section class="brandhome container">
+      <div class="brandhome container">
         <div class="bh-box">
           <div class="bh-box-link">
             <a class="bh-box-link__atd" href="https://shop.29cm.co.kr/brand/16478">
@@ -252,7 +247,7 @@
             <span class="bh-box-icon-click">234</span>
           </button>
         </div>
-      </section>
+      </div>
 
 
       <!-- detailpage tab -->
@@ -393,7 +388,7 @@
 
        <!-- splide  -->
        <!-- More by BRAND list : Recommend Product list -->
-      <section class="splide container" aria-label="Splide Basic HTML Example">
+      <div class="splide container" aria-label="Splide Basic HTML Example">
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide"><img src="./images/morebybrand1.jpg" alt="Slide 01"></li>
@@ -401,7 +396,7 @@
             <li class="splide__slide"><img src="./images/morebybrand3.jpg" alt="Slide 03"></li>
           </ul>
         </div>
-      </section>
+      </div>
       <!-- splide script -->
       <script>
         new Splide( '.splide' ).mount();
@@ -410,160 +405,179 @@
 
 
 
-        <!-- More by BRAND list : Recommend Product list -->
-        <div class="recommend_prd_lst-1">
-          <div class="rpl-tit">
-            More by BRAND
-            <span class="blind">같은 브랜드 상품 리스트</span>
-          </div>
-          <div class="rpl-swiper-wrap">
-            <ul class="rpl-slides">
-              <li class="rpl-swiper active">
-                <a
-                  href="https://product.29cm.co.kr/catalog/2063426?source=brand"
-                  class="rpl-swiper-active_link"
-                >
-                  <div class="thumb_area">
-                    <img
-                      class="thumb"
-                      src="./images/morebybrand1.jpg"
-                      alt="A;td Shirring Sleeveless Top thumbnail image"
-                    />
-                  </div>
-                  <div class="info_area">
-                    <div class="info_area_brand">
-                      <span class="info_area_brand__name"
-                        >A;td
-                        <span class="blind">브랜드이름 A;td 아티드</span>
-                      </span>
-                    </div>
-                    <div class="info_area_product">
-                      <span class="info_area_product_name"
-                        >Shirring Sleeveless Top_BLUE
-                        <span class="blind"
-                          >상품이름 셔링 슬리브리스 탑 블루 컬러</span
-                        >
-                      </span>
-                    </div>
-                    <div class="info_area_price">
-                      <span class="info_area_price_txt">63,700원</span>
-                    </div>
-                  </div>
-                </a>
-              </li>
-
-              <li class="rpl-swiper next">
-                <a
-                  href="https://product.29cm.co.kr/catalog/2063375?source=brand"
-                  class="rpl-swiper-active_next"
-                >
-                  <div class="thumb_area">
-                    <span class="thumb">
-                      <img
-                        src="./images/morebybrand2.jpg"
-                        alt="A;td Cargo Banding Skirt thumbnail image"
-                      />
-                    </span>
-                  </div>
-                  <div class="info_area">
-                    <div class="info_area_brand">
-                      <span class="info_area_brand__name"
-                        >A;td
-                        <span class="blind">브랜드이름 A;td 아티드</span>
-                      </span>
-                    </div>
-                    <div class="info_area_product">
-                      <span class="info_area_product_name"
-                        >Cargo Banding Skirt_WHITE
-                        <span class="blind"
-                          >상품이름 카고 밴딩 스커트 화이트 컬러
-                        </span>
-                      </span>
-                    </div>
-                    <div class="info_area_price">
-                      <span class="info_area_price_txt">87,200원</span>
-                    </div>
-                  </div>
-                </a>
-              </li>
-
-              <li class="rpl-swiper hidden">
-                <a
-                  href="https://product.29cm.co.kr/catalog/2063416?source=brand"
-                  class="rpl-swiper-active_hidden"
-                >
-                  <div class="thumb_area">
-                    <span class="thumb">
-                      <img
-                        src="./images/morebybrand3.jpg"
-                        alt="A;td Sleeveless Long Onepiece thumbnail image "
-                      />
-                    </span>
-                  </div>
-                  <div class="info_area">
-                    <span class="brand">A;td</span>
-                    <span class="product">Sleeveless Long Onepiece</span>
-                    <div class="price-wrap">
-                      <span class="price">95,200원</span>
-                    </div>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
+      <!-- More by BRAND list : Recommend Product list -->
+      <!-- <div class="recommend_prd_lst-1">
+        <div class="rpl-tit">
+          More by BRAND
+          <span class="blind">같은 브랜드 상품 리스트</span>
         </div>
-<br><br><br><br><br><br>
-<br><br><br><br><br><br>
-<br><br><br><br><br><br><br>
+        <div class="rpl-swiper-wrap">
+          <ul class="rpl-slides">
+            <li class="rpl-swiper active">
+              <a
+                href="https://product.29cm.co.kr/catalog/2063426?source=brand"
+                class="rpl-swiper-active_link"
+              >
+                <div class="thumb_area">
+                  <img
+                    class="thumb"
+                    src="./images/morebybrand1.jpg"
+                    alt="A;td Shirring Sleeveless Top thumbnail image"
+                  />
+                </div>
+                <div class="info_area">
+                  <div class="info_area_brand">
+                    <span class="info_area_brand__name"
+                      >A;td
+                      <span class="blind">브랜드이름 A;td 아티드</span>
+                    </span>
+                  </div>
+                  <div class="info_area_product">
+                    <span class="info_area_product_name"
+                      >Shirring Sleeveless Top_BLUE
+                      <span class="blind"
+                        >상품이름 셔링 슬리브리스 탑 블루 컬러</span
+                      >
+                    </span>
+                  </div>
+                  <div class="info_area_price">
+                    <span class="info_area_price_txt">63,700원</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li class="rpl-swiper next">
+              <a
+                href="https://product.29cm.co.kr/catalog/2063375?source=brand"
+                class="rpl-swiper-active_next"
+              >
+                <div class="thumb_area">
+                  <span class="thumb">
+                    <img
+                      src="./images/morebybrand2.jpg"
+                      alt="A;td Cargo Banding Skirt thumbnail image"
+                    />
+                  </span>
+                </div>
+                <div class="info_area">
+                  <div class="info_area_brand">
+                    <span class="info_area_brand__name"
+                      >A;td
+                      <span class="blind">브랜드이름 A;td 아티드</span>
+                    </span>
+                  </div>
+                  <div class="info_area_product">
+                    <span class="info_area_product_name"
+                      >Cargo Banding Skirt_WHITE
+                      <span class="blind"
+                        >상품이름 카고 밴딩 스커트 화이트 컬러
+                      </span>
+                    </span>
+                  </div>
+                  <div class="info_area_price">
+                    <span class="info_area_price_txt">87,200원</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li class="rpl-swiper hidden">
+              <a
+                href="https://product.29cm.co.kr/catalog/2063416?source=brand"
+                class="rpl-swiper-active_hidden"
+              >
+                <div class="thumb_area">
+                  <span class="thumb">
+                    <img
+                      src="./images/morebybrand3.jpg"
+                      alt="A;td Sleeveless Long Onepiece thumbnail image "
+                    />
+                  </span>
+                </div>
+                <div class="info_area">
+                  <span class="brand">A;td</span>
+                  <span class="product">Sleeveless Long Onepiece</span>
+                  <div class="price-wrap">
+                    <span class="price">95,200원</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div> -->
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br><br>
 
 
 
     <!-- review -->
-    <section class="sec-review container">
+    <div class="sec-review container">
       
       <!-- review tit -->
       <div class="review-tit">
         <a name="tab-review"></a>
         <span class="review-tit__txt">REVIEW (77)
+          <span class="blind">아티드 크로쉐 니트 가디건 구매자들의 리뷰 총 77개</span>
           </span>
       </div>
 
-      <!-- review icons -->
+      <!-- review - customer rates average / icons -->
       <div class="customer-rates">
         <div class="customer-rates-tit">
           <span>구매자 평점</span>
         </div>
-        <div class="customer-rates-icons">
-          <i class="las la-star"></i><i class="las la-star"></i
-            ><i class="las la-star"></i><i class="las la-star"></i
-              ><i class="las la-star-half"></i>
-              <span>4.5</span>
-            </div>
+        <div class="customer-rates-average">
+          <div class="customer-rates-icons">
+            <span class="customer-rates-icons__stars" style="width: 90%">
+              <span class="blind">리뷰 77개의 평균 점수는 별 5개중 별 4.5개</span>
+            </span>
           </div>
-
-      <!-- review customer images-->
-      <div class="customer-review-image">
-        <img src="./images/review1.jpg" alt="리뷰 이미지 1">
-        <img src="./images/review2.jpg" alt="리뷰 이미지 2">
-        <img src="./images/review3.jpg" alt="리뷰 이미지 3">
-        <img src="./images/review4.jpg" alt="리뷰 이미지 4">
+          <div class="customer-rates-point">
+            <span class="customer-rates-point__txt">4.5</span>
+          </div>
+        </div>
       </div>
 
-      <!-- review average customer satisfaction -->
-      <div class="customer-rates-average">
-        <div class="rev-g review-average-1">
-          <span class="review-average__1">사이즈</span>
-          <span class="review-average__2">정사이즈에요</span>
-          <div class="review-average-bar__3">
-            <span class="blind">구매자들의 상품 사이즈 평점 100%</span>
-          </div>
-          <span class="review-average__4">100%</span>
-        </div>
+      <!-- review - top customer images-->
+      <div class="customer-review-image-wrap">
+        <ul class="customer-review-image">
+          <li><a href="#">
+            <img src="./images/review1.jpg" alt="구매자 리뷰 이미지 1"></a>
+          </li>
+          <li><a href="#">
+            <img src="./images/review2.jpg" alt="구매자 리뷰 이미지 2"></a>
+          </li>
+          <li><a href="#">
+            <img src="./images/review3.jpg" alt="구매자 리뷰 이미지 3"></a>
+          </li>
+          <li><a href="#">
+            <img src="./images/review4.jpg" alt="구매자 리뷰 이미지 4"></a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- review bar graph - average of customer satisfaction -->
+      <div class="customer-rates-average-lst">
+        <dl class="rev-g review-average-lst__1">
+          <dt class="review-average-lst__1-title">사이즈</dt>
+          <dd class="review-average-lst__1-size">정사이즈에요</dd>
+          <dd class="review-average-lst__1-percent-bar">
+            <span class="blind">구매자들의 상품 사이즈 만족도 100%</span>
+            <span class="percent-bg">
+              <span class="percent" style="width: 90%;"></span>
+            </span>
+            <span class="review-average-lst__1-percent-txt">100%</span>
+          </dd>
+        </dl>
         <div class="rev-g review-average-2">
           <span class="review-average__1">착용감</span>
           <span class="review-average__2">잘맞고편해요</span>
           <div class="review-average-bar__3">
-            <span class="blind">구매자들의 상품 사이즈 평점 100%</span>
+            <span class="blind">구매자들의 상품 사이즈 평점 90%</span>
+            <span class="percent" style="width: 90%;"></span>
           </div>
           <span class="review-average__4">90%</span>
         </div>
@@ -571,13 +585,14 @@
           <span class="review-average__1">스타일</span>
           <span class="review-average__2">마음에들어요</span>
           <div class="review-average-bar__3">
-            <span class="blind">구매자들의 상품 사이즈 평점 100%</span>
+            <span class="blind">구매자들의 상품 사이즈 평점 80%</span>
+            <span class="percent" style="width: 80%;"></span>
           </div>
           <span class="review-average__4">80%</span>
         </div>
       </div>
 
-      <!-- review tabs -->
+      <!-- review tabs - btn -->
       <div class="review-tabs">
         <button type="button" class="review-tabs__btn1">최신순</button>  
         <button type="button" class="review-tabs__btn2">평점 높은순</button>  
@@ -591,9 +606,8 @@
         <div class="crl-g customer-review-lst-1">
           <div class="customer-review-top">
             <div class="customer-review-icons">
-              <i class="las la-star"></i><i class="las la-star"></i
-                ><i class="las la-star"></i><i class="las la-star"></i
-                  ><i class="las la-star-half"></i>
+              <span class="customer-review-icons__stars" style="width: 100%">
+              </span>
             </div>
             <div class="customer-review-id">
               <span>hele******</span>
@@ -626,13 +640,13 @@
             </div>
           </div>
         </div>
+
         <!-- customer review list 2 -->
         <div class="crl-g customer-review-lst-2">
         <div class="customer-review-top">
           <div class="customer-review-icons">
-            <i class="las la-star"></i><i class="las la-star"></i
-              ><i class="las la-star"></i><i class="las la-star"></i
-                ><i class="las la-star-half"></i>
+            <span class="customer-review-icons__stars" style="width: 54%">
+            </span>
           </div>
           <div class="customer-review-id">
             <span>hoon******</span>
@@ -665,13 +679,13 @@
           </div>
           </div>
         </div>
+
         <!-- customer review list 3 -->
         <div class="crl-g customer-review-lst-3">
           <div class="customer-review-top">
             <div class="customer-review-icons">
-              <i class="las la-star"></i><i class="las la-star"></i
-                ><i class="las la-star"></i><i class="las la-star"></i
-                  ><i class="las la-star-half"></i>
+              <span class="customer-review-icons__stars" style="width: 60%">
+              </span>
             </div>
             <div class="customer-review-id">
               <span>biny******</span>
@@ -703,26 +717,34 @@
             </div>
             </div>
           </div>
-      </div> 
+
+          <!-- customer review list seemore btn -->
+               <!-- 버튼 div 안으로 ! -->
+        <div class="customer-review-list-seemore">
+          <button type="button" class="customer-review-list-seemore__btn">
+            상품 리뷰 전체보기 (77)
+          </button>
+        </div>
+ 
+
+          <!-- <div class="customer-review-list-btn">
+            <button type="button" onclick="show-prd-img(this)" class="crl-seemore__btn">
+              상품 리뷰 전체보기
+            </button>
+          </div>
+          </div>
+      </div>  -->
       
-      <!-- customer review list seemore btn -->
-      <div class="customer-review-list-btn">
-        <button type="button" onclick="show-prd-img(this)" class="crl-seemore__btn">
-          상품 리뷰 전체보기
-        </button>
-      </div>
-      
-      </section>
       
       
-        <section class="q&a container"> 
+        <div class="q&a container"> 
           <div class="q&a-personal-review">
             <div>
               <span>접수완료 | hele*******</span>
               <span>2023.07.10</span>
             </div>
           </div>
-        </section>
+        </div>
     
       </main>
     </div>
