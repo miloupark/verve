@@ -1876,7 +1876,7 @@ li:nth-child(1):active {
 .review-tabs .review-tabs__btn1::before {
   content: "";
   top: 3px;
-  left: 52px;
+  left: 47px;
   width: 1px;
   height: 10px;
   position: absolute;
@@ -1942,27 +1942,25 @@ li:nth-child(1):active {
   color: #555;
 }
 
-.customer-review-option {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 8px;
+.customer-review-detail-image img {
+  width: 70px;
+  height: 70px;
 }
-.customer-review-option .crd__txt {
+
+.customer-review-option-txt {
   display: block;
-  font-size: 12px;
+  padding-top: 8px;
+  font-size: 13px;
   font-weight: 500;
   color: #555;
 }
-.customer-review-option .crd__txt .customer-review-detail-image img {
-  width: 50px;
-  height: 50px;
+.customer-review-option-txt .crd__txt {
+  display: block;
 }
 
 .customer-review-purchase {
   width: 268px;
   padding-top: 4px;
-}
-.customer-review-purchase .crp__txt {
   display: block;
   font-size: 12px;
   font-weight: 500;

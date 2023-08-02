@@ -668,7 +668,7 @@
     &::before {
       content: "";
       top: 3px;
-      left: 52px;
+      left: 47px;
       width: 1px;
       height: 10px;
       position: absolute;
@@ -736,34 +736,30 @@
     color: #555;
   }
 }
-
-.customer-review-option {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 8px;
-  .crd__txt {
-  display: block;
-  font-size: 12px;
-  font-weight: 500;
-  color: #555;
-  .customer-review-detail-image {
-   img {
-     width: 50px;
-     height: 50px;
-     }
+.customer-review-detail-image {
+ img {
+   width: 70px;
+   height: 70px;
    }
  }
+.customer-review-option-txt {
+  display: block;
+  padding-top: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  .crd__txt {
+    display: block;
+  }
 }
 .customer-review-purchase {
   width: 268px;
   padding-top: 4px;
-  .crp__txt {
-    display: block;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: -0.5px;
-    color: #000;
-  }
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: #000;
 }
 .customer-review-buttons {
   display: flex;
@@ -787,7 +783,7 @@
     }
   }
 }
-// detailpage product image seemore btn
+// customer review list seemore btn 
 .customer-review-list-seemore {
   display: block;
   width: 375px;
