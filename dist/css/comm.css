@@ -1238,8 +1238,9 @@ legend {
   height: 100px;
 }
 
-.wrap {
+.goods-detial-wrap {
   position: relative;
+  background: #fff;
 }
 
 .wrap-header {
@@ -1281,7 +1282,8 @@ legend {
   font-weight: 900;
 }
 #header .btn-shoppingbag::before {
-  font-size: 36px;
+  font-weight: 900;
+  font-size: 28px;
 }
 #header .sticky {
   position: fixed;
@@ -1401,7 +1403,7 @@ legend {
   margin-top: 6px;
 }
 
-.acc-1 {
+.acc-1-header {
   position: relative;
   display: flex;
   font-size: 14px;
@@ -1413,8 +1415,9 @@ legend {
   transition: 0.2s;
   border-top: 1px solid #cfcfcf;
   background-color: #fff;
+  transition: 0.4s;
 }
-.acc-1::before {
+.acc-1-header::before {
   content: "+";
   position: absolute;
   display: inline-block;
@@ -1439,8 +1442,30 @@ legend {
   font-weight: bold;
 }
 
+.acc-1-cont {
+  display: none;
+  height: 85px;
+  overflow: hidden;
+  border-top: 1px solid #cfcfcf;
+}
+.acc-1-cont .acc-1-cont-lst-tit {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  font-size: 12px;
+  color: #000;
+}
+.acc-1-cont .acc-1-cont-lst-tit .acc-1-cont-lst-tit__benefit {
+  color: #dd0035;
+}
+.acc-1-cont .acc-1-cont-lst-cont {
+  padding-top: 4px;
+  font-size: 12px;
+  color: #555;
+}
+
 .active,
-.accordion-1-benefitprice:hover {
+.acc-1-header:hover {
   background-color: #ffffff;
 }
 
@@ -1471,7 +1496,6 @@ legend {
   font-weight: 900;
 }
 
-/* Style the accordion panel. Note: hidden by default */
 .brandhome {
   position: relative;
   margin: 16px 0 24px 0;
@@ -1479,7 +1503,6 @@ legend {
 
 .bh-box {
   display: flex;
-  width: 335px;
   height: 70px;
   border: 1px solid #cfcfcf;
 }
@@ -1590,14 +1613,12 @@ li:nth-child(1):active {
 }
 
 .dp-img-seemore-wrap {
-  width: 375px;
-  height: 132px;
   position: relative;
 }
 
 .dp-img-seemore-full {
-  display: block;
   margin: 0 20px;
+  align-items: center;
 }
 .dp-img-seemore-full::before {
   display: block;
@@ -1607,18 +1628,37 @@ li:nth-child(1):active {
   margin-top: -76px;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
 }
-.dp-img-seemore-full .dp-img-seemore__btn {
+.dp-img-seemore-full .dp-img-seemore__open {
   width: 100%;
   display: block;
   height: 56px;
   border: 1px solid #000;
   background-color: #fff;
-  padding: 12px 0;
+  padding: 20px 0;
   font-size: 15px;
   font-weight: 700;
 }
-.dp-img-seemore-full .dp-img-seemore__btn::after {
+.dp-img-seemore-full .dp-img-seemore__open::after {
   content: "\f078";
+  display: inline-block;
+  margin-left: 4px;
+  width: 20px;
+  height: 20px;
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
+}
+.dp-img-seemore-full .dp-img-seemore__close {
+  width: 100%;
+  display: block;
+  height: 56px;
+  border: 1px solid #000;
+  background-color: #fff;
+  padding: 20px 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+.dp-img-seemore-full .dp-img-seemore__close::after {
+  content: "\f077";
   display: inline-block;
   margin-left: 4px;
   width: 20px;
@@ -1630,7 +1670,6 @@ li:nth-child(1):active {
 .accordion-2 {
   display: block;
   padding-top: 20px;
-  padding-bottom: 40px;
 }
 .accordion-2 .acc-3 {
   position: relative;
@@ -1709,51 +1748,62 @@ li:nth-child(1):active {
   font-weight: 900;
 }
 
-.splide .splide__track {
-  width: 100%;
-  height: 136px;
+.recommend-prd-lst {
+  padding-top: 40px;
 }
 
-.recommend_prd_lst-1 {
-  display: block;
-  padding-left: 20px;
-}
-.recommend_prd_lst-1 .rpl-tit {
+.recommend-prd-lst-tit {
   font-family: "Noto Serif KR", serif;
   font-size: 15px;
   font-weight: 700;
   padding-bottom: 8px;
 }
-.recommend_prd_lst-1 .rpl-slides {
-  display: flex;
+
+.swiper-wrapper {
+  position: relative;
 }
-.recommend_prd_lst-1 .rpl-slides .rpl-swiper {
+
+.swiper-thumb__image {
   display: block;
   width: 136px;
-  margin-right: 16px;
+  height: 136px;
 }
-.recommend_prd_lst-1 .info_area {
+
+.swiper-slide-cont {
   width: 136px;
 }
-.recommend_prd_lst-1 .info_area .info_area_brand__name {
+.swiper-slide-cont .swiper-slide-cont__tit__brand {
+  display: block;
   font-size: 13px;
   font-weight: 500;
 }
-.recommend_prd_lst-1 .info_area .info_area_product_name {
+.swiper-slide-cont .swiper-slide-cont__product__name {
   display: block;
   white-space: nowrap;
   font-size: 12px;
   font-weight: 400;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: #555;
 }
-.recommend_prd_lst-1 .info_area .info_area_price {
-  font-size: 12px;
+.swiper-slide-cont .swiper-wrapper__slide-cont__price__txt {
+  font-size: 13px;
   font-weight: 500;
 }
 
+.swiper-slide-link__product {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
 .wrap-review {
+  margin-top: 50px;
   padding-top: 20px;
+  border-top: 1px solid #cfcfcf;
 }
 .wrap-review .review-tit__txt {
   font-size: 15px;
@@ -2005,7 +2055,7 @@ li:nth-child(1):active {
   height: 56px;
   border: 1px solid #000;
   background-color: #fff;
-  padding: 12px 0;
+  padding: 20px 0;
   font-size: 15px;
   font-weight: 700;
 }
@@ -2020,7 +2070,7 @@ li:nth-child(1):active {
 }
 
 .wrap-qna {
-  margin-top: 40px;
+  margin-top: 50px;
   padding-top: 20px;
   border-top: 1px solid #cfcfcf;
 }
@@ -2065,6 +2115,10 @@ li:nth-child(1):active {
   border-bottom: 1px solid #cfcfcf;
 }
 
+.customer-review-list-seemore {
+  margin-bottom: 80px;
+}
+
 .bottom-nav {
   display: flex;
   position: fixed;
@@ -2073,7 +2127,6 @@ li:nth-child(1):active {
   background: #fff;
   z-index: 10;
   width: 100%;
-  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
@@ -2088,7 +2141,7 @@ li:nth-child(1):active {
 }
 .bottom-nav-icons__like::before {
   content: "\f004";
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 400;
   font-family: "Font Awesome 6 Free";
 }
@@ -2106,7 +2159,7 @@ li:nth-child(1):active {
 }
 .bottom-nav-icons__present::before {
   content: "\f06b";
-  font-size: 31px;
+  font-size: 28px;
   font-weight: 600;
   font-family: "Line Awesome Free";
 }
@@ -2118,15 +2171,15 @@ li:nth-child(1):active {
   position: relative;
 }
 .bottom-nav-purchase .bottom-nav-purchase__btn {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
 }
 .bottom-nav-purchase::before {
   content: "";
-  top: 3px;
+  top: 6px;
   left: 0px;
   width: 1px;
-  height: 40px;
+  height: 36px;
   position: absolute;
   background-color: #000;
 }/*# sourceMappingURL=comm.css.map */

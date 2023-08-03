@@ -63,7 +63,7 @@
 
   <body>
     <!-- header -->
-    <div class="wrap">
+    <div class="goods-detial-wrap">
       <header id="header" class="container">
         <div class="util-g">
           <div class="left-util">
@@ -81,9 +81,10 @@
               </li>
               <li>
                 <button class="btn-g btn-shoppingbag">
-                  <span class="material-icons-outlined">shopping_cart
+                  <span class="material-icons-outlined">
                     <span class="blind">장바구니</span>
-                  </span>
+                    shopping_bag
+                    </span>
                 </button>
               </li>
             </ul>
@@ -94,7 +95,7 @@
       <main>
         <!-- swiper slide images -->
         <div class="swiper-slide-images">
-          <div class="swiper mySwiper">
+          <div class="swiper mySwiper swiper1">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <img src="./images/dp-slide1.jpg" alt="slide-img1" />
@@ -116,7 +117,7 @@
 
         <!-- swiper script -->
         <script>
-          var swiper = new Swiper(".mySwiper", {
+          var swiper = new Swiper(".swiper1", {
             scrollbar: {
               el: ".swiper-scrollbar",
               hide: true,
@@ -186,19 +187,71 @@
       <!-- accordion-1 -->
       <div class="accordion-1 container">
         <!-- accordion 1 최대혜택가 -->
-        <div class="acc-1">
-          <div class="acc-1-benefitprice">
-            <span class="acc-1-benefitprice__txt">최대혜택가</span>
+        <div class="accordion-1">
+          <div class="acc-1-header">
+            <div class="acc-1-benefitprice">
+              <span class="acc-1-benefitprice__txt">최대혜택가</span>
+            </div>
+            <div class="acc-1-discount">
+              <span class="acc-1-discount__percent">
+                <span class="blind">할인율 19%</span>
+                19%
+              </span>
+              <span class="acc-1-discount__price">
+                <span class="blind">할인율 19% 적용시 104,490원</span>
+                104,490원
+              </span>
+            </div>
           </div>
-          <div class="acc-1-discount">
-            <span class="acc-1-discount__percent">
-              <span class="blind">할인율 19%</span>
-              19%
-            </span>
-            <span class="acc-1-discount__price">
-              <span class="blind">할인율 19% 적용시 104,490원</span>
-              104,490원
-            </span>
+          <div class="acc-1-cont">
+            <!-- acc-1-cont 1 -->
+            <div class="acc-1-cont-lst">
+              <div class="acc-1-cont-lst-tit">
+                <span class="acc-1-cont-lst-tit__bank">KakaoPay 할인</span>
+                <span class="acc-1-cont-lst-tit__benefit">4,000원 할인</span>
+              </div>
+              <div class="acc-1-cont-lst-cont">
+                <span>매일 오전 10시부터 선착순 450명,<br>
+                  카카오페이머니 8만원 이상 결제 시 4천원
+                </span>
+              </div>
+            </div>
+            <!-- acc-1-cont 2 -->
+            <div class="acc-1-cont-lst">
+              <div class="acc-1-cont-lst-tit">
+                <span class="acc-1-cont-lst-tit__bank">Toss Pay 적립</span>
+                <span class="acc-1-cont-lst-tit__benefit">2,000원 할인</span>
+              </div>
+              <div class="acc-1-cont-lst-cont">
+                <span>토스페이 생애 첫 결제 시 1만원 이상 결제 시 2천원<br>
+                  토스포인트 적립
+                </span>
+              </div>
+            </div>
+            <!-- acc-1-cont 3 -->
+            <div class="acc-1-cont-lst">
+              <div class="acc-1-cont-lst-tit">
+                <span class="acc-1-cont-lst-tit__bank">우리카드 할인</span>
+                <span class="acc-1-cont-lst-tit__benefit">2,000원 할인</span>
+              </div>
+              <div class="acc-1-cont-lst-cont">
+                <span>2023년 우리페이 첫 결제 고객 1만원 이상 결제 시<br>
+                  2천원 청구할인
+                </span>
+              </div>
+            </div>
+            <!-- acc-1-cont 4 -->
+            <div class="acc-1-cont-lst">
+              <div class="acc-1-cont-lst-tit">
+                <span class="acc-1-cont-lst-tit__bank">PAYCO 적립</span>
+                <span class="acc-1-cont-lst-tit__benefit">1045원 적립</span>
+              </div>
+              <div class="acc-1-cont-lst-cont">
+                <span>페이고포인트로 결제 시 페이코포인트 1% 리워드<br>
+                  무제한 적립
+                </span>
+              </div>
+            </div>
           </div>
         </div>
         <!-- accordion 2 배송정보 -->
@@ -211,7 +264,7 @@
 
       <!-- accordion script -->
       <script>
-        var acc = document.getElementsByClassName("accordion");
+        var acc = document.getElementsByClassName("acc-1-header");
         var i;
 
         for (i = 0; i < acc.length; i++) {
@@ -254,13 +307,13 @@
       <div class="dp-tab container">
         <ul class="dp-tab__menu">
           <li class="dp-tab__detail">
-            <a href="javascript:void(0)"> Detail </a>
+            <a href="javascript:void(0)"> DETAIL </a>
           </li>
           <li class="dp-tab__review">
-            <a href="#tab-review"> Review </a>
+            <a href="#tab-review"> REVIEW </a>
           </li>
           <li class="dp-tab__q&a">
-            <a href="#tab-q&a"> Q&A </a>
+            <a href="#tab-qna"> Q&A </a>
           </li>
         </ul>
       </div>
@@ -348,21 +401,21 @@
             alt="12번 아티드 크로쉐 니트 가디건 화이트 제품 이미지 정면 하단 확대"
           />
         </div>
-
-        <!-- 버튼 div 안으로 ! -->
-        <!-- detailpage product image seemore btn -->
+        
+        <!-- detailpage product image seemore open btn -->
         <div class="dp-img-seemore-wrap">
           <div class="dp-img-seemore-full">
-            <button
-              type="button"
-              onclick="show-prd-img(this)"
-              class="dp-img-seemore__btn"
-            >
-              상품설명 닫기
+            <button type="button" onclick="show-prd-img(this)" class="dp-img-seemore__open">
+              상품설명 더보기
             </button>
+            <!-- detailpage product image seemore close btn
+            <button type="button" onclick="show-prd-img(this)" class="dp-img-seemore__close">
+              상품설명 닫기
+            </button> -->
           </div>
         </div>
       </div>
+  
 
         <!-- accordion-2  -->
         <div class="accordion-2 container">
@@ -386,131 +439,448 @@
           </div>
         </div>
 
-       <!-- splide  -->
-       <!-- More by BRAND list : Recommend Product list -->
-      <div class="splide container" aria-label="Splide Basic HTML Example">
-        <div class="splide__track">
-          <ul class="splide__list">
-            <li class="splide__slide"><img src="./images/morebybrand1.jpg" alt="Slide 01"></li>
-            <li class="splide__slide"><img src="./images/morebybrand2.jpg" alt="Slide 02"></li>
-            <li class="splide__slide"><img src="./images/morebybrand3.jpg" alt="Slide 03"></li>
-          </ul>
+      <!-- More by BRAND list : Recommend Product list -->
+      <div class="recommend-prd-lst swiper2 container">
+        <div class="recommend-prd-lst-tit">
+          More by BRAND
+          <span class="blind">같은 브랜드 추천 상품 리스트 슬라이드</span>
+        </div>
+        <div class="swiper-wrapper">
+          <!-- slide 1 -->
+          <div class="swiper-slide">
+            <div class="sswiper-slide-thumb">
+              <img src="./images/morebybrand1.jpg" alt="A;td Shirring Sleeveless Top thumbnail image" class="swiper-slide-thumb__image">
+            </div>
+            <div class="swiper-slide-cont">
+              <div class="swiper-slide-cont__tit">
+                <span class="swiper-slide-cont__tit__brand"
+                  >A;td
+                  <span class="blind">브랜드이름 A;td 아티드</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__product">
+                <span class="swiper-slide-cont__product__name"
+                  >Shirring Sleeveless Top_BLUE
+                  <span class="blind"
+                    >상품이름 셔링 슬리브리스 탑 블루 컬러</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__price">
+                <span class="swiper-wrapper__slide-cont__price__txt">63,700원</span>
+              </div>
+            </div>
+            <div class="swiper-slide-link">
+              <a href="https://product.29cm.co.kr/catalog/2063426?source=brand" class="swiper-slide-link__product"></a>
+            </div>
+          </div>
+          <!-- slide 2 -->
+          <div class="swiper-slide">
+            <div class="sswiper-slide-thumb">
+              <img src="./images/morebybrand2.jpg" alt="A;td Cargo Banding Skirt thumbnail image" class="swiper-slide-thumb__image">
+            </div>
+            <div class="swiper-slide-cont">
+              <div class="swiper-slide-cont__tit">
+                <span class="swiper-slide-cont__tit__brand"
+                  >A;td
+                  <span class="blind">브랜드이름 A;td 아티드</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__product">
+                <span class="swiper-slide-cont__product__name"
+                  >Cargo Banding Skirt_WHITE
+                  <span class="blind"
+                    >상품이름 카고 밴딩 스커트 화이트 컬러</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__price">
+                <span class="swiper-wrapper__slide-cont__price__txt">87,200원</span>
+              </div>
+            </div>
+            <div class="swiper-slide-link">
+              <a href="https://product.29cm.co.kr/catalog/2063375?source=brand" class="swiper-slide-link__product"></a>
+            </div>
+          </div>
+          <!-- slide 3 -->
+          <div class="swiper-slide">
+            <div class="sswiper-slide-thumb">
+              <img src="./images/morebybrand3.jpg" alt="A;td Sleeveless Long Onepiece thumbnail image" class="swiper-slide-thumb__image">
+            </div>
+            <div class="swiper-slide-cont">
+              <div class="swiper-slide-cont__tit">
+                <span class="swiper-slide-cont__tit__brand"
+                  >A;td
+                  <span class="blind">브랜드이름 A;td 아티드</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__product">
+                <span class="swiper-slide-cont__product__name"
+                  >Strap Point Sleeveless Long Onepiece
+                  <span class="blind"
+                    >상품이름 스트랩 포인트 슬리브리스 롱 원피스 블랙 컬러</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__price">
+                <span class="swiper-wrapper__slide-cont__price__txt">95,200원</span>
+              </div>
+            </div>
+            <div class="swiper-slide-link">
+              <a href="https://product.29cm.co.kr/catalog/2063416?source=brand" class="swiper-slide-link__product"></a>
+            </div>
+          </div>
+          <!-- slide 4 -->
+          <div class="swiper-slide">
+            <div class="sswiper-slide-thumb">
+              <img src="./images/morebybrand4.jpg" alt="A;td Two-pocket open collar short-sleeved shirts thumbnail image" class="swiper-slide-thumb__image">
+            </div>
+            <div class="swiper-slide-cont">
+              <div class="swiper-slide-cont__tit">
+                <span class="swiper-slide-cont__tit__brand"
+                  >A;td
+                  <span class="blind">브랜드이름 A;td 아티드</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__product">
+                <span class="swiper-slide-cont__product__name"
+                  >Two-pocket open collar short-sleeved shirts 
+                  <span class="blind"
+                    >상품이름 투 포켓 오픈 카라 반팔 셔츠 베이지 컬러</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__price">
+                <span class="swiper-wrapper__slide-cont__price__txt">74,250원</span>
+              </div>
+            </div>
+            <div class="swiper-slide-link">
+              <a href="https://product.29cm.co.kr/catalog/2063440?source=brand" class="swiper-slide-link__product"></a>
+            </div>
+          </div>
+          <!-- slide 5 -->
+          <div class="swiper-slide">
+            <div class="sswiper-slide-thumb">
+              <img src="./images/morebybrand5.jpg" alt="A;td Bustier mini onepiece black thumbnail image" class="swiper-slide-thumb__image">
+            </div>
+            <div class="swiper-slide-cont">
+              <div class="swiper-slide-cont__tit">
+                <span class="swiper-slide-cont__tit__brand"
+                  >A;td
+                  <span class="blind">브랜드이름 A;td 아티드</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__product">
+                <span class="swiper-slide-cont__product__name"
+                  >Bustier mini onepiece black
+                  <span class="blind"
+                    >상품이름 뷔스티에 미니 원피스 블랙 컬러</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__price">
+                <span class="swiper-wrapper__slide-cont__price__txt">95,200원</span>
+              </div>
+            </div>
+            <div class="swiper-slide-link">
+              <a href="https://product.29cm.co.kr/catalog/2092788?source=brand" class="swiper-slide-link__product"></a>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- splide script -->
+
+      <!-- You may also like list : Recommend Product list -->
+      <div class="recommend-prd-lst swiper2 container">
+        <div class="recommend-prd-lst-tit">
+          You may also like
+          <span class="blind">다른 브랜드 연관 상품 추천 리스트 슬라이드</span>
+        </div>
+        <div class="swiper-wrapper">
+          <!-- slide 1 -->
+          <div class="swiper-slide">
+            <div class="sswiper-slide-thumb">
+              <img src="./images/youmayalsolike1.jpg" alt="Sincethen Black Daisy Long Onepiece thumbnail image" class="swiper-slide-thumb__image">
+            </div>
+            <div class="swiper-slide-cont">
+              <div class="swiper-slide-cont__tit">
+                <span class="swiper-slide-cont__tit__brand"
+                  >Sincethen
+                  <span class="blind">브랜드이름 Sincethen 신스댄</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__product">
+                <span class="swiper-slide-cont__product__name"
+                  >Black Daisy Long Onepiece
+                  <span class="blind"
+                    >상품이름 블랙 데이지 롱원피스</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__price">
+                <span class="swiper-wrapper__slide-cont__price__txt">119,000원</span>
+              </div>
+            </div>
+            <div class="swiper-slide-link">
+              <a href="https://www.wconcept.co.kr/Product/302906766?entry_channel=search&search_menu=direct&rccode=mo_search" class="swiper-slide-link__product"></a>
+            </div>
+          </div>
+          <!-- slide 2 -->
+          <div class="swiper-slide">
+            <div class="sswiper-slide-thumb">
+              <img src="./images/youmayalsolike2.jpg" alt="Mangomanyplease Page shirring one-piece thumbnail image" class="swiper-slide-thumb__image">
+            </div>
+            <div class="swiper-slide-cont">
+              <div class="swiper-slide-cont__tit">
+                <span class="swiper-slide-cont__tit__brand"
+                  >Mangomanyplease
+                  <span class="blind">브랜드이름 Mangomanyplease 망고매니플리즈</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__product">
+                <span class="swiper-slide-cont__product__name"
+                  >Page shirring one-piece (2colors)
+                  <span class="blind"
+                    >상품이름 페이지 셔링 원피스</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__price">
+                <span class="swiper-wrapper__slide-cont__price__txt">131,100원</span>
+              </div>
+            </div>
+            <div class="swiper-slide-link">
+              <a href="https://product.29cm.co.kr/catalog/2103749?source=brand" class="swiper-slide-link__product"></a>
+            </div>
+          </div>
+          <!-- slide 3 -->
+          <div class="swiper-slide">
+            <div class="sswiper-slide-thumb">
+              <img src="./images/youmayalsolike3.jpg" alt="KINDERSALMON Fluid Dress Black thumbnail image" class="swiper-slide-thumb__image">
+            </div>
+            <div class="swiper-slide-cont">
+              <div class="swiper-slide-cont__tit">
+                <span class="swiper-slide-cont__tit__brand"
+                  >KINDERSALMON
+                  <span class="blind">브랜드이름 KINDERSALMON 킨더살몬</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__product">
+                <span class="swiper-slide-cont__product__name"
+                  >Fluid Dress Black
+                  <span class="blind"
+                    >상품이름 플루이드 드레스 블랙 컬러</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__price">
+                <span class="swiper-wrapper__slide-cont__price__txt">168,000원</span>
+              </div>
+            </div>
+            <div class="swiper-slide-link">
+              <a href="https://product.29cm.co.kr/catalog/1559272" class="swiper-slide-link__product"></a>
+            </div>
+          </div>
+          <!-- slide 4 -->
+          <div class="swiper-slide">
+            <div class="sswiper-slide-thumb">
+              <img src="./images/youmayalsolike4.jpg" alt="Prenda DENIM PATCH CREWNECK TEE WHITE thumbnail image" class="swiper-slide-thumb__image">
+            </div>
+            <div class="swiper-slide-cont">
+              <div class="swiper-slide-cont__tit">
+                <span class="swiper-slide-cont__tit__brand"
+                  >Prenda
+                  <span class="blind">브랜드이름 Prenda 프렌다</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__product">
+                <span class="swiper-slide-cont__product__name"
+                  >DENIM PATCH CREWNECK TEE WHITE
+                  <span class="blind"
+                    >상품이름 데님 패치 크루넥 티 컬러 화이트</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__price">
+                <span class="swiper-wrapper__slide-cont__price__txt">27,000원</span>
+              </div>
+            </div>
+            <div class="swiper-slide-link">
+              <a href="https://product.29cm.co.kr/catalog/1487608" class="swiper-slide-link__product"></a>
+            </div>
+          </div>
+          <!-- slide 5 -->
+          <div class="swiper-slide">
+            <div class="sswiper-slide-thumb">
+              <img src="./images/youmayalsolike5.jpg" alt="&needs Pansy half sleeve knit (ivory) thumbnail image" class="swiper-slide-thumb__image">
+            </div>
+            <div class="swiper-slide-cont">
+              <div class="swiper-slide-cont__tit">
+                <span class="swiper-slide-cont__tit__brand"
+                  >&needs
+                  <span class="blind">브랜드이름 &needs 앤니즈</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__product">
+                <span class="swiper-slide-cont__product__name"
+                  >Pansy half sleeve knit (ivory)
+                  <span class="blind"
+                    >상품이름 팬지 반소매 아이보리 니트 </span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__price">
+                <span class="swiper-wrapper__slide-cont__price__txt">80,100원</span>
+              </div>
+            </div>
+            <div class="swiper-slide-link">
+              <a href="https://product.29cm.co.kr/catalog/1417345" class="swiper-slide-link__product"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Today’s featured items list : Recommend Product list -->
+      <div class="recommend-prd-lst swiper2 container">
+        <div class="recommend-prd-lst-tit">
+          Today's featured items
+          <span class="blind">오늘의 추천 상품 리스트 슬라이드</span>
+        </div>
+        <div class="swiper-wrapper">
+          <!-- slide 1 -->
+          <div class="swiper-slide">
+            <div class="sswiper-slide-thumb">
+              <img src="./images/todayfeatureditems1.jpg" alt="Mohae Tencel tee_7 colors thumbnail image" class="swiper-slide-thumb__image">
+            </div>
+            <div class="swiper-slide-cont">
+              <div class="swiper-slide-cont__tit">
+                <span class="swiper-slide-cont__tit__brand"
+                  >Mohae
+                  <span class="blind">브랜드이름 Mohae 모헤</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__product">
+                <span class="swiper-slide-cont__product__name"
+                  >Tencel tee_7 colors
+                  <span class="blind"
+                    >상품이름 텐셀 티셔츠 컬러 7가지 그레이 화이트 차콜 핑크 크림 민트 블랙</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__price">
+                <span class="swiper-wrapper__slide-cont__price__txt">33,000원</span>
+              </div>
+            </div>
+            <div class="swiper-slide-link">
+              <a href="https://product.29cm.co.kr/catalog/1985434" class="swiper-slide-link__product"></a>
+            </div>
+          </div>
+          <!-- slide 2 -->
+          <div class="swiper-slide">
+            <div class="sswiper-slide-thumb">
+              <img src="./images/todayfeatureditems2.jpg" alt="Mardi Mercredi TSHIRT FLOWERMARDI_BLACK CREAM thumbnail image" class="swiper-slide-thumb__image">
+            </div>
+            <div class="swiper-slide-cont">
+              <div class="swiper-slide-cont__tit">
+                <span class="swiper-slide-cont__tit__brand"
+                  >Mardi Mercredi
+                  <span class="blind">브랜드이름 Mardi Mercredi 마르디메르크</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__product">
+                <span class="swiper-slide-cont__product__name"
+                  >TSHIRT FLOWERMARDI_BLACK CREAM
+                  <span class="blind"
+                    >상품이름 티셔츠 플라워마르디 검정색 티셔츠 크림색 프린트</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__price">
+                <span class="swiper-wrapper__slide-cont__price__txt">39,900원</span>
+              </div>
+            </div>
+            <div class="swiper-slide-link">
+              <a href="https://product.29cm.co.kr/catalog/1483926" class="swiper-slide-link__product"></a>
+            </div>
+          </div>
+          <!-- slide 3 -->
+          <div class="swiper-slide">
+            <div class="sswiper-slide-thumb">
+              <img src="./images/todayfeatureditems3.jpg" alt="Depound Monet jacquard knit - ivory thumbnail image" class="swiper-slide-thumb__image">
+            </div>
+            <div class="swiper-slide-cont">
+              <div class="swiper-slide-cont__tit">
+                <span class="swiper-slide-cont__tit__brand"
+                  >Depound
+                  <span class="blind">브랜드이름 Depound 드파운드</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__product">
+                <span class="swiper-slide-cont__product__name"
+                  >Monet jacquard knit - ivory
+                  <span class="blind"
+                    >상품이름 모네트 자카드 니트</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__price">
+                <span class="swiper-wrapper__slide-cont__price__txt">98,325원</span>
+              </div>
+            </div>
+            <div class="swiper-slide-link">
+              <a href="https://product.29cm.co.kr/catalog/2012486" class="swiper-slide-link__product"></a>
+            </div>
+          </div>
+          <!-- slide 4 -->
+          <div class="swiper-slide">
+            <div class="sswiper-slide-thumb">
+              <img src="./images/todayfeatureditems4.jpg" alt="Loeuvre Blue Linen Straight Denim SJ3SL169-22 thumbnail image" class="swiper-slide-thumb__image">
+            </div>
+            <div class="swiper-slide-cont">
+              <div class="swiper-slide-cont__tit">
+                <span class="swiper-slide-cont__tit__brand"
+                  >Loeuvre
+                  <span class="blind">브랜드이름 Loeuvre 루에브르</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__product">
+                <span class="swiper-slide-cont__product__name"
+                  >Blue Linen Straight Denim SJ3SL169-22
+                  <span class="blind"
+                    >상품이름 블루 린넨 스트레이트 데님 상품명 SJ3SL169-22</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__price">
+                <span class="swiper-wrapper__slide-cont__price__txt">127,200원</span>
+              </div>
+            </div>
+            <div class="swiper-slide-link">
+              <a href="https://product.29cm.co.kr/catalog/1938395?" class="swiper-slide-link__product"></a>
+            </div>
+          </div>
+          <!-- slide 5 -->
+          <div class="swiper-slide">
+            <div class="sswiper-slide-thumb">
+              <img src="./images/todayfeatureditems5.jpg" alt="ronron NUIT D ETE T SHIRT BLACK thumbnail image" class="swiper-slide-thumb__image">
+            </div>
+            <div class="swiper-slide-cont">
+              <div class="swiper-slide-cont__tit">
+                <span class="swiper-slide-cont__tit__brand"
+                  >ronron
+                  <span class="blind">브랜드이름 ronron 론론</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__product">
+                <span class="swiper-slide-cont__product__name"
+                  >NUIT D ETE T SHIRT BLACK
+                  <span class="blind"
+                    >상품이름 뉘데떼 티셔츠 블랙</span>
+                </span>
+              </div>
+              <div class="swiper-slide-cont__price">
+                <span class="swiper-wrapper__slide-cont__price__txt">39,200원</span>
+              </div>
+            </div>
+            <div class="swiper-slide-link">
+              <a href="https://product.29cm.co.kr/catalog/1542421" class="swiper-slide-link__product"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- list slide script / freemode -->
       <script>
-        new Splide( '.splide' ).mount();
+        var swiper = new Swiper(".swiper2", {
+          slidesPerView: 3,
+          spaceBetween: 100,
+          freeMode: true
+        });
       </script>
- 
-
-
-
-      <!-- More by BRAND list : Recommend Product list -->
-      <!-- <div class="recommend_prd_lst-1">
-        <div class="rpl-tit">
-          More by BRAND
-          <span class="blind">같은 브랜드 상품 리스트</span>
-        </div>
-        <div class="rpl-swiper-wrap">
-          <ul class="rpl-slides">
-            <li class="rpl-swiper active">
-              <a
-                href="https://product.29cm.co.kr/catalog/2063426?source=brand"
-                class="rpl-swiper-active_link"
-              >
-                <div class="thumb_area">
-                  <img
-                    class="thumb"
-                    src="./images/morebybrand1.jpg"
-                    alt="A;td Shirring Sleeveless Top thumbnail image"
-                  />
-                </div>
-                <div class="info_area">
-                  <div class="info_area_brand">
-                    <span class="info_area_brand__name"
-                      >A;td
-                      <span class="blind">브랜드이름 A;td 아티드</span>
-                    </span>
-                  </div>
-                  <div class="info_area_product">
-                    <span class="info_area_product_name"
-                      >Shirring Sleeveless Top_BLUE
-                      <span class="blind"
-                        >상품이름 셔링 슬리브리스 탑 블루 컬러</span
-                      >
-                    </span>
-                  </div>
-                  <div class="info_area_price">
-                    <span class="info_area_price_txt">63,700원</span>
-                  </div>
-                </div>
-              </a>
-            </li>
-
-            <li class="rpl-swiper next">
-              <a
-                href="https://product.29cm.co.kr/catalog/2063375?source=brand"
-                class="rpl-swiper-active_next"
-              >
-                <div class="thumb_area">
-                  <span class="thumb">
-                    <img
-                      src="./images/morebybrand2.jpg"
-                      alt="A;td Cargo Banding Skirt thumbnail image"
-                    />
-                  </span>
-                </div>
-                <div class="info_area">
-                  <div class="info_area_brand">
-                    <span class="info_area_brand__name"
-                      >A;td
-                      <span class="blind">브랜드이름 A;td 아티드</span>
-                    </span>
-                  </div>
-                  <div class="info_area_product">
-                    <span class="info_area_product_name"
-                      >Cargo Banding Skirt_WHITE
-                      <span class="blind"
-                        >상품이름 카고 밴딩 스커트 화이트 컬러
-                      </span>
-                    </span>
-                  </div>
-                  <div class="info_area_price">
-                    <span class="info_area_price_txt">87,200원</span>
-                  </div>
-                </div>
-              </a>
-            </li>
-
-            <li class="rpl-swiper hidden">
-              <a
-                href="https://product.29cm.co.kr/catalog/2063416?source=brand"
-                class="rpl-swiper-active_hidden"
-              >
-                <div class="thumb_area">
-                  <span class="thumb">
-                    <img
-                      src="./images/morebybrand3.jpg"
-                      alt="A;td Sleeveless Long Onepiece thumbnail image "
-                    />
-                  </span>
-                </div>
-                <div class="info_area">
-                  <span class="brand">A;td</span>
-                  <span class="product">Sleeveless Long Onepiece</span>
-                  <div class="price-wrap">
-                    <span class="price">95,200원</span>
-                  </div>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div> -->
-      <br><br><br><br><br><br>
-      <br><br><br><br><br><br>
-      <br><br><br><br><br><br><br>
-
 
 
     <!-- review -->
@@ -831,10 +1201,6 @@
         <button class="bottom-nav-purchase__btn">구매하기</button>
       </div>
     </div>
-
-
-
-
     </main>
     </div>
   </body>

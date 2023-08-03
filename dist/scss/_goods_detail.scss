@@ -5,8 +5,9 @@
 // 공통요소 : 헤더, 풋터, 버튼, 아이콘, 박스
 
 // 공통
-.wrap {
+.goods-detial-wrap {
   position: relative;
+  background: #fff;
   // background: url(/images/dp.jpg);
 }
 
@@ -48,7 +49,8 @@
     font-weight: 900;
   }
   .btn-shoppingbag::before {
-    font-size: 36px;
+    font-weight: 900;
+    font-size: 28px;
   }
   .sticky {
     position: fixed;
@@ -167,7 +169,7 @@
 
 // accordion wrap 1
 // accordion 1 최대혜택가
-.acc-1 {
+.acc-1-header {
   position: relative;
   display: flex;
   font-size: 14px;
@@ -179,6 +181,7 @@
   transition: 0.2s;
   border-top: 1px solid #cfcfcf;
   background-color: #fff;
+  transition: 0.4s;
   // "+" icon
   &::before {
     content: "\2b";
@@ -206,10 +209,35 @@
     font-weight: bold;
   }
 }
+
+// 클릭 시 "\f068" 아이콘 마이너스로 변경
+.acc-1-cont {
+  // display: block;
+  display: none;
+  height: 85px;
+  overflow: hidden;
+  border-top: 1px solid #cfcfcf;
+  .acc-1-cont-lst-tit {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    font-size: 12px;
+    color: #000;
+    .acc-1-cont-lst-tit__benefit {
+      color: #dd0035;
+    }
+  }
+  .acc-1-cont-lst-cont {
+    padding-top: 4px;
+    font-size: 12px;
+    color: #555;
+  }
+}
 .active,
-.accordion-1-benefitprice:hover {
+.acc-1-header:hover {
   background-color: #ffffff;
 }
+
 
 // accordion 2 배송정보
 .acc-2 {
@@ -240,15 +268,6 @@
   }
 }
 
-/* Style the accordion panel. Note: hidden by default */
-// .panel {
-//   padding: 0 18px;
-//   background-color: white;
-//   display: none;
-//   overflow: hidden;
-//   transition: max-height 0.2s ease-out;
-// }
-
 // brand home
 .brandhome {
   position: relative;
@@ -256,7 +275,6 @@
 }
 .bh-box {
   display: flex;
-  width: 335px;
   height: 70px;
   border: 1px solid #cfcfcf;
 }
@@ -364,18 +382,16 @@
     max-height: 10000px;
   }
 }
-
-
 // detailpage product image seemore btn
 .dp-img-seemore-wrap {
-  width: 375px;
-  height: 132px;
   position: relative;
 }
+
 // seemore btn gradient
 .dp-img-seemore-full {
-  display: block;
+  // display: block;
   margin: 0 20px;
+  align-items: center;
   &::before {
     display: block;
     content: "";
@@ -384,13 +400,14 @@
     margin-top: -76px;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
   }
-  .dp-img-seemore__btn {
+  // detailpage product image seemore open btn
+  .dp-img-seemore__open {
     width: 100%;
     display: block;
     height: 56px;
     border: 1px solid #000;
     background-color: #fff;
-    padding: 12px 0;
+    padding: 20px 0;
     font-size: 15px;
     font-weight: 700;
     &::after {
@@ -403,15 +420,33 @@
       font-family: "Font Awesome 6 Free";
     }
   }
+  // detailpage product image seemore close btn
+  .dp-img-seemore__close {
+    width: 100%;
+    display: block;
+    height: 56px;
+    border: 1px solid #000;
+    background-color: #fff;
+    padding: 20px 0;
+    font-size: 15px;
+    font-weight: 700;
+    &::after {
+      content: "\f077";
+      display: inline-block;
+      margin-left: 4px;
+      width: 20px;
+      height: 20px;
+      font-weight: 900;
+      font-family: "Font Awesome 6 Free";
+    }
+  }
 }
-// <i class="fa-solid fa-chevron-up"></i> = "\f077"
-// <i class="fa-solid fa-chevron-down"></i> = "\f078"
+
 
 // accordion wrap 2
 .accordion-2 {
   display: block;
   padding-top: 20px;
-  padding-bottom: 40px;
   // accordion 3 상품 사이즈 정보
   .acc-3 {
     position: relative;
@@ -495,57 +530,63 @@
     }
   }
 }
-
-// splide 
-.splide {
-  .splide__track {
-    width: 100%;
-    height: 136px;
-  }
-}
-
+// 공통
 // More by BRAND list : Recommend Product list
-.recommend_prd_lst-1 {
+// You may also like list : Recommend Product list
+// Today’s featured items list : Recommend Product list
+.recommend-prd-lst {
+  padding-top: 40px;
+}
+.recommend-prd-lst-tit {
+  font-family: "Noto Serif KR", serif;
+  font-size: 15px;
+  font-weight: 700;
+  padding-bottom: 8px;
+}
+.swiper-wrapper {
+  position: relative;
+}
+.swiper-thumb__image {
   display: block;
-  padding-left: 20px;
-  .rpl-tit {
-    font-family: "Noto Serif KR", serif;
-    font-size: 15px;
-    font-weight: 700;
-    padding-bottom: 8px;
+  width: 136px;
+  height: 136px;
+}
+.swiper-slide-cont {
+  width: 136px;
+  .swiper-slide-cont__tit__brand {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
   }
-  .rpl-slides {
-    display: flex;
-    .rpl-swiper {
-      display: block;
-      width: 136px;
-      margin-right: 16px;
-    }
+  .swiper-slide-cont__product__name {
+    display: block;
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #555;
   }
-  .info_area {
-    width: 136px;
-    .info_area_brand__name {
-      font-size: 13px;
-      font-weight: 500;
-    }
-    .info_area_product_name {
-      display: block;
-      white-space: nowrap;
-      font-size: 12px;
-      font-weight: 400;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .info_area_price {
-      font-size: 12px;
-      font-weight: 500;
-    }
+  .swiper-wrapper__slide-cont__price__txt {
+    font-size: 13px;
+    font-weight: 500;
   }
 }
+.swiper-slide-link__product {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
 
 // review 
 .wrap-review {
+  margin-top: 50px;
   padding-top: 20px;
+  border-top: 1px solid #cfcfcf;
   .review-tit__txt {
     font-size: 15px;
     font-weight: 700;
@@ -798,7 +839,7 @@
     height: 56px;
     border: 1px solid #000;
     background-color: #fff;
-    padding: 12px 0;
+    padding: 20px 0;
     font-size: 15px;
     font-weight: 700;
     &::after {
@@ -814,7 +855,7 @@
 
 // Q&A
 .wrap-qna{
-  margin-top: 40px;
+  margin-top: 50px;
   padding-top: 20px;
   border-top: 1px solid #cfcfcf;
   .qna-tit {
@@ -831,32 +872,36 @@
   padding-top: 20px;
   .customer-qna-top {
     display: flex;
-  justify-content: space-between;
-  color: #555;
-  font-size: 13px;
-  .customer-qna-top-process__id {
-    padding-left: 16px;
-    position: relative;
-    &::before {
-      content: "";
-      top: 5px;
-      left: 6px;
-      width: 1px;
-      height: 10px;
-      position: absolute;
-      background-color: #555;
+    justify-content: space-between;
+    color: #555;
+    font-size: 13px;
+    .customer-qna-top-process__id {
+      padding-left: 16px;
+      position: relative;
+      &::before {
+        content: "";
+        top: 5px;
+        left: 6px;
+        width: 1px;
+        height: 10px;
+        position: absolute;
+        background-color: #555;
+      }
     }
   }
+  .customer-qna-cont {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    padding-top: 2px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #cfcfcf;
+  }
 }
-.customer-qna-cont {
-  display: block;
-  font-size: 13px;
-  font-weight: 500;
-  padding-top: 2px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #cfcfcf;
+.customer-review-list-seemore {
+margin-bottom: 80px;
 }
-}
+
 // bottom nav
 .bottom-nav {
   display: flex;
@@ -866,7 +911,6 @@
   background: #fff;
   z-index: 10;
   width: 100%;
-  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
@@ -879,7 +923,7 @@
   height: 48px;
   &::before {
     content: "\f004";
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 400;
     font-family: "Font Awesome 6 Free";
   }
@@ -895,7 +939,7 @@
   padding-bottom: 2px;
   &::before {
     content: "\f06b";
-    font-size: 31px;
+    font-size: 28px;
     font-weight: 600;
     font-family: "Line Awesome Free";
   }
@@ -906,15 +950,15 @@
   justify-content: center;
   position: relative;
   .bottom-nav-purchase__btn {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
   }
   &::before {
     content: "";
-    top: 3px;
+    top: 6px;
     left: 0px;
     width: 1px;
-    height: 40px;
+    height: 36px;
     position: absolute;
     background-color: #000;
   }
