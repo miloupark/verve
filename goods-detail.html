@@ -260,7 +260,7 @@
             <a href="#tab-review"> Review </a>
           </li>
           <li class="dp-tab__q&a">
-            <a href="javascript:void(0)"> Q&A </a>
+            <a href="#tab-q&a"> Q&A </a>
           </li>
         </ul>
       </div>
@@ -514,8 +514,7 @@
 
 
     <!-- review -->
-    <div class="sec-review container">
-      
+    <div class="wrap-review container">
       <!-- review tit -->
       <div class="review-tit">
         <a name="tab-review"></a>
@@ -567,29 +566,33 @@
           <dd class="review-average-lst__1-percent-bar">
             <span class="blind">구매자들의 상품 사이즈 만족도 100%</span>
             <span class="percent-bg">
-              <span class="percent" style="width: 90%;"></span>
+              <span class="percent" style="width: 100%;"></span>
             </span>
             <span class="review-average-lst__1-percent-txt">100%</span>
           </dd>
         </dl>
-        <div class="rev-g review-average-2">
-          <span class="review-average__1">착용감</span>
-          <span class="review-average__2">잘맞고편해요</span>
-          <div class="review-average-bar__3">
+        <dl class="rev-g review-average-lst__1">
+          <dt class="review-average-lst__1-title">착용감</dt>
+          <dd class="review-average-lst__1-size">잘맞고편해요</dd>
+          <dd class="review-average-lst__1-percent-bar">
             <span class="blind">구매자들의 상품 사이즈 평점 90%</span>
-            <span class="percent" style="width: 90%;"></span>
-          </div>
-          <span class="review-average__4">90%</span>
-        </div>
-        <div class="rev-g review-average-3">
-          <span class="review-average__1">스타일</span>
-          <span class="review-average__2">마음에들어요</span>
-          <div class="review-average-bar__3">
+            <span class="percent-bg">
+              <span class="percent" style="width: 90%;"></span>
+            </span>
+            <span class="review-average-lst__1-percent-txt">90%</span>
+          </dd>
+        </dl>
+        <dl class="rev-g review-average-lst__1">
+          <dt class="review-average-lst__1-title">스타일</dt>
+          <dd class="review-average-lst__1-size">마음에들어요</dd>
+          <dd class="review-average-lst__1-percent-bar">
             <span class="blind">구매자들의 상품 사이즈 평점 80%</span>
-            <span class="percent" style="width: 80%;"></span>
-          </div>
-          <span class="review-average__4">80%</span>
-        </div>
+            <span class="percent-bg">
+              <span class="percent" style="width: 80%;"></span>
+            </span>
+            <span class="review-average-lst__1-percent-txt">80%</span>
+          </dd>
+        </dl>
       </div>
 
       <!-- review tabs - btn -->
@@ -604,6 +607,7 @@
       <div class="customer-review-lst">
         <!-- customer review list 1 -->
         <div class="crl-g customer-review-lst-1">
+          <!-- purchase customer's rating star -->
           <div class="customer-review-top">
             <div class="customer-review-icons">
               <span class="customer-review-icons__stars" style="width: 100%">
@@ -616,16 +620,22 @@
               <span>2023.06.13</span>
             </div>
           </div>
+          <!-- option of review -->
+          <div class="customer-review-option">
+            <span class="customer-review-option__txt">옵션 : 색상 사이즈</span>
+            <span class="customer-review-option__txt">체형 : 160cm / 48kg</span>
+            <span class="customer-review-option__txt">사이즈 : 잘 맞아요</span>
+          </div>
+          <!-- purchase customer's review -->
+          <div class="customer-review-purchase">
+            <span class="customer-review-purchase__txt">소재가 탄탄해서 늘어짐도 없을 것 같고 착용감도 좋아요
+              색상도 단독으로 입기 예쁘고 핏도 날씬해 보여서 스커트나 팬츠 어디에 받쳐 입어도 예뻐서 잘 구매한 것 같아요</span>
+          </div>
+          <!-- purchase customer's image -->
           <div class="customer-review-detail-image">
             <img src="./images/review1.jpg" alt="고객 구매 리뷰 이미지">
           </div>
-          <div class="customer-review-option-txt">
-            <span class="crd__txt">옵션 : 색상 사이즈</span>
-            <span class="crd__txt">체형 : 160cm / 48kg</span>
-            <span class="crd__txt">사이즈 : 잘 맞아요</span>
-            <span class="customer-review-purchase">소재가 탄탄해서 늘어짐도 없을 것 같고 착용감도 좋아요
-              색상도 단독으로 입기 예쁘고 핏도 날씬해 보여서 스커트나 팬츠 어디에 받쳐 입어도 예뻐서 잘 구매한 것 같아요</span>
-          </div>
+          <!-- customer review buttons -->
           <div class="customer-review-buttons">
             <div class="customer-review-buttons-left">
               <button type="button" class="crb-left-1">신고</button>
@@ -639,45 +649,49 @@
 
         <!-- customer review list 2 -->
         <div class="crl-g customer-review-lst-2">
-        <div class="customer-review-top">
-          <div class="customer-review-icons">
-            <span class="customer-review-icons__stars" style="width: 54%">
-            </span>
+          <!-- purchase customer's rating star -->
+          <div class="customer-review-top">
+            <div class="customer-review-icons">
+              <span class="customer-review-icons__stars" style="width: 54%">
+              </span>
+            </div>
+            <div class="customer-review-id">
+              <span>hoon******</span>
+            </div>
+            <div class="customer-review-date">
+              <span>2023.06.11</span>
+            </div>
           </div>
-          <div class="customer-review-id">
-            <span>hoon******</span>
+          <!-- option of review -->
+          <div class="customer-review-option">
+            <span class="customer-review-option__txt">옵션 : 색상 사이즈</span>
+            <span class="customer-review-option__txt">체형 : 164cm / 54kg</span>
+            <span class="customer-review-option__txt">사이즈 : 잘 맞아요</span>
           </div>
-          <div class="customer-review-date">
-            <span>2023.06.11</span>
+          <!-- purchase customer's review -->
+          <div class="customer-review-purchase">
+            <span class="customer-review-purchase__txt">우선 핏이 넘 무난하고 이쁘네요ㅎㅎ
+              여름에 입기도 좋고 재질도 너무 좋아요 </span>
           </div>
-        </div>
-        <div class="customer-review-option">
-          <div class="customer-review-option-txt">
-            <span class="crd__txt">옵션 : 색상 사이즈</span>
-            <span class="crd__txt">체형 : 164cm / 54kg</span>
-            <span class="crd__txt">사이즈 : 잘 맞아요</span>
-          </div>
+          <!-- purchase customer's image -->
           <div class="customer-review-detail-image">
             <img src="./images/review2.jpg" alt="고객 구매 리뷰 이미지">
           </div>
-        </div>
-        <div class="customer-review-purchase">
-          <span class="crp__txt">우선 핏이 넘 무난하고 이쁘네요ㅎㅎ
-            여름에 입기도 좋고 재질도 너무 좋아요 </span>
-        </div>
-        <div class="customer-review-buttons">
-          <div class="customer-review-buttons-left">
-            <button type="button" class="crb-left-1">신고</button>
-            <button type="button" class="crb-left-2">숨김</button>
-          </div>
-          <div class="customer-review-buttons-right">
-            <button type="button" class="crb-right-1">추천</button>
-          </div>
+          <!-- customer review buttons -->
+          <div class="customer-review-buttons">
+            <div class="customer-review-buttons-left">
+              <button type="button" class="crb-left-1">신고</button>
+              <button type="button" class="crb-left-2">숨김</button>
+            </div>
+            <div class="customer-review-buttons-right">
+              <button type="button" class="crb-right-1">추천</button>
+            </div>
           </div>
         </div>
 
         <!-- customer review list 3 -->
         <div class="crl-g customer-review-lst-3">
+          <!-- purchase customer's rating star -->
           <div class="customer-review-top">
             <div class="customer-review-icons">
               <span class="customer-review-icons__stars" style="width: 60%">
@@ -690,19 +704,21 @@
               <span>2023.05.28</span>
             </div>
           </div>
+          <!-- option of review -->
           <div class="customer-review-option">
-            <div class="customer-review-option-txt">
-              <span class="crd__txt">옵션 : 색상 사이즈</span>
-              <span class="crd__txt">체형 : 164cm / 54kg</span>
-              <span class="crd__txt">사이즈 : 잘 맞아요</span>
-            </div>
-            <div class="customer-review-detail-image">
-              <img src="./images/review2.jpg" alt="고객 구매 리뷰 이미지">
-            </div>
+            <span class="customer-review-option__txt">옵션 : 색상 사이즈</span>
+            <span class="customer-review-option__txt">체형 : 164cm / 54kg</span>
+            <span class="customer-review-option__txt">사이즈 : 잘 맞아요</span>
           </div>
+          <!-- purchase customer's review -->
           <div class="customer-review-purchase">
-            <span class="crp__txt">비 오는 날 입어봤는데 너무 좋아요~! 포인트 주기 딱인 것 같아요 여러모로 좋네용ㅎㅎ </span>
+            <span class="customer-review-purchase__txt">비 오는 날 입어봤는데 너무 좋아요~! 포인트 주기 딱인 것 같아요 여러모로 좋네용ㅎㅎ </span>
           </div>
+          <!-- purchase customer's image -->
+          <div class="customer-review-detail-image">
+            <img src="./images/review3.jpg" alt="고객 구매 리뷰 이미지">
+          </div>
+          <!-- customer review buttons -->
           <div class="customer-review-buttons">
             <div class="customer-review-buttons-left">
               <button type="button" class="crb-left-1">신고</button>
@@ -711,38 +727,112 @@
             <div class="customer-review-buttons-right">
               <button type="button" class="crb-right-1">추천</button>
             </div>
-            </div>
           </div>
-
-          <!-- customer review list seemore btn -->
-               <!-- 버튼 div 안으로 ! -->
+        </div>
+        <!-- customer review list seemore btn -->
         <div class="customer-review-list-seemore">
-          <button type="button" class="customer-review-list-seemore__btn">
-            상품 리뷰 전체보기 (77)
-          </button>
-        </div>
-      </div>
-      </div>
- 
-
-          <!-- <div class="customer-review-list-btn">
-            <button type="button" onclick="show-prd-img(this)" class="crl-seemore__btn">
-              상품 리뷰 전체보기
+            <button type="button" class="customer-review-list-seemore__btn">
+              상품 리뷰 전체보기 (77)
             </button>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- Q&A -->
+    <div class="wrap-qna container"> 
+      <!-- Q&A tit -->
+      <div class="qna-tit">
+        <a name="tab-qna"></a>
+        <span class="customer-qna__txt">Q&A (7)
+          <span class="blind">아티드 크로쉐 니트 가디건의 상품문의 총 7개</span>
+        </span>
+      </div>
+      <!-- Q&A lst-1 -->
+      <div class="customer-qna-lst">
+        <div class="customer-qna-top">
+          <div class="customer-qna-top-process">
+            <span class="customer-qna-top-process__state">접수완료</span>
+            <span class="customer-qna-top-process__id">webd******</span>
           </div>
-          </div>
-      </div>  -->
-      
-      
-      
-        <div class="q&a container"> 
-          <div class="q&a-personal-review">
-            <div>
-              <span>접수완료 | hele*******</span>
-              <span>2023.07.10</span>
-            </div>
+          <div class="customer-qna-top-date">
+            <span>2023.06.22</span>
           </div>
         </div>
+        <div class="customer-qna-cont">
+          <span class="customer-qna-cont__tit">[상품문의]</span>
+          <span class="customer-qna-cont__txt">비밀글입니다.</span>
+        </div>
+      </div>
+      <!-- Q&A lst-2 -->
+      <div class="customer-qna-lst">
+        <div class="customer-qna-top">
+          <div class="customer-qna-top-process">
+            <span class="customer-qna-top-process__state">접수완료</span>
+            <span class="customer-qna-top-process__id">comp******</span>
+          </div>
+          <div class="customer-qna-top-date">
+            <span>2023.06.18</span>
+          </div>
+        </div>
+        <div class="customer-qna-cont">
+          <span class="customer-qna-cont__tit">[기타문의]</span>
+          <span class="customer-qna-cont__txt">비밀글입니다.</span>
+        </div>
+      </div>
+      <!-- Q&A lst-3 -->
+      <div class="customer-qna-lst">
+        <div class="customer-qna-top">
+          <div class="customer-qna-top-process">
+            <span class="customer-qna-top-process__state">접수완료</span>
+            <span class="customer-qna-top-process__id">angr******</span>
+          </div>
+          <div class="customer-qna-top-date">
+            <span>2023.05.24</span>
+          </div>
+        </div>
+        <div class="customer-qna-cont">
+          <span class="customer-qna-cont__tit">[상품문의]</span>
+          <span class="customer-qna-cont__txt">비밀글입니다.</span>
+        </div>
+      </div>
+      <!-- customer review list seemore btn -->
+      <div class="customer-review-list-seemore">
+        <button type="button" class="customer-review-list-seemore__btn">
+          상품 Q&A 전체보기 (7)
+        </button>
+    </div>
+    </div>
+
+    <!-- bottom nav -->
+    <div class="bottom-nav container">
+      <div class="bottom-nav-icons">
+        <ul class="bottom-nav-icons-lst">
+          <li>
+            <button class="bottom-nav-icons__like">
+              <span class="blind">아티드 크로쉐 니트 가디건 찜하기 아이콘</span>
+            </button>
+          </li>
+          <li>
+            <button class="bottom-nav-icons__link">
+              <span class="material-icons-outlined">
+                <span class="blind">아티드 크로쉐 니트 가디건 공유하기 아이콘</span>
+                share
+                </span>
+            </button>
+          </li>
+          <li>
+            <button class="bottom-nav-icons__present">
+              <span class="blind">아티드 크로쉐 니트 가디건 선물하기 아이콘</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="bottom-nav-purchase">
+        <button class="bottom-nav-purchase__btn">구매하기</button>
+      </div>
+    </div>
+
+
 
 
     </main>

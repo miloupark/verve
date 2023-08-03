@@ -544,7 +544,7 @@
 }
 
 // review 
-.sec-review {
+.wrap-review {
   padding-top: 20px;
   .review-tit__txt {
     font-size: 15px;
@@ -554,7 +554,7 @@
 }
 .customer-rates {
   .customer-rates-tit {
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 700;
     color: #555;
     display: block;
@@ -631,7 +631,7 @@
       border-radius: 5px;
       width: 132px;
       height: 4px;
-      margin-top: 7;
+      margin-top: 7px;
     }
     .percent {
       display: block;    
@@ -641,7 +641,9 @@
     }
   }
   .review-average-lst__1-percent-txt {
-    font-size: 12px;
+    width: 50px;
+    text-align: right;
+    font-size: 13px;
     font-weight: 500;
     color: #000;
     padding-left: 16px;
@@ -654,7 +656,7 @@
   justify-content: flex-end;
   align-items: center;
   height: 49px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   color: #cfcfcf;
   border-top: 1px solid #cfcfcf;
@@ -667,8 +669,8 @@
     position: relative;
     &::before {
       content: "";
-      top: 3px;
-      left: 47px;
+      top: 5px;
+      left: 54px;
       width: 1px;
       height: 10px;
       position: absolute;
@@ -680,7 +682,7 @@
     color: #cfcfcf;
     &::before {
       content: "";
-      top: 3px;
+      top: 5px;
       right: 0px;
       width: 1px;
       height: 10px;
@@ -693,7 +695,7 @@
     color: #cfcfcf;
     &::before {
       content: "";
-      top: 3px;
+      top: 5px;
       right: 0px;
       width: 1px;
       height: 10px;
@@ -708,11 +710,12 @@
 
 // customer review list
 .crl-g {
+  position: relative;
   padding-top: 16px;
   border-bottom: 1px solid #cfcfcf;
   .customer-review-top {
     display: flex;
-    font-size: 12px;
+    font-size: 13px;
     justify-content: space-between;
     .customer-review-icons {
       position: relative;
@@ -728,37 +731,37 @@
         background-size: 64px;
       }
     }
+    .customer-review-id {
+      margin-left: -154px;
+    }
+    .customer-review-date {
+      color: #555;
+    }
   }
-  .customer-review-id {
-    margin-left: -154px;
-  }
-  .customer-review-date {
-    color: #555;
-  }
-}
-.customer-review-detail-image {
- img {
-   width: 70px;
-   height: 70px;
-   }
- }
-.customer-review-option-txt {
-  display: block;
-  padding-top: 8px;
-  font-size: 13px;
-  font-weight: 500;
-  color: #555;
-  .crd__txt {
+  .customer-review-option {
     display: block;
+    padding-top: 8px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #555;
+    min-height: 80px;
+    .customer-review-option__txt {
+      display: block;
+      padding-bottom: 2px;
+    }
+  }
+  .customer-review-detail-image {
+    position: absolute;
+    top: 48px;
+    right: 0;
   }
 }
 .customer-review-purchase {
-  width: 268px;
-  padding-top: 4px;
+  // width: 280px;
+  padding-top: 20px;
   display: block;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: -0.5px;
+  font-size: 13px;
+  font-weight: 400;
   color: #000;
 }
 .customer-review-buttons {
@@ -786,9 +789,8 @@
 // customer review list seemore btn 
 .customer-review-list-seemore {
   display: block;
-  width: 375px;
-  height: 132px;
   position: relative;
+  padding-top: 20px;
 }
   .customer-review-list-seemore__btn {
     width: 100%;
@@ -810,31 +812,110 @@
     }
   }
 
-// // customer review list seemore btn
-// .customer-review-list-btn {
-//   width: 355px;
-//   height: 132px;
-//   position: relative;
-// }
-//   .crl-seemore__btn {
-//     width: 100%;
-//     display: block;
-//     height: 56px;
-//     border: 1px solid #000;
-//     background-color: #fff;
-//     padding: 12px 0;
-//     font-size: 15px;
-//     font-weight: 700;
-//     &::after {
-//       content: "\f078";
-//       display: inline-block;
-//       margin-left: 4px;
-//       width: 20px;
-//       height: 20px;
-//       font-weight: 900;
-//       font-family: "Font Awesome 6 Free";
-//    }
-//   }  
-
-// <i class="fa-solid fa-chevron-up"></i> = "\f077"
-// <i class="fa-solid fa-chevron-down"></i> = "\f078"
+// Q&A
+.wrap-qna{
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #cfcfcf;
+  .qna-tit {
+    font-size: 15px;
+    font-weight: 700;
+    font-family: "Noto Serif KR", serif;
+  }
+}
+// Q&A lst-1
+.wrap-qna {
+  padding-bottom: 20px;
+}
+.customer-qna-lst {
+  padding-top: 20px;
+  .customer-qna-top {
+    display: flex;
+  justify-content: space-between;
+  color: #555;
+  font-size: 13px;
+  .customer-qna-top-process__id {
+    padding-left: 16px;
+    position: relative;
+    &::before {
+      content: "";
+      top: 5px;
+      left: 6px;
+      width: 1px;
+      height: 10px;
+      position: absolute;
+      background-color: #555;
+    }
+  }
+}
+.customer-qna-cont {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  padding-top: 2px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #cfcfcf;
+}
+}
+// bottom nav
+.bottom-nav {
+  display: flex;
+  position: fixed;
+  height: 48px;
+  justify-content: space-between;
+  background: #fff;
+  z-index: 10;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  .bottom-nav-icons-lst {
+    display: flex;
+  }
+}
+.bottom-nav-icons__like {
+  width: 48px;
+  height: 48px;
+  &::before {
+    content: "\f004";
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "Font Awesome 6 Free";
+  }
+}
+.bottom-nav-icons__link {
+  width: 48px;
+  height: 48px;
+  font-size: 34px;
+}
+.bottom-nav-icons__present {
+  width: 48px;
+  height: 48px;
+  padding-bottom: 2px;
+  &::before {
+    content: "\f06b";
+    font-size: 31px;
+    font-weight: 600;
+    font-family: "Line Awesome Free";
+  }
+}
+.bottom-nav-purchase {
+  display: flex;
+  width: 150px;
+  justify-content: center;
+  position: relative;
+  .bottom-nav-purchase__btn {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  &::before {
+    content: "";
+    top: 3px;
+    left: 0px;
+    width: 1px;
+    height: 40px;
+    position: absolute;
+    background-color: #000;
+  }
+}
