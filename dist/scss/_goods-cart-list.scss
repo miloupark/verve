@@ -1,0 +1,22 @@
+@charset "UFT-8";
+@import "mixin", "variables", "fonts", "reset", "main", "contents";
+
+body {
+    background-image: url(/verve/images/shopping\ cart.jpg);
+}
+// header
+.bag-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    .bag-header__tit {
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+// h56
