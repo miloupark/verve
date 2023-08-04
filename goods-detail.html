@@ -185,9 +185,9 @@
       </div>
 
       <!-- accordion-1 -->
-      <div class="accordion-1 container">
+      <div class="accordion-wrap container">
         <!-- accordion 1 최대혜택가 -->
-        <div class="accordion-1">
+        <div class="accordion-1 active">
           <div class="acc-1-header">
             <div class="acc-1-benefitprice">
               <span class="acc-1-benefitprice__txt">최대혜택가</span>
@@ -262,23 +262,6 @@
         </div>
       </div>
 
-      <!-- accordion script -->
-      <script>
-        var acc = document.getElementsByClassName("acc-1-header");
-        var i;
-
-        for (i = 0; i < acc.length; i++) {
-          acc[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.maxHeight) {
-              panel.style.maxHeight = null;
-            } else {
-              panel.style.maxHeight = panel.scrollHeight + "px";
-            }
-          });
-        }
-      </script>
 
       <!-- brandhome togo -->
       <div class="brandhome container">
@@ -286,7 +269,7 @@
           <div class="bh-box-link">
             <a class="bh-box-link__atd" href="https://shop.29cm.co.kr/brand/16478">
               <img
-                src="/images/a;td brandhome.png"
+                src="./images/a;td brandhome.png"
                 alt="브랜드 홈페이지 바로가기"
                 class="brandhomeimg"
               />
@@ -296,8 +279,8 @@
               </div>
             </a>
           </div>
-          <button class="bh-box-icon">
-            <span class="bh-box-icon-click">234</span>
+          <button class="bh-box-icon-btn">
+            <span class="bh-box-icon__click">234</span>
           </button>
         </div>
       </div>
@@ -448,7 +431,7 @@
         <div class="swiper-wrapper">
           <!-- slide 1 -->
           <div class="swiper-slide">
-            <div class="sswiper-slide-thumb">
+            <div class="swiper-slide-thumb">
               <img src="./images/morebybrand1.jpg" alt="A;td Shirring Sleeveless Top thumbnail image" class="swiper-slide-thumb__image">
             </div>
             <div class="swiper-slide-cont">
@@ -475,7 +458,7 @@
           </div>
           <!-- slide 2 -->
           <div class="swiper-slide">
-            <div class="sswiper-slide-thumb">
+            <div class="swiper-slide-thumb">
               <img src="./images/morebybrand2.jpg" alt="A;td Cargo Banding Skirt thumbnail image" class="swiper-slide-thumb__image">
             </div>
             <div class="swiper-slide-cont">
@@ -502,7 +485,7 @@
           </div>
           <!-- slide 3 -->
           <div class="swiper-slide">
-            <div class="sswiper-slide-thumb">
+            <div class="swiper-slide-thumb">
               <img src="./images/morebybrand3.jpg" alt="A;td Sleeveless Long Onepiece thumbnail image" class="swiper-slide-thumb__image">
             </div>
             <div class="swiper-slide-cont">
@@ -529,7 +512,7 @@
           </div>
           <!-- slide 4 -->
           <div class="swiper-slide">
-            <div class="sswiper-slide-thumb">
+            <div class="swiper-slide-thumb">
               <img src="./images/morebybrand4.jpg" alt="A;td Two-pocket open collar short-sleeved shirts thumbnail image" class="swiper-slide-thumb__image">
             </div>
             <div class="swiper-slide-cont">
@@ -556,7 +539,7 @@
           </div>
           <!-- slide 5 -->
           <div class="swiper-slide">
-            <div class="sswiper-slide-thumb">
+            <div class="swiper-slide-thumb">
               <img src="./images/morebybrand5.jpg" alt="A;td Bustier mini onepiece black thumbnail image" class="swiper-slide-thumb__image">
             </div>
             <div class="swiper-slide-cont">
@@ -593,7 +576,7 @@
         <div class="swiper-wrapper">
           <!-- slide 1 -->
           <div class="swiper-slide">
-            <div class="sswiper-slide-thumb">
+            <div class="swiper-slide-thumb">
               <img src="./images/youmayalsolike1.jpg" alt="Sincethen Black Daisy Long Onepiece thumbnail image" class="swiper-slide-thumb__image">
             </div>
             <div class="swiper-slide-cont">
@@ -620,7 +603,7 @@
           </div>
           <!-- slide 2 -->
           <div class="swiper-slide">
-            <div class="sswiper-slide-thumb">
+            <div class="swiper-slide-thumb">
               <img src="./images/youmayalsolike2.jpg" alt="Mangomanyplease Page shirring one-piece thumbnail image" class="swiper-slide-thumb__image">
             </div>
             <div class="swiper-slide-cont">
@@ -647,7 +630,7 @@
           </div>
           <!-- slide 3 -->
           <div class="swiper-slide">
-            <div class="sswiper-slide-thumb">
+            <div class="swiper-slide-thumb">
               <img src="./images/youmayalsolike3.jpg" alt="KINDERSALMON Fluid Dress Black thumbnail image" class="swiper-slide-thumb__image">
             </div>
             <div class="swiper-slide-cont">
@@ -674,7 +657,7 @@
           </div>
           <!-- slide 4 -->
           <div class="swiper-slide">
-            <div class="sswiper-slide-thumb">
+            <div class="swiper-slide-thumb">
               <img src="./images/youmayalsolike4.jpg" alt="Prenda DENIM PATCH CREWNECK TEE WHITE thumbnail image" class="swiper-slide-thumb__image">
             </div>
             <div class="swiper-slide-cont">
@@ -701,7 +684,7 @@
           </div>
           <!-- slide 5 -->
           <div class="swiper-slide">
-            <div class="sswiper-slide-thumb">
+            <div class="swiper-slide-thumb">
               <img src="./images/youmayalsolike5.jpg" alt="&needs Pansy half sleeve knit (ivory) thumbnail image" class="swiper-slide-thumb__image">
             </div>
             <div class="swiper-slide-cont">
@@ -738,7 +721,7 @@
         <div class="swiper-wrapper">
           <!-- slide 1 -->
           <div class="swiper-slide">
-            <div class="sswiper-slide-thumb">
+            <div class="swiper-slide-thumb">
               <img src="./images/todayfeatureditems1.jpg" alt="Mohae Tencel tee_7 colors thumbnail image" class="swiper-slide-thumb__image">
             </div>
             <div class="swiper-slide-cont">
@@ -765,7 +748,7 @@
           </div>
           <!-- slide 2 -->
           <div class="swiper-slide">
-            <div class="sswiper-slide-thumb">
+            <div class="swiper-slide-thumb">
               <img src="./images/todayfeatureditems2.jpg" alt="Mardi Mercredi TSHIRT FLOWERMARDI_BLACK CREAM thumbnail image" class="swiper-slide-thumb__image">
             </div>
             <div class="swiper-slide-cont">
@@ -792,7 +775,7 @@
           </div>
           <!-- slide 3 -->
           <div class="swiper-slide">
-            <div class="sswiper-slide-thumb">
+            <div class="swiper-slide-thumb">
               <img src="./images/todayfeatureditems3.jpg" alt="Depound Monet jacquard knit - ivory thumbnail image" class="swiper-slide-thumb__image">
             </div>
             <div class="swiper-slide-cont">
@@ -819,7 +802,7 @@
           </div>
           <!-- slide 4 -->
           <div class="swiper-slide">
-            <div class="sswiper-slide-thumb">
+            <div class="swiper-slide-thumb">
               <img src="./images/todayfeatureditems4.jpg" alt="Loeuvre Blue Linen Straight Denim SJ3SL169-22 thumbnail image" class="swiper-slide-thumb__image">
             </div>
             <div class="swiper-slide-cont">
@@ -846,7 +829,7 @@
           </div>
           <!-- slide 5 -->
           <div class="swiper-slide">
-            <div class="sswiper-slide-thumb">
+            <div class="swiper-slide-thumb">
               <img src="./images/todayfeatureditems5.jpg" alt="ronron NUIT D ETE T SHIRT BLACK thumbnail image" class="swiper-slide-thumb__image">
             </div>
             <div class="swiper-slide-cont">
@@ -873,15 +856,6 @@
           </div>
         </div>
       </div>
-      <!-- list slide script / freemode -->
-      <script>
-        var swiper = new Swiper(".swiper2", {
-          slidesPerView: 3,
-          spaceBetween: 100,
-          freeMode: true
-        });
-      </script>
-
 
     <!-- review -->
     <div class="wrap-review container">

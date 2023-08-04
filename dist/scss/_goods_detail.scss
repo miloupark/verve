@@ -5,6 +5,10 @@
 // 공통요소 : 헤더, 풋터, 버튼, 아이콘, 박스
 
 // 공통
+
+.container {
+  padding: 0 20px;
+}
 .goods-detial-wrap {
   position: relative;
   background: #fff;
@@ -184,7 +188,7 @@
   transition: 0.4s;
   // "+" icon
   &::before {
-    content: "\2b";
+    content: "\f067";
     position: absolute;
     display: inline-block;
     top: 19px;
@@ -209,14 +213,11 @@
     font-weight: bold;
   }
 }
-
-// 클릭 시 "\f068" 아이콘 마이너스로 변경
 .acc-1-cont {
-  // display: block;
   display: none;
-  height: 85px;
   overflow: hidden;
   border-top: 1px solid #cfcfcf;
+  padding: 10px 0;
   .acc-1-cont-lst-tit {
     display: flex;
     justify-content: space-between;
@@ -229,7 +230,7 @@
   }
   .acc-1-cont-lst-cont {
     padding-top: 4px;
-    font-size: 12px;
+    font-size: 11px;
     color: #555;
   }
 }
@@ -238,6 +239,17 @@
   background-color: #ffffff;
 }
 
+.accordion-1 {
+  &.active {
+    .acc-1-cont {
+      display: block;
+    }
+    // 클릭 시 "\f068" 아이콘 마이너스로 변경
+    .acc-1-header::before {
+      content: "\f068";
+    }
+  }
+}
 
 // accordion 2 배송정보
 .acc-2 {
@@ -275,7 +287,7 @@
 }
 .bh-box {
   display: flex;
-  height: 70px;
+  // height: 70px;
   border: 1px solid #cfcfcf;
 }
 .bh-box-link {
@@ -292,23 +304,24 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 195px;
+  width: 171px;
   padding-left: 16px;
   .bh-box-link-tit__brand {
+    display: block;
     font-size: 14px;
     font-weight: 700;
   }
   .bh-box-link-tit__slogan {
-    padding-top: 4px;
+    display: block;
+    padding-top: 2px;
     font-size: 13px;
     font-weight: 400;
   }
 }
-.bh-box-icon {
+.bh-box-icon-btn {
   display: block;
-  padding: 0 22px;
-  width: 68px;
-  height: 68px;
+  position: absolute;
+  right: 0;
   &::before {
     position: absolute;
     content: "\f004";
@@ -318,10 +331,11 @@
     font-size: 22px;
     font-family: "Font Awesome 6 Free";
   }
-  .bh-box-icon-click {
+  .bh-box-icon__click {
     display: block;
-    padding-top: 22px;
-    font-size: 10px;
+    padding-top: 42px;
+    padding-right: 47px;
+    font-size: 12px;
     font-weight: 500;
     color: #555;
   }
@@ -407,7 +421,7 @@
     height: 56px;
     border: 1px solid #000;
     background-color: #fff;
-    padding: 20px 0;
+    padding: 18px 0;
     font-size: 15px;
     font-weight: 700;
     &::after {
@@ -543,16 +557,21 @@
   font-weight: 700;
   padding-bottom: 8px;
 }
-.swiper-wrapper {
+.swiper-free-mode>.swiper-wrapper {
   position: relative;
+  width: 80%;
+  margin: 0;
 }
 .swiper-thumb__image {
   display: block;
-  width: 136px;
-  height: 136px;
+}
+.swiper-slide-thumb__image {
+  display: block;
+  width: 100%;
 }
 .swiper-slide-cont {
-  width: 136px;
+  width: 100%;
+  padding-top: 4px;
   .swiper-slide-cont__tit__brand {
     display: block;
     font-size: 13px;
@@ -839,7 +858,7 @@
     height: 56px;
     border: 1px solid #000;
     background-color: #fff;
-    padding: 20px 0;
+    padding: 18px 0;
     font-size: 15px;
     font-weight: 700;
     &::after {

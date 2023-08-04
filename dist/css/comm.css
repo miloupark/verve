@@ -1238,6 +1238,10 @@ legend {
   height: 100px;
 }
 
+.container {
+  padding: 0 20px;
+}
+
 .goods-detial-wrap {
   position: relative;
   background: #fff;
@@ -1418,7 +1422,7 @@ legend {
   transition: 0.4s;
 }
 .acc-1-header::before {
-  content: "+";
+  content: "\f067";
   position: absolute;
   display: inline-block;
   top: 19px;
@@ -1444,9 +1448,9 @@ legend {
 
 .acc-1-cont {
   display: none;
-  height: 85px;
   overflow: hidden;
   border-top: 1px solid #cfcfcf;
+  padding: 10px 0;
 }
 .acc-1-cont .acc-1-cont-lst-tit {
   display: flex;
@@ -1460,13 +1464,20 @@ legend {
 }
 .acc-1-cont .acc-1-cont-lst-cont {
   padding-top: 4px;
-  font-size: 12px;
+  font-size: 11px;
   color: #555;
 }
 
 .active,
 .acc-1-header:hover {
   background-color: #ffffff;
+}
+
+.accordion-1.active .acc-1-cont {
+  display: block;
+}
+.accordion-1.active .acc-1-header::before {
+  content: "\f068";
 }
 
 .acc-2 {
@@ -1503,7 +1514,6 @@ legend {
 
 .bh-box {
   display: flex;
-  height: 70px;
   border: 1px solid #cfcfcf;
 }
 
@@ -1524,26 +1534,27 @@ legend {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 195px;
+  width: 171px;
   padding-left: 16px;
 }
 .bh-box-link-tit .bh-box-link-tit__brand {
+  display: block;
   font-size: 14px;
   font-weight: 700;
 }
 .bh-box-link-tit .bh-box-link-tit__slogan {
-  padding-top: 4px;
+  display: block;
+  padding-top: 2px;
   font-size: 13px;
   font-weight: 400;
 }
 
-.bh-box-icon {
+.bh-box-icon-btn {
   display: block;
-  padding: 0 22px;
-  width: 68px;
-  height: 68px;
+  position: absolute;
+  right: 0;
 }
-.bh-box-icon::before {
+.bh-box-icon-btn::before {
   position: absolute;
   content: "\f004";
   top: 0px;
@@ -1552,10 +1563,11 @@ legend {
   font-size: 22px;
   font-family: "Font Awesome 6 Free";
 }
-.bh-box-icon .bh-box-icon-click {
+.bh-box-icon-btn .bh-box-icon__click {
   display: block;
-  padding-top: 22px;
-  font-size: 10px;
+  padding-top: 42px;
+  padding-right: 47px;
+  font-size: 12px;
   font-weight: 500;
   color: #555;
 }
@@ -1634,7 +1646,7 @@ li:nth-child(1):active {
   height: 56px;
   border: 1px solid #000;
   background-color: #fff;
-  padding: 20px 0;
+  padding: 18px 0;
   font-size: 15px;
   font-weight: 700;
 }
@@ -1759,18 +1771,24 @@ li:nth-child(1):active {
   padding-bottom: 8px;
 }
 
-.swiper-wrapper {
+.swiper-free-mode > .swiper-wrapper {
   position: relative;
+  width: 80%;
+  margin: 0;
 }
 
 .swiper-thumb__image {
   display: block;
-  width: 136px;
-  height: 136px;
+}
+
+.swiper-slide-thumb__image {
+  display: block;
+  width: 100%;
 }
 
 .swiper-slide-cont {
-  width: 136px;
+  width: 100%;
+  padding-top: 4px;
 }
 .swiper-slide-cont .swiper-slide-cont__tit__brand {
   display: block;
@@ -2055,7 +2073,7 @@ li:nth-child(1):active {
   height: 56px;
   border: 1px solid #000;
   background-color: #fff;
-  padding: 20px 0;
+  padding: 18px 0;
   font-size: 15px;
   font-weight: 700;
 }
