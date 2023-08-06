@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>goods-checkout</title>
+    <title>checkout</title>
     <meta
       name="description"
       content="네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요"
@@ -61,9 +61,55 @@
     <script defer src="./dist/js/comm.js"></script>
 </head>
 <body>
-    <div class="goods-checkout container">
-        <header></header>
-        <main></main>
+    <div class="checkout-wrap container">
+      <!-- header -->
+      <header class="checkout-header">
+        <button class="checkout-header__icon-back">
+          <span class="blind">돌아가기</span>
+        </button>
+        <span class="checkout-header__tit">Check Out</span>
+      </header>
+
+      <main>
+        <!-- checkout shipping -->
+        <div class="checkout-shipping">
+          <div class="checkout-shipping-tit">
+            <span class="checkout-shipping-tit__address">배송지</span>
+             <button class="checkout-shipping-tit__btn" type="button">변경</button>
+          </div>
+          <div class="checkout-shipping-cont">
+            <span class="checkout-shipping-cont__shipto">박혜빈 / 010-7154-9604</span>
+            <span class="checkout-shipping-cont__address">[04595] 서울특별시 중구 신당동 844 약수동 <br> 
+              남산타운 아파트 27동 502호</span>
+          </div>
+        </div>
+        <!-- checkout orderlist -->
+
+
+
+        <div class="checkout-orderlist">
+          <div class="checkout-orderlist-tit">
+           <span class="checkout-orderlist-tit__total">주문상품</span>
+          </div>
+          <div class="checkout-orderlist-cont">
+            <div class="checkout-orderlist-info">
+              <span class="checkout-orderlist-info__tit">23HS_크로쉐 니트 가디건_WHITE</span>
+              <span class="checkout-orderlist-info__opt">옵션 : [Size] Free </span>
+              <span class="checkout-orderlist-info__count">수량 : 1  </span>
+              <span class="bag-product-lst-info__price">104,490원</span>
+            </div>
+            <div class="bag-product-lst-image">
+              <a href="https://product.29cm.co.kr/catalog/2063465">
+                <img class="bag-product-lst-image__link" src="./images/shoppingbag1.jpg" alt="아티드 23HS_크로쉐 니트 가디건_WHITE">
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </main>
     </div>
 </body>
 </html>

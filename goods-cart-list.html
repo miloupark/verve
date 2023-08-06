@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>goods-cart-list</title>
+    <title>shoppingbag</title>
     <meta
     name="description"
     content="네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요"
@@ -62,78 +62,96 @@ rel="stylesheet"
 </head>
 
 <body>
-  <div class="bag-wrap">
+  <div class="bag-wrap container">
     <!-- header -->
     <header class="bag-header">
+      <button class="bag-header__icon-back">
+        <span class="blind">돌아가기</span>
+      </button>
       <span class="bag-header__tit">Shopping Bag</span>
     </header>
-    <div class="shoppingbag-lst container">
-      <!-- total checkbox -->
-      <div class="bag-total-product">
-        <div class="input">
-          <input type="checkbox" id="allcheck" name="checked">
-          <label for="totalproduct">전체상품</label>
+    <!-- shoppingbag list wrap -->
+    <main>
+      <div class="shoppingbag-lst">
+        <div class="bag-total-product">
+          <div class="bag-total-product-checkbox">
+            <input class="bag-total-product-checkbox__input" type="checkbox" style="zoom: 1.2" checked="checked" id="allcheck" name="checked">
+            <label class="bag-total-product-checkbox__label" for="totalproduct">전체상품 (1/2)</label>
+          </div>
+        </div>
+        <!-- shoppingbag product list -->
+        <div class="bag-product-lst-wrap">
+          <!-- shoppingbag product list 1 -->
+          <div class="bag-product-lst">
+            <div class="bag-product-lst-tit">
+              <div class="bag-product-lst-tit-checkbox">
+                <input class="bag-product-lst-tit-checkbox__input" type="checkbox" style="zoom: 1.2" checked="checked" id="a;td" name="checked-purchase-product">
+                <label for="bag-product-lst-tit-checkbox__label">A;td</label>
+              </div>
+            </div>
+            <div class="bag-product-lst-cont">
+              <div class="bag-product-lst-info">
+                <span class="bag-product-lst-info__tit">23HS_크로쉐 니트 가디건_WHITE</span>
+                <span class="bag-product-lst-info__opt">옵션 : [Size] Free </span>
+                <span class="bag-product-lst-info__count">수량 : 1  </span>
+                <span class="bag-product-lst-info__price">104,490원</span>
+              </div>
+              <div class="bag-product-lst-image">
+                <a href="https://product.29cm.co.kr/catalog/2063465">
+                  <img class="bag-product-lst-image__link" src="./images/shoppingbag1.jpg" alt="아티드 23HS_크로쉐 니트 가디건_WHITE">
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- shoppingbag total product list 2 -->
+          <div class="bag-product-lst">
+            <div class="bag-product-lst-tit">
+              <div class="bag-product-lst-tit-checkbox">
+                <input class="bag-product-lst-tit-checkbox__input" type="checkbox" style="zoom: 1.2" id="a;td" name="checked-purchase-product">
+                <label for="bag-product-lst-tit-checkbox__label">KINDERSALMON</label>
+              </div>
+            </div>
+            <div class="bag-product-lst-cont">
+              <div class="bag-product-lst-info">
+                <span class="bag-product-lst-info__tit">Fluid Dress Black</span>
+                <span class="bag-product-lst-info__opt">옵션 : [Size] 001</span>
+                <span class="bag-product-lst-info__count">수량 : 1  </span>
+                <span class="bag-product-lst-info__price">168,000원</span>
+              </div>
+              <div class="bag-product-lst-image">
+                <a href="https://product.29cm.co.kr/catalog/1559272">
+                  <img class="bag-product-lst-image__link" src="./images/shoppingbag2.jpg" alt="아티드 23HS_크로쉐 니트 가디건_WHITE">
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- shoppingbag total product list -->
-      <div class="bag-product-lst">
-        <!-- shoppingbag total product list 1 -->
-        <div class="bag-product-lst-1">
-          <div class="input">
-            <input type="checkbox" id="a;td" name="checked-purchase-product" value="a;td ">
-            <label for="totalproduct">A;td</label>
-          </div>
-          <div class="bag-product-name">
-            <span>23HS_크로쉐 니트 가디건_WHITE</span>
-            <span>옵션 : [Size] Free </span>
-            <span>수량 : 1  </span>
-            <span>104,490원</span>
-          </div>
-          <div class="bag-product-image">
-            <a href="#"><img src="./images/shoppingbag1.jpg" alt="아티드 23HS_크로쉐 니트 가디건_WHITE"></a>
-          </div>
+      <!-- shoppingbag product amount list -->
+      <div class="bag-prouct-amount-list-g">
+        <div class="bag-prouct-amount-list">
+          <span class="bag-prouct-amount-list__tit">주문 상품 수</span>
+          <span class="bag-prouct-amount-list__cont">총 1개</span>
         </div>
-        <!-- shoppingbag total product list 2 -->
-        <div class="bag-product-lst-2">
-          <div class="input">"a;td
-            <input type="checkbox" id="kindersalmon" alt="none-purchase-product">
-            <label for="totalproduct">KINDERSALMON</label>
-          </div>
-          <div class="bag-product-name">
-            <span>Fluid Dress Black</span>
-            <span>옵션 : [Size] 001 </span>
-            <span>수량 : 1  </span>
-            <span>168,000원</span>
-          </div>
-          <div class="bag-product-image">
-            <a href="#"><img src="./images/shoppingbag2.jpg" alt="킨더살몬 플루이드 드레스 블랙"></a>
-          </div>
+        <div class="bag-prouct-amount-list">
+          <span class="bag-prouct-amount-list__tit">총 주문금액</span>
+          <span class="bag-prouct-amount-list__cont">104,490원</span>
+        </div>
+        <div class="bag-prouct-amount-list">
+          <span class="bag-prouct-amount-list__tit">총 배송비</span>
+          <span class="bag-product-total-shippingfee__cont">0원</span>
+        </div>
+        <div class="bag-prouct-amount-list">
+          <span class="bag-prouct-amount-list__tit">총 결제금액</span>
+          <span class="bag-prouct-amount-list__cont">104,490원</span>
         </div>
       </div>
-      <!-- bag-product-total-detail-price -->
-      <div class="bag-product-info">
-        <div class="bag-product-purchase-total-product">
-          <span>주문 상품 수</span>
-          <span>총 1개</span>
-        </div>
-        <div class="bag-product-purchase-only-product-price-">
-          <span>총 주문금액</span>
-          <span>104,490원</span>
-        </div>
-        <div class="bag-product-purchase-total-shippingprice">
-          <span>총 배송비</span>
-          <span>0원</span>
-        </div>
-        <div class="bag-product-purchase-total-price">
-          <span>총 결제금액</span>
-          <span>104,490원</span>
-        </div>
+      
+      <!-- shoppingbag bottom nav -->
+      <div class="shopping-bag-bottom-btn">
+        <button type="button" class="shopping-bag-bottom-btn-checkout">CHECK OUT</button>
       </div>
-      <!-- shopping bag bottom nav -->
-      <div class="shopping-bag-bottom-nav">
-        <button type="button" class="shopping-bag-bottom-nav-btn">CHECK OUT</button>
-      </div>
-    </div>
+    </main>
   </div>
 </body>
 </html>

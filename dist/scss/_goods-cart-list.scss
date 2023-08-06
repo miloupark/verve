@@ -1,9 +1,12 @@
 @charset "UFT-8";
 @import "mixin", "variables", "fonts", "reset", "main", "contents";
 
-body {
-    background-image: url(/verve/images/shopping\ cart.jpg);
+
+// bag-wrap
+.bag-wrap {
+    background-color: #fff;
 }
+
 // header
 .bag-header {
     display: flex;
@@ -14,9 +17,120 @@ body {
     left: 0;
     right: 0;
     position: fixed;
+    border-bottom: 1px solid #555;
+    &::before {
+        content: "\f104";
+        top: 18px;
+        left: 18px;
+        position: absolute;
+        font-size: 20px;
+        font-weight: 900;
+        font-family: "Font Awesome 6 Free";
+      }
     .bag-header__tit {
         font-size: 18px;
         font-weight: 700;
     }
 }
-// h56
+
+// shoppingbag-lst
+.shoppingbag-lst {
+    display: block;
+    margin-top: 64px;
+}
+// shopping bag product list - allcheckbox
+.bag-total-product {
+    display: flex;
+    width: 100%;
+    height: 64px;
+    align-items: center;
+    border-bottom: 1px solid #cfcfcf;
+    font-size: 14px;
+    font-weight: 500;
+    .bag-total-product-checkbox__input {
+        cursor: pointer;
+    }
+}
+// shopping bag product list - title
+.bag-product-lst-tit {
+    display: flex;
+    width: 100%;
+    height: 54px;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 500;
+    .bag-product-lst-tit-checkbox__input {
+        cursor: pointer;
+    }
+}
+// shopping bag product list - content
+.bag-product-lst-cont {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #cfcfcf;
+}
+.bag-product-lst-info {
+  display: block;
+    .bag-product-lst-info__tit {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .bag-product-lst-info__opt {
+        display: block;
+        font-size: 12px;
+        font-weight: 400;
+        color: #555;
+        padding-top: 3px;
+    }
+    .bag-product-lst-info__count {
+        display: block;
+        font-size: 12px;
+        font-weight: 400;
+        color: #555;
+    }
+    .bag-product-lst-info__price {        
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        padding-top: 3px;
+    }
+}
+
+// shoppingbag product amount list
+.bag-prouct-amount-list-g {
+    display: block;
+    height: 212px;
+    .bag-prouct-amount-list {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        .bag-prouct-amount-list__tit {
+            font-size: 14px;
+            font-weight: 400;
+        }
+        .bag-prouct-amount-list__cont {
+            font-size: 13px;
+            font-weight: 400;
+        }
+    }
+}
+
+// shoppingbag bottom nav
+.shopping-bag-bottom-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    border-top: 1px solid #555;
+    cursor: pointer;
+    .shopping-bag-bottom-btn-checkout {
+        font-size: 16px;
+        font-weight: 700;
+    }
+}

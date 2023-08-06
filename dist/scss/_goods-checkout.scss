@@ -1,2 +1,105 @@
 @charset "UFT-8";
 @import "mixin", "variables", "fonts", "reset", "main", "contents";
+
+// bag-wrap
+.checkout-wrap {
+    background-color: #fff;
+}
+
+// header
+.checkout-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    border-bottom: 1px solid #555;
+    &::before {
+        content: "\f104";
+        top: 18px;
+        left: 18px;
+        position: absolute;
+        font-size: 20px;
+        font-weight: 900;
+        font-family: "Font Awesome 6 Free";
+      }
+    .checkout-header__tit {
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+
+// checkout-shipping
+.checkout-shipping {
+    margin-top: 64px;
+    padding-top: 16px;
+    border-bottom: 1px solid #cfcfcf;
+    .checkout-shipping-tit {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 16px;
+        .checkout-shipping-tit__address {
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .checkout-shipping-tit__btn {
+            display: block;
+            color: #555;
+            cursor: pointer;
+        }
+    }
+    .checkout-shipping-cont {
+        display: block;
+        padding-top: 16px;
+        padding-bottom: 20px;
+        .checkout-shipping-cont__shipto {
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        .checkout-shipping-cont__address {
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            padding-top: 4px;
+        }
+    }
+}
+
+// checkout orderlist
+.checkout-orderlist-tit {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 16px;
+}
+.checkout-orderlist-info {
+  display: block;
+    .checkout-orderlist-info__tit {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .checkout-orderlist-info__opt {
+        display: block;
+        font-size: 12px;
+        font-weight: 400;
+        color: #555;
+        padding-top: 3px;
+    }
+    .checkout-orderlist-info__count {
+        display: block;
+        font-size: 12px;
+        font-weight: 400;
+        color: #555;
+    }
+    .checkout-orderlist-info__price {        
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        padding-top: 3px;
+    }
+}
