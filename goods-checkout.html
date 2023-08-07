@@ -84,9 +84,6 @@
           </div>
         </div>
         <!-- checkout orderlist -->
-
-
-
         <div class="checkout-orderlist">
           <div class="checkout-orderlist-tit">
            <span class="checkout-orderlist-tit__total">주문상품</span>
@@ -96,16 +93,111 @@
               <span class="checkout-orderlist-info__tit">23HS_크로쉐 니트 가디건_WHITE</span>
               <span class="checkout-orderlist-info__opt">옵션 : [Size] Free </span>
               <span class="checkout-orderlist-info__count">수량 : 1  </span>
-              <span class="bag-product-lst-info__price">104,490원</span>
+              <span class="checkout-orderlist-info__price">104,490원</span>
             </div>
-            <div class="bag-product-lst-image">
+            <div class="checkout-orderlist-image">
               <a href="https://product.29cm.co.kr/catalog/2063465">
-                <img class="bag-product-lst-image__link" src="./images/shoppingbag1.jpg" alt="아티드 23HS_크로쉐 니트 가디건_WHITE">
+                <img class="checkout-orderlist-image__link" src="./images/shoppingbag1.jpg" alt="아티드 23HS_크로쉐 니트 가디건_WHITE">
               </a>
             </div>
           </div>
         </div>
 
+        <!-- checkout discount benefits-->
+        <div class="checkout-discount">
+          <div class="checkout-discount-coupons-g">
+            <span class="checkout-discount-coupons-g__tit">할인적용</span>
+            <div class="checkout-discount-coupons">
+              <span class="checkout-discount-coupons__tit">쿠폰</span>
+              <div class="checkout-discount-coupons-btn active">
+                <button class="checkout-discount-coupons-btn__accordion">사용가능 쿠폰 3장</button>
+              </div>
+              <div class="checkout-discount-coupons-btn-cont">
+                <span class="checkout-discount-coupons-btn-cont__cpn">전상품 대상 5%</span>
+                <span class="checkout-discount-coupons-btn-cont__cpn">전상품 대상 10%</span>
+                <span class="checkout-discount-coupons-btn-cont__cpn">VIP 회원 대상 15%</span>
+              </div>
+            </div>
+          </div>
+          <div class="checkout-discount-point-g">
+            <span class="checkout-discount-point-g__tit">포인트</span>
+            <div class="checkout-discount-point-btn">
+              <button class="checkout-discount-point-btn__default">0p</button>
+              <button class="checkout-discount-point-btn__all">모두 사용</button>
+            </div>
+            <span class="checkout-discount-point-g__mypoint">보유 포인트 1,000p</span>
+          </div>
+        </div>
+        <!-- accordion script -->
+        <script>
+          var acc = document.getElementsByClassName("checkout-discount-coupons-btn");
+          var i;
+
+          for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+              /* Toggle between adding and removing the "active" class,
+              to highlight the button that controls the panel */
+              this.classList.toggle("active");
+
+              /* Toggle between hiding and showing the active panel */
+              var panel = this.nextElementSibling;
+              if (panel.style.display === "block") {
+                panel.style.display = "none";
+              } else {
+                panel.style.display = "block";
+              }
+            });
+          }
+        </script>
+
+         <!-- checkout payment option-->
+        <div class="checkout-payment-option">
+          <span class="checkout-payment-option__tit">결제방법</span>
+          <div class="checkout-payment-option-buttons-top">
+            <button class="checkout-payment-option-buttons-top__btn">신용카드</button>
+            <button class="checkout-payment-option-buttons-top__btn">간편결제</button>
+          </div>
+          <div class="checkout-payment-option-buttons-bottom">
+            <button class="checkout-payment-option-buttons-bottom__btn">가상계좌</button>
+            <button class="checkout-payment-option-buttons-bottom__btn">휴대폰 결제</button>
+            <button class="checkout-payment-option-buttons-bottom__btn">무통장 입급</button>
+          </div>
+          <div class="checkout-payment-option-accordion">
+            <button class="checkout-payment-option-accordion__card">카드선택</button>
+            <button class="checkout-payment-option-accordion__cardplan">할부선택</button>
+          </div>
+        </div>
+
+
+      <!-- checkout payment detail list -->
+      <div class="checkout-payment-detail-g">
+        <span class="checkout-payment-detail-g__tit">최종 결제정보</span>
+        <div class="checkout-payment-detail">
+          <span class="checkout-payment-detail-g__tit">총 상품금액</span>
+          <span class="checkout-payment-detail-g__cont">104,490원</span>
+        </div>
+        <div class="checkout-payment-detail">
+          <span class="checkout-payment-detail-g__tit">배송비</span>
+          <span class="checkout-payment-detail-g__cont">+ 0원</span>
+        </div>
+        <div class="checkout-payment-detail">
+          <span class="checkout-payment-detail-g__tit">할인쿠폰</span>
+          <span class="checkout-payment-detail-g__cont">- 0원</span>
+        </div>
+        <div class="checkout-payment-detail">
+          <span class="checkout-payment-detail-g__tit">포인트</span>
+          <span class="checkout-payment-detail-g__cont">- 0원</span>
+        </div>
+        <div class="checkout-payment-detail-total">
+          <span class="checkout-payment-detail-total__tit">총 결제금액</span>
+          <span class="checkout-payment-detail-total__cont">104,490원</span>
+        </div>
+      </div>
+      
+      <!-- checkout payment bottom nav -->
+      <div class="checkout-payment-bottom-btn">
+        <button type="button" class="checkout-payment-bottom-btn__purchase">104,490원 결제하기</button>
+      </div>
 
 
 

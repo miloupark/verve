@@ -17,6 +17,7 @@
     right: 0;
     position: fixed;
     border-bottom: 1px solid #555;
+    background-color: #fff;
     &::before {
         content: "\f104";
         top: 18px;
@@ -42,6 +43,7 @@
         justify-content: space-between;
         padding-top: 16px;
         .checkout-shipping-tit__address {
+            display: block;
             font-size: 15px;
             font-weight: 500;
         }
@@ -62,7 +64,7 @@
         }
         .checkout-shipping-cont__address {
             display: block;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 400;
             padding-top: 4px;
         }
@@ -70,36 +72,298 @@
 }
 
 // checkout orderlist
-.checkout-orderlist-tit {
+.checkout-orderlist {
+    border-bottom: 1px solid #cfcfcf;
+    .checkout-orderlist-tit {
+        display: block;
+        font-size: 15px;
+        font-weight: 500;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+}
+.checkout-orderlist-cont {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    .checkout-orderlist-info {
+      display: block;
+        .checkout-orderlist-info__tit {
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        .checkout-orderlist-info__opt {
+            display: block;
+            font-size: 12px;
+            font-weight: 400;
+            color: #555;
+            padding-top: 3px;
+        }
+        .checkout-orderlist-info__count {
+            display: block;
+            font-size: 12px;
+            font-weight: 400;
+            color: #555;
+        }
+        .checkout-orderlist-info__price {        
+            display: block;
+            font-size: 13px;
+            font-weight: 400;
+            padding-top: 3px;
+        }
+    }
+    .checkout-orderlist-image__link {
+        width: 100%;
+        display: block;
+    }
+}
+
+// checkout discount benefits
+.checkout-discount {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #cfcfcf;
+}
+.checkout-discount-coupons-g__tit {
     display: block;
     font-size: 15px;
     font-weight: 500;
+    padding-top: 16px;
     padding-bottom: 16px;
 }
-.checkout-orderlist-info {
-  display: block;
-    .checkout-orderlist-info__tit {
-        display: block;
-        font-size: 14px;
-        font-weight: 500;
-    }
-    .checkout-orderlist-info__opt {
-        display: block;
+// checkout discount coupons
+.checkout-discount-coupons-btn-cont {
+    display: block;
+    height: 100px;
+    padding: 9px;
+    margin-top: -1px;
+    background-color: #fff;
+    border: 1px solid #000;
+    .checkout-discount-coupons-btn-cont__cpn {
+        display: flex;
         font-size: 12px;
         font-weight: 400;
-        color: #555;
-        padding-top: 3px;
+        padding-top: 8px;
     }
-    .checkout-orderlist-info__count {
-        display: block;
-        font-size: 12px;
-        font-weight: 400;
-        color: #555;
+}
+.checkout-discount-coupons__tit {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+}
+.checkout-discount-coupons-btn {
+    display: block;
+    position: relative;
+    padding-top: 8px;
+    &.active {
+        .checkout-discount-coupons-btn__accordion::after {
+            content: "\f067";
     }
-    .checkout-orderlist-info__price {        
+}
+}
+.checkout-discount-coupons-btn__accordion {
+    display: block;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 9px;
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+    color: #555;
+    border: 1px solid #555;
+    // transition: 0.2s;
+    &:after {
+        content: "\f068";
+        top: 18px;
+        right: 9px;
+        font-size: 13px;
+        font-family: "Font Awesome 5 Free";
+        font-size: 15px;
+        font-weight: 900;
+        margin-left: 5px;
+        position: absolute;
+    }
+}   
+.checkout-discount-coupons__accordion-cont {
+    padding: 0 18px;
+    background-color: #fff;
+    display: none;
+    overflow: hidden;
+}
+// checkout discount point
+.checkout-discount-point-g {
+    .checkout-discount-point-g__tit {
         display: block;
         font-size: 14px;
-        font-weight: 500;
-        padding-top: 3px;
+        font-weight: 400;
+        padding-top: 16px;
+    }
+    .checkout-discount-point-g__mypoint {
+        display: block;
+        font-size: 12px;
+        color: #555;
+        padding-top: 4px;
+    }
+    }
+
+.checkout-discount-point-btn {
+    display: flex;
+    justify-content: space-between;
+    .checkout-discount-point-btn__default {
+        display: block;
+        background-color: #fff;
+        cursor: pointer;
+        padding: 9px;
+        width: 70%;
+        text-align: left;
+        font-size: 12px;
+        color: #555;
+        border: 1px solid #555;
+    }
+    .checkout-discount-point-btn__all {
+        display: block;
+        background-color: #fff;
+        cursor: pointer;
+        padding: 9px;
+        width: 25%;
+        text-align: center;
+        min-width: 72px;
+        font-size: 12px;
+        color: #fff;
+        padding-top: 8px;
+        background-color: #555;
+        border: 1px solid #555;
+    }
+}
+
+// checkout-payment-option
+.checkout-payment-option__tit {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    padding-top: 16px;
+}
+.checkout-payment-option-buttons-top {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+    .checkout-payment-option-buttons-top__btn {
+        background-color: #fff;
+        cursor: pointer;
+        padding: 9px;
+        width: 48%;
+        text-align: center;
+        min-width: 72px;
+        font-size: 12px;
+        padding-top: 8px;
+        background-color: #fff;
+        border: 1px solid #555;
+    }
+}
+.checkout-payment-option-buttons-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8px;
+    .checkout-payment-option-buttons-bottom__btn {
+        background-color: #fff;
+        cursor: pointer;
+        padding: 9px;
+        width: 30%;
+        text-align: center;
+        min-width: 72px;
+        font-size: 12px;
+        padding-top: 8px;
+        background-color: #fff;
+        border: 1px solid #555;
+}
+}
+.checkout-payment-option-accordion {
+    padding-bottom: 20px;
+}
+.checkout-payment-option-accordion__card {
+    position: relative;
+    display: block;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 9px;
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+    color: #555;
+    border: 1px solid #555;
+    margin-top: 16px;
+    // transition: 0.2s;
+    &:after {
+        content: "\f067";
+        top: 10px;
+        right: 9px;
+        font-size: 13px;
+        font-family: "Font Awesome 5 Free";
+        font-size: 15px;
+        font-weight: 900;
+        margin-left: 5px;
+        position: absolute;
+    }
+}   
+.checkout-payment-option-accordion__cardplan {
+    position: relative;
+    display: block;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 9px;
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+    color: #555;
+    border: 1px solid #555;
+    margin-top: 8px;
+    // transition: 0.2s;
+    &:after {
+        content: "\f067";
+        top: 10px;
+        right: 9px;
+        font-size: 13px;
+        font-family: "Font Awesome 5 Free";
+        font-size: 15px;
+        font-weight: 900;
+        margin-left: 5px;
+        position: absolute;
+    }
+}   
+
+// checkout payment detail list
+.checkout-payment-detail-g {
+    display: block;
+    height: 220px;
+    .checkout-payment-detail {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        .checkout-payment-detail-g__tit {
+            font-size: 14px;
+            font-weight: 400;
+        }
+        .checkout-payment-detail-g__cont {
+            font-size: 13px;
+            font-weight: 400;
+        }
+    }
+}
+
+// checkout payment bottom nav
+.checkout-payment-bottom-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    border-top: 1px solid #555;
+    cursor: pointer;
+    .checkout-payment-bottom-btn__purchase {
+        font-size: 16px;
+        font-weight: 700;
     }
 }
