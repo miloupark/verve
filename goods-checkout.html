@@ -113,9 +113,9 @@
                 <button class="checkout-discount-coupons-btn__accordion">사용가능 쿠폰 3장</button>
               </div>
               <div class="checkout-discount-coupons-btn-cont">
+                <span class="checkout-discount-coupons-btn-cont__cpn">선택 안함</span>
                 <span class="checkout-discount-coupons-btn-cont__cpn">전상품 대상 5%</span>
                 <span class="checkout-discount-coupons-btn-cont__cpn">전상품 대상 10%</span>
-                <span class="checkout-discount-coupons-btn-cont__cpn">VIP 회원 대상 15%</span>
               </div>
             </div>
           </div>
@@ -150,7 +150,7 @@
           }
         </script>
 
-         <!-- checkout payment option-->
+        <!-- checkout payment option-->
         <div class="checkout-payment-option">
           <span class="checkout-payment-option__tit">결제방법</span>
           <div class="checkout-payment-option-buttons-top">
@@ -164,41 +164,93 @@
           </div>
           <div class="checkout-payment-option-accordion">
             <button class="checkout-payment-option-accordion__card">카드선택</button>
-            <button class="checkout-payment-option-accordion__cardplan">할부선택</button>
           </div>
+          <div class="checkout-payment-option-accordion-cont">
+            <span class="checkout-payment-option-accordion-cont__card">우리카드</span>
+            <span class="checkout-payment-option-accordion-cont__card">신한카드</span>
+            <span class="checkout-payment-option-accordion-cont__card">삼성카드</span>
+            <span class="checkout-payment-option-accordion-cont__card">현대카드</span>
+            <span class="checkout-payment-option-accordion-cont__card">제주카드</span>
+            <span class="checkout-payment-option-accordion-cont__card">씨티카드</span>
+            <span class="checkout-payment-option-accordion-cont__card">BC카드</span>
+            <span class="checkout-payment-option-accordion-cont__card">NH카드</span>
+            <span class="checkout-payment-option-accordion-cont__card">우체국카드</span>
+            <span class="checkout-payment-option-accordion-cont__card">KB국민카드</span>
+          </div>
+            <button class="checkout-payment-option-accordion__card">할부선택</button>
         </div>
+        <!-- accordion script -->
+        <script>
+          var acc = document.getElementsByClassName("checkout-payment-option-accordion");
+          var i;
 
+          for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+              /* Toggle between adding and removing the "active" class,
+              to highlight the button that controls the panel */
+              this.classList.toggle("active");
+
+              /* Toggle between hiding and showing the active panel */
+              var panel = this.nextElementSibling;
+              if (panel.style.display === "block") {
+                panel.style.display = "none";
+              } else {
+                panel.style.display = "block";
+              }
+            });
+          }
+        </script>
 
       <!-- checkout payment detail list -->
       <div class="checkout-payment-detail-g">
         <span class="checkout-payment-detail-g__tit">최종 결제정보</span>
         <div class="checkout-payment-detail">
-          <span class="checkout-payment-detail-g__tit">총 상품금액</span>
-          <span class="checkout-payment-detail-g__cont">104,490원</span>
+          <span class="checkout-payment-detail__tit">총 상품금액</span>
+          <span class="checkout-payment-detail__cont">104,490원</span>
         </div>
         <div class="checkout-payment-detail">
-          <span class="checkout-payment-detail-g__tit">배송비</span>
-          <span class="checkout-payment-detail-g__cont">+ 0원</span>
-        </div>
-        <div class="checkout-payment-detail">
-          <span class="checkout-payment-detail-g__tit">할인쿠폰</span>
-          <span class="checkout-payment-detail-g__cont">- 0원</span>
-        </div>
-        <div class="checkout-payment-detail">
-          <span class="checkout-payment-detail-g__tit">포인트</span>
-          <span class="checkout-payment-detail-g__cont">- 0원</span>
-        </div>
-        <div class="checkout-payment-detail-total">
-          <span class="checkout-payment-detail-total__tit">총 결제금액</span>
-          <span class="checkout-payment-detail-total__cont">104,490원</span>
-        </div>
+        <span class="checkout-payment-detail__tit">배송비</span>
+        <span class="checkout-payment-detail__cont">+ 0원</span>
       </div>
+      <div class="checkout-payment-detail">
+        <span class="checkout-payment-detail__tit">할인쿠폰</span>
+        <span class="checkout-payment-detail__cont">- 0원</span>
+      </div>
+      <div class="checkout-payment-detail">
+        <span class="checkout-payment-detail__tit">포인트</span>
+        <span class="checkout-payment-detail__cont">- 0원</span>
+      </div>
+      <div class="checkout-payment-detail-total">
+        <span class="checkout-payment-detail-total__tit">총 결제금액</span>
+        <span class="checkout-payment-detail-total__cont">104,490원</span>
+      </div>
+    </div>
       
-      <!-- checkout payment bottom nav -->
-      <div class="checkout-payment-bottom-btn">
-        <button type="button" class="checkout-payment-bottom-btn__purchase">104,490원 결제하기</button>
-      </div>
 
+    <!-- checkout personal information checked -->
+    <div class="checkout-personal-info">
+      <div class="checkout-personal-info-checkbox-all">
+        <input class="checkout-personal-info-checkbox-all__input" type="checkbox" style="zoom: 1.2" id="personalinfoall" name="personalinfoall">
+        <label class="checkout-personal-info-checkbox-all__label" for="personalinfoall">주문 정보를 확인하였으며, 약관 전체에 동의합니다.</label>
+      </div>
+      <div class="checkout-personal-info-checkbox">
+        <input class="checkout-personal-info-checkbox__input" type="checkbox" style="zoom: 1.2" id="personalinfo1" name="personalinfo">
+        <label class="checkout-personal-info-checkbox__label" for="personalinfo">[필수] 개인정보 수집/이용 동의</label>
+      </div>
+      <div class="checkout-personal-info-checkbox">
+        <input class="checkout-personal-info-checkbox__input" type="checkbox" style="zoom: 1.2" id="personalinfo2" name="personalinfo">
+        <label class="checkout-personal-info-checkbox__label" for="personalinfo">[필수] 개인정보 제3자 제공 동의</label>
+      </div>
+      <div class="checkout-personal-info-checkbox">
+        <input class="checkout-personal-info-checkbox__input" type="checkbox" style="zoom: 1.2" id="personalinfo3" name="personalinfo">
+        <label class="checkout-personal-info-checkbox__label" for="personalinfo">[필수] 개인정보 수집/이용 동의</label>
+      </div>
+    </div>
+
+      <!-- checkout bottom nav -->
+      <div class="checkout-bottom-btn">
+        <button type="button" class="checkout-bottom-btn__purchase">104,490원 결제하기</button>
+      </div>
 
 
       </main>
