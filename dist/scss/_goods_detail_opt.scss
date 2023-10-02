@@ -1,0 +1,105 @@
+@charset "UFT-8";
+@import "mixin", "variables", "fonts", "reset", "main", "contents";
+
+* {
+  font-family: "NotoSansKR";
+}
+
+.prd-opt-wrap {
+  width: 375px;
+  height: 183px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+}
+.prd-opt-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 20px 58px;
+  .prd-opt_txt {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .prd-opt-btn {
+    display: flex;
+    .prd-opt-btn_minus {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-width: 1px 0px 1px 1px;
+      border-color: #333;
+      border-style: solid;
+      &::before {
+        content: "\f068";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Line Awesome Free';
+        font-size: 16px;
+        font-weight: 900;
+      }
+    }
+    .prd-opt-count {
+      display: block;
+      color: #333;
+      width: 32px;
+      height: 32px;
+      border: 1px solid #333;
+      font-size: 15px;
+      font-weight: 500;
+      text-align: center;
+    }
+    .prd-opt-btn_plus {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-width: 1px 1px 1px 0px;
+      border-color: #333;
+      border-style: solid;
+      &::before {
+        content: "\f067";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Line Awesome Free';
+        font-size: 16px;
+        font-weight: 900;
+      }
+    }
+  }
+}
+.prd-opt-bottom-btn {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  border-top: 1px solid #333;
+  .prd-opt-bottom-cart,
+  .prd-opt-bottom-buy {
+    width: 50%;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .prd-opt-bottom-cart {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 32px;
+      top: 16px;
+      right: 0;
+      background-color: #333;
+    }
+  }
+}
